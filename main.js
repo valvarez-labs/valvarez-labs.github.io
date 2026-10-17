@@ -116,6 +116,26 @@
     show(1);
   }
 
+  /* Selector de tema claro / oscuro. Se recuerda en localStorage (si está disponible). */
+  function initTheme() {
+    var root = document.documentElement, btn = document.getElementById("theme");
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (!btn) return;
+    function paint() {
+      var light = root.getAttribute("data-theme") === "light";
+      btn.textContent = light ? "☾" : "☀";
+      btn.setAttribute("aria-label", light ? "Cambiar a tema oscuro" : "Cambiar a tema claro");
+      if (meta) meta.setAttribute("content", light ? "#f4f4f0" : "#0a0a0a");
+    }
+    btn.addEventListener("click", function () {
+      var next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+      paint();
+    });
+    paint();
+  }
+
   function initYear() {
     var y = document.getElementById("year");
     if (y && !y.textContent) y.textContent = new Date().getFullYear();
@@ -127,6 +147,7 @@
     safe(initReveal, "reveal");
     safe(initCount, "count");
     safe(initTimeline, "timeline");
+    safe(initTheme, "theme");
     safe(initYear, "year");
   }
 
