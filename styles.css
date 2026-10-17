@@ -160,3 +160,11 @@ footer{padding:36px var(--gut);border-top:1px solid var(--line);display:flex;jus
 #lang:hover,#lang:focus-visible{border-color:var(--accent);outline:none}
 #lang option{background:var(--bg-2);color:var(--ink)}
 @media (max-width:420px){.bar-right{gap:10px}#lang{padding-right:26px}}
+/* ---------- logotipo ---------- */
+.brand{display:inline-flex;align-items:center;gap:10px}
+.brand img{height:28px;width:auto}
+.theme-img.for-light{display:none}
+:root[data-theme="light"] .theme-img.for-light{display:inline-block}
+:root[data-theme="light"] .theme-img.for-dark{display:none}
+.foot-logo img{height:60px;width:auto;opacity:.95}
+footer{align-items:center}
