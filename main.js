@@ -79,6 +79,23 @@
     els.forEach(function (el) { io.observe(el); });
   }
 
+  /* Línea de tiempo con paginación (1 / 2). Sin JS se muestran los dos paneles seguidos. */
+  function initTimeline() {
+    var panels = document.querySelectorAll(".tl-panel");
+    if (!panels.length) return;
+    var labels = ["SMX · 1 / 2", "ASIX · 2 / 2"], cur = 1;
+    var count = document.getElementById("tl-count");
+    function show(i) {
+      cur = (i + panels.length) % panels.length;
+      panels.forEach(function (p, k) { p.classList.toggle("on", k === cur); });
+      if (count) count.textContent = labels[cur];
+    }
+    var prev = document.getElementById("tl-prev"), next = document.getElementById("tl-next");
+    if (prev) prev.addEventListener("click", function () { show(cur - 1); });
+    if (next) next.addEventListener("click", function () { show(cur + 1); });
+    show(1);
+  }
+
   function initYear() {
     var y = document.getElementById("year");
     if (y && !y.textContent) y.textContent = new Date().getFullYear();
@@ -89,6 +106,7 @@
     safe(initRows, "rows");
     safe(initReveal, "reveal");
     safe(initCount, "count");
+    safe(initTimeline, "timeline");
     safe(initYear, "year");
   }
 
