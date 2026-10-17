@@ -202,3 +202,15 @@ html[lang="es"] .legal [data-lang="es"],html[lang="ca"] .legal [data-lang="ca"],
 .xp-desc{color:var(--ink2);max-width:66ch;margin-bottom:14px}
 .chips{list-style:none;display:flex;gap:8px;flex-wrap:wrap}
 .chips li{padding:4px 13px;border:1px solid var(--line);border-radius:999px;background:var(--bg-2);font-size:12px;color:var(--ink2)}
+/* ---------- sobre mí + ficha rápida ---------- */
+.about{display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(28px,5vw,72px);align-items:start}
+.about-title{font-size:clamp(26px,3.6vw,46px);letter-spacing:-.04em;line-height:1.08;margin-bottom:22px;max-width:18ch}
+.about-p{color:var(--mute);max-width:60ch;margin-bottom:16px;font-size:clamp(15px,1.2vw,17px)}
+.about-p mark{background:none;color:var(--ink);font-weight:700}
+.card-fast{border:1px solid var(--line);border-radius:18px;background:var(--bg-2);padding:clamp(20px,2.6vw,30px);position:sticky;top:90px}
+.card-fast h3{margin-bottom:12px}
+.card-fast dl>div{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.card-fast dl>div:last-child{border-bottom:0}
+.card-fast dt{color:var(--mute);flex:none}
+.card-fast dd{font-weight:700;text-align:right}
+@media (max-width:860px){.about{grid-template-columns:1fr}.card-fast{position:static}}
