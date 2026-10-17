@@ -15,7 +15,7 @@ a{color:inherit}
 .label b{color:var(--accent);font-weight:500}
 
 /* ---------- barra superior ---------- */
-.bar{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px var(--gut);mix-blend-mode:difference;color:#fff;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.bar{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px var(--gut);background:rgba(10,10,10,.72);color:#fff;border-bottom:1px solid rgba(255,255,255,.06);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
 .bar nav{display:flex;gap:22px}
 .bar a{text-decoration:none}
 .bar a:hover{text-decoration:underline;text-underline-offset:4px}
@@ -23,13 +23,11 @@ a{color:inherit}
 
 /* ---------- hero ---------- */
 .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:120px var(--gut) 56px;overflow:hidden;isolation:isolate}
-.hero-gradient{position:absolute;inset:-10%;z-index:-1;
-  background:
-    radial-gradient(circle 38vmax at var(--mx,50%) var(--my,45%),var(--g1) 0%,transparent 60%),
-    radial-gradient(circle 46vmax at calc(var(--mx,50%) + 12%) calc(var(--my,45%) - 12%),var(--g2) 0%,transparent 60%),
-    radial-gradient(circle 34vmax at calc(var(--mx,50%) - 14%) calc(var(--my,45%) + 14%),var(--g3) 0%,transparent 60%),
-    var(--bg);
-  filter:blur(46px) saturate(140%);opacity:.75;transition:opacity .4s}
+.hero-gradient{position:absolute;inset:0;z-index:-1;overflow:hidden;background:var(--bg)}
+.blob{position:absolute;left:0;top:0;width:60vmax;height:60vmax;margin:-30vmax 0 0 -30vmax;border-radius:50%;opacity:.55;will-change:transform;pointer-events:none}
+.b1{background:radial-gradient(circle,var(--g1) 0%,transparent 62%)}
+.b2{background:radial-gradient(circle,var(--g2) 0%,transparent 62%);width:75vmax;height:75vmax;margin:-37.5vmax 0 0 -37.5vmax}
+.b3{background:radial-gradient(circle,var(--g3) 0%,transparent 62%);width:52vmax;height:52vmax;margin:-26vmax 0 0 -26vmax}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to bottom,rgba(10,10,10,.15),rgba(10,10,10,.82) 78%,var(--bg))}
 .hero-kicker{margin-bottom:24px;display:flex;gap:14px;flex-wrap:wrap}
 .pill{display:inline-flex;align-items:center;gap:8px;padding:5px 14px;border:1px solid rgba(255,255,255,.25);border-radius:999px;font-size:12px;letter-spacing:.06em;background:rgba(10,10,10,.45)}
@@ -113,15 +111,8 @@ footer{padding:36px var(--gut);border-top:1px solid var(--line);display:flex;jus
 .reveal[data-split]{opacity:1;transform:none}
 
 /* Solo se reduce lo realmente intrusivo; las microinteracciones siguen activas. */
-@media (prefers-reduced-motion:reduce){
-  .hero-gradient{animation:none}
-}
-@keyframes drift{
-  0%{transform:translate3d(0,0,0)}
-  50%{transform:translate3d(3%,-2%,0)}
-  100%{transform:translate3d(0,0,0)}
-}
-.hero-gradient{animation:drift 14s ease-in-out infinite}
+
+
 
 /* ---------- línea de tiempo ---------- */
 .tl-pager{display:flex;align-items:center;gap:14px}

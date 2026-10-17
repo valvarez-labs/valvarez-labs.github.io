@@ -6,23 +6,43 @@
     try { fn(); } catch (e) { if (window.console) console.warn("[web] fallo en " + name, e); }
   }
 
-  /* Gradiente que sigue al cursor (y al dedo en móvil). */
+  /* Gradiente: tres capas que se desplazan solo con transform (barato para la GPU).
+     Se anima únicamente mientras el hero es visible y la pestaña está activa. */
   function initGradient() {
-    var root = document.documentElement, raf = null, tx = 50, ty = 45;
-    function apply() {
-      raf = null;
-      root.style.setProperty("--mx", tx + "%");
-      root.style.setProperty("--my", ty + "%");
+    var hero = document.querySelector(".hero");
+    var blobs = document.querySelectorAll(".hero-gradient .blob");
+    if (!hero || blobs.length < 3) return;
+    var W = window.innerWidth, H = window.innerHeight;
+    var target = { x: W * 0.5, y: H * 0.45 };
+    var pos = [{ x: W * 0.5, y: H * 0.45 }, { x: W * 0.62, y: H * 0.33 }, { x: W * 0.36, y: H * 0.6 }];
+    var offs = [[0, 0], [0.12, -0.12], [-0.14, 0.14]], lag = [0.08, 0.05, 0.035];
+    var running = false, visible = true, t0 = performance.now();
+    function frame(now) {
+      if (!running) return;
+      var drift = Math.sin((now - t0) / 4000);
+      for (var i = 0; i < 3; i++) {
+        var tx = target.x + offs[i][0] * W + drift * 24 * (i + 1);
+        var ty = target.y + offs[i][1] * H + Math.cos((now - t0) / 5000) * 18 * (i + 1);
+        pos[i].x += (tx - pos[i].x) * lag[i];
+        pos[i].y += (ty - pos[i].y) * lag[i];
+        blobs[i].style.transform = "translate3d(" + pos[i].x.toFixed(1) + "px," + pos[i].y.toFixed(1) + "px,0)";
+      }
+      requestAnimationFrame(frame);
     }
-    function move(x, y) {
-      tx = (x / window.innerWidth) * 100;
-      ty = (y / window.innerHeight) * 100;
-      if (!raf) raf = requestAnimationFrame(apply);
+    function sync() {
+      var should = visible && !document.hidden;
+      if (should && !running) { running = true; requestAnimationFrame(frame); }
+      else if (!should) running = false;
     }
+    function move(x, y) { target.x = x; target.y = y; }
     document.addEventListener("mousemove", function (e) { move(e.clientX, e.clientY); }, { passive: true });
-    document.addEventListener("touchmove", function (e) {
-      if (e.touches[0]) move(e.touches[0].clientX, e.touches[0].clientY);
-    }, { passive: true });
+    document.addEventListener("touchmove", function (e) { if (e.touches[0]) move(e.touches[0].clientX, e.touches[0].clientY); }, { passive: true });
+    window.addEventListener("resize", function () { W = window.innerWidth; H = window.innerHeight; }, { passive: true });
+    document.addEventListener("visibilitychange", sync);
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (en) { visible = en[0].isIntersecting; sync(); }, { threshold: 0 }).observe(hero);
+    }
+    sync();
   }
 
   /* Filas desplegables (experiencia, formación, portfolio). Acordeón accesible. */
