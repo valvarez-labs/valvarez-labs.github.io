@@ -15,7 +15,7 @@
     var W = window.innerWidth, H = window.innerHeight;
     var target = { x: W * 0.5, y: H * 0.45 };
     var pos = [{ x: W * 0.5, y: H * 0.45 }, { x: W * 0.62, y: H * 0.33 }, { x: W * 0.36, y: H * 0.6 }];
-    var offs = [[0, 0], [0.12, -0.12], [-0.14, 0.14]], lag = [0.08, 0.05, 0.035];
+    var offs = [[0, 0], [0.12, -0.12], [-0.14, 0.14]], lag = [0.28, 0.2, 0.15];
     var running = false, visible = true, t0 = performance.now();
     function frame(now) {
       if (!running) return;
