@@ -168,3 +168,20 @@ footer{padding:36px var(--gut);border-top:1px solid var(--line);display:flex;jus
 :root[data-theme="light"] .theme-img.for-dark{display:none}
 .foot-logo img{height:60px;width:auto;opacity:.95}
 footer{align-items:center}
+/* ---------- enlaces legales y página legal ---------- */
+.legal-links{display:flex;gap:18px;flex-wrap:wrap}
+.legal-links a,footer a{text-underline-offset:4px}
+.legal-links a:hover,footer a:hover{color:var(--accent-ink)}
+.legal{padding-top:110px;padding-bottom:40px;max-width:820px}
+.legal .label a{text-decoration:none}
+.legal-sec{padding:34px 0;border-bottom:1px solid var(--line)}
+.legal-sec:last-child{border-bottom:0}
+.legal [data-lang]{display:none}
+html[lang="es"] .legal [data-lang="es"],html[lang="ca"] .legal [data-lang="ca"],html[lang="en"] .legal [data-lang="en"]{display:block}
+.legal h1{font-size:clamp(28px,5vw,44px);letter-spacing:-.03em;line-height:1.1;margin-bottom:6px}
+.legal h2{font-size:17px;margin:26px 0 8px;letter-spacing:-.01em}
+.legal p,.legal li{color:var(--ink2);max-width:70ch;margin-bottom:10px}
+.legal ul{margin:0 0 12px 22px}
+.legal a{color:var(--accent-ink);text-underline-offset:4px}
+.legal code{background:var(--bg-2);border:1px solid var(--line);border-radius:6px;padding:1px 7px;font-size:13px}
+.legal .upd{color:var(--mute);font-size:12px;letter-spacing:.06em}

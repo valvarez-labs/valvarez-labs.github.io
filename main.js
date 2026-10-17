@@ -41,6 +41,7 @@
       "pf.smx.small": "Equipos, sistemas, redes, servicios y web",
       "pf.smx.body": "Primer y segundo curso, más el proyecto final. <a href=\"" + L + "/tree/main/SMX\">Ver SMX →</a>",
       "sec.contact": "Contacto", "contact.p": "Escríbeme y te respondo.", "footer.role": "Técnico informático · ASIX",
+      "footer.legal": "Aviso legal", "footer.privacy": "Privacidad", "footer.cookies": "Cookies", "legal.back": "← Volver al inicio", "legal.title": "Aviso legal, privacidad y cookies · Valvarez",
       "theme.toLight": "Cambiar a tema claro", "theme.toDark": "Cambiar a tema oscuro", "lang.label": "Idioma",
       "months": ["ENE","FEB","MAR","ABR","MAY","JUN","JUL","AGO","SEP","OCT","NOV","DIC"]
     },
@@ -80,6 +81,7 @@
       "pf.smx.small": "Equips, sistemes, xarxes, serveis i web",
       "pf.smx.body": "Primer i segon curs, més el projecte final. <a href=\"" + L + "/tree/main/SMX\">Veure SMX →</a>",
       "sec.contact": "Contacte", "contact.p": "Escriu-me i et responc.", "footer.role": "Tècnic informàtic · ASIX",
+      "footer.legal": "Avís legal", "footer.privacy": "Privacitat", "footer.cookies": "Cookies", "legal.back": "← Tornar a l'inici", "legal.title": "Avís legal, privacitat i cookies · Valvarez",
       "theme.toLight": "Canviar a tema clar", "theme.toDark": "Canviar a tema fosc", "lang.label": "Idioma",
       "months": ["GEN","FEB","MAR","ABR","MAIG","JUNY","JUL","AGO","SET","OCT","NOV","DES"]
     },
@@ -119,6 +121,7 @@
       "pf.smx.small": "Hardware, systems, networks, services and web",
       "pf.smx.body": "First and second year, plus the final project. <a href=\"" + L + "/tree/main/SMX\">View SMX →</a>",
       "sec.contact": "Contact", "contact.p": "Write to me and I'll reply.", "footer.role": "IT technician · ASIX",
+      "footer.legal": "Legal notice", "footer.privacy": "Privacy", "footer.cookies": "Cookies", "legal.back": "← Back to home", "legal.title": "Legal notice, privacy and cookies · Valvarez",
       "theme.toLight": "Switch to light theme", "theme.toDark": "Switch to dark theme", "lang.label": "Language",
       "months": ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"]
     }
@@ -138,7 +141,7 @@
       var start = parseInt(box.getAttribute("data-start") || "0", 10), months = T("months");
       Array.prototype.forEach.call(box.children, function (s, i) { s.textContent = months[(start + i) % 12]; });
     });
-    document.title = T("meta.title");
+    document.title = document.body.getAttribute("data-page") === "legal" ? T("legal.title") : T("meta.title");
     var md = document.querySelector('meta[name="description"]'); if (md) md.setAttribute("content", T("meta.desc"));
     var sel = document.getElementById("lang");
     if (sel) { sel.value = lang; sel.setAttribute("aria-label", T("lang.label")); var sr = document.querySelector(".lang-wrap .sr"); if (sr) sr.textContent = T("lang.label"); }
