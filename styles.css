@@ -185,3 +185,20 @@ html[lang="es"] .legal [data-lang="es"],html[lang="ca"] .legal [data-lang="ca"],
 .legal a{color:var(--accent-ink);text-underline-offset:4px}
 .legal code{background:var(--bg-2);border:1px solid var(--line);border-radius:6px;padding:1px 7px;font-size:13px}
 .legal .upd{color:var(--mute);font-size:12px;letter-spacing:.06em}
+/* ---------- experiencia en línea vertical ---------- */
+.xp-title{font-size:clamp(28px,4.4vw,52px);letter-spacing:-.04em;line-height:1.05;margin-bottom:14px}
+.xp-lead{color:var(--mute);max-width:56ch;margin-bottom:clamp(30px,5vw,56px)}
+.xp{list-style:none;position:relative;padding-left:34px;display:grid;gap:clamp(28px,4vw,46px)}
+.xp::before{content:"";position:absolute;left:7px;top:8px;bottom:0;width:2px;background:var(--line)}
+.xp-item{position:relative}
+.xp-dot{position:absolute;left:-34px;top:7px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:2px solid var(--accent-ink)}
+.xp-item.current .xp-dot{background:var(--accent);box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 22%,transparent)}
+.xp-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px 24px;flex-wrap:wrap}
+.xp-head h3{font-size:clamp(18px,2vw,24px);letter-spacing:-.02em}
+.xp-date{font-size:12px;color:var(--mute);letter-spacing:.05em}
+.xp-co{margin:6px 0 10px;font-size:13px}
+.xp-co a{color:var(--accent-ink);font-weight:700;text-underline-offset:4px}
+.xp-kind,.xp-place{margin-left:10px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.xp-desc{color:var(--ink2);max-width:66ch;margin-bottom:14px}
+.chips{list-style:none;display:flex;gap:8px;flex-wrap:wrap}
+.chips li{padding:4px 13px;border:1px solid var(--line);border-radius:999px;background:var(--bg-2);font-size:12px;color:var(--ink2)}
