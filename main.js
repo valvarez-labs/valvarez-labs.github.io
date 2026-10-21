@@ -49,6 +49,9 @@
       "pf.smx.body": "Primer y segundo curso, más el proyecto final. <a href=\"" + L + "/tree/main/SMX\">Ver SMX →</a>",
       "sec.contact": "Contacto", "contact.p": "Escríbeme y te respondo.", "footer.role": "Técnico informático · ASIX",
       "footer.legal": "Aviso legal", "footer.privacy": "Privacidad", "footer.cookies": "Cookies", "legal.back": "← Volver al inicio", "legal.title": "Aviso legal, privacidad y cookies · Valvarez",
+      "skills.title": "Aptitudes de formación · Valvarez", "btn.skills": "Ver aptitudes de formación →", "skills.back": "← Volver a la web", "skills.h1": "Aptitudes de formación", "skills.lead": "Lo que he aprendido y practicado en los ciclos SMX y ASIX, tal y como lo tengo recogido en mi LinkedIn.", "skills.smx": "Sistemas Microinformáticos y Redes", "skills.asix": "Administración de Sistemas Informáticos en Red", "skills.soon": "Próximamente: iré añadiendo las aptitudes de ASIX a medida que avance el curso.",
+      "g.os": "Sistemas operativos", "g.net": "Redes", "g.srv": "Servicios", "g.virt": "Virtualización y hardware", "g.dev": "Programación y web", "g.db": "Bases de datos", "k.db": "Bases de datos", "k.reldb": "Base de datos relacional",
+      "k.networks": "Redes informáticas", "k.subnets": "Subredes", "k.netsec": "Seguridad de redes", "k.firewalls": "Cortafuegos", "k.dns": "Servidor DNS", "k.dhcp": "Servidor DHCP", "k.web": "Servidores web", "k.mail": "Servidor de correo", "k.vm": "Gestión de Máquinas Virtuales", "k.hw": "Hardware",
       "theme.toLight": "Cambiar a tema claro", "theme.toDark": "Cambiar a tema oscuro", "lang.label": "Idioma",
       "months": ["ENE","FEB","MAR","ABR","MAY","JUN","JUL","AGO","SEP","OCT","NOV","DIC"]
     },
@@ -96,6 +99,9 @@
       "pf.smx.body": "Primer i segon curs, més el projecte final. <a href=\"" + L + "/tree/main/SMX\">Veure SMX →</a>",
       "sec.contact": "Contacte", "contact.p": "Escriu-me i et responc.", "footer.role": "Tècnic informàtic · ASIX",
       "footer.legal": "Avís legal", "footer.privacy": "Privacitat", "footer.cookies": "Cookies", "legal.back": "← Tornar a l'inici", "legal.title": "Avís legal, privacitat i cookies · Valvarez",
+      "skills.title": "Aptituds de formació · Valvarez", "btn.skills": "Veure aptituds de formació →", "skills.back": "← Tornar a la web", "skills.h1": "Aptituds de formació", "skills.lead": "El que he après i practicat als cicles SMX i ASIX, tal com ho tinc recollit al meu LinkedIn.", "skills.smx": "Sistemes Microinformàtics i Xarxes", "skills.asix": "Administració de Sistemes Informàtics en Xarxa", "skills.soon": "Pròximament: aniré afegint les aptituds d'ASIX a mesura que avanci el curs.",
+      "g.os": "Sistemes operatius", "g.net": "Xarxes", "g.srv": "Serveis", "g.virt": "Virtualització i maquinari", "g.dev": "Programació i web", "g.db": "Bases de dades", "k.db": "Bases de dades", "k.reldb": "Base de dades relacional",
+      "k.networks": "Xarxes informàtiques", "k.subnets": "Subxarxes", "k.netsec": "Seguretat de xarxes", "k.firewalls": "Tallafocs", "k.dns": "Servidor DNS", "k.dhcp": "Servidor DHCP", "k.web": "Servidors web", "k.mail": "Servidor de correu", "k.vm": "Gestió de màquines virtuals", "k.hw": "Maquinari",
       "theme.toLight": "Canviar a tema clar", "theme.toDark": "Canviar a tema fosc", "lang.label": "Idioma",
       "months": ["GEN","FEB","MAR","ABR","MAIG","JUNY","JUL","AGO","SET","OCT","NOV","DES"]
     },
@@ -143,6 +149,9 @@
       "pf.smx.body": "First and second year, plus the final project. <a href=\"" + L + "/tree/main/SMX\">View SMX →</a>",
       "sec.contact": "Contact", "contact.p": "Write to me and I'll reply.", "footer.role": "IT technician · ASIX",
       "footer.legal": "Legal notice", "footer.privacy": "Privacy", "footer.cookies": "Cookies", "legal.back": "← Back to home", "legal.title": "Legal notice, privacy and cookies · Valvarez",
+      "skills.title": "Training skills · Valvarez", "btn.skills": "View training skills →", "skills.back": "← Back to the site", "skills.h1": "Training skills", "skills.lead": "What I have learned and practised in the SMX and ASIX programmes, as listed on my LinkedIn.", "skills.smx": "Microcomputer Systems and Networks", "skills.asix": "Network Systems Administration", "skills.soon": "Coming soon: I will add the ASIX skills as the course progresses.",
+      "g.os": "Operating systems", "g.net": "Networking", "g.srv": "Services", "g.virt": "Virtualization and hardware", "g.dev": "Programming and web", "g.db": "Databases", "k.db": "Databases", "k.reldb": "Relational database",
+      "k.networks": "Computer networks", "k.subnets": "Subnets", "k.netsec": "Network security", "k.firewalls": "Firewalls", "k.dns": "DNS server", "k.dhcp": "DHCP server", "k.web": "Web servers", "k.mail": "Mail server", "k.vm": "Virtual machine management", "k.hw": "Hardware",
       "theme.toLight": "Switch to light theme", "theme.toDark": "Switch to dark theme", "lang.label": "Language",
       "months": ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"]
     }
@@ -162,7 +171,8 @@
       var start = parseInt(box.getAttribute("data-start") || "0", 10), months = T("months");
       Array.prototype.forEach.call(box.children, function (s, i) { s.textContent = months[(start + i) % 12]; });
     });
-    document.title = document.body.getAttribute("data-page") === "legal" ? T("legal.title") : T("meta.title");
+    var pg = document.body.getAttribute("data-page");
+    document.title = pg === "legal" ? T("legal.title") : pg === "skills" ? T("skills.title") : T("meta.title");
     var md = document.querySelector('meta[name="description"]'); if (md) md.setAttribute("content", T("meta.desc"));
     var sel = document.getElementById("lang");
     if (sel) { sel.value = lang; sel.setAttribute("aria-label", T("lang.label")); var sr = document.querySelector(".lang-wrap .sr"); if (sr) sr.textContent = T("lang.label"); }

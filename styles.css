@@ -222,3 +222,12 @@ html[lang="es"] .legal [data-lang="es"],html[lang="ca"] .legal [data-lang="ca"],
 .stack-row li+li::before{content:"/";color:var(--accent-ink);margin:0 .6em;font-weight:400}
 .stack-row li:hover{color:var(--accent-ink)}
 @media (max-width:700px){.stack-row{grid-template-columns:1fr}}
+/* ---------- página de aptitudes ---------- */
+.skills-cta{margin-top:clamp(28px,4vw,48px)}
+.skills-page{padding-top:110px;padding-bottom:40px}
+.skills-page .label a{text-decoration:none}
+.skills-title{font-size:clamp(32px,6vw,68px);letter-spacing:-.04em;line-height:1.05;margin:18px 0 14px}
+.skills-lead{color:var(--mute);max-width:60ch;margin-bottom:clamp(28px,5vw,56px)}
+.skills-sec{margin-bottom:clamp(40px,7vw,80px)}
+.skills-sec .sec-head{align-items:center;margin-bottom:18px}
+.skills-soon{color:var(--mute);border:1px dashed var(--line);border-radius:14px;padding:22px 24px;max-width:60ch}
