@@ -214,3 +214,11 @@ html[lang="es"] .legal [data-lang="es"],html[lang="ca"] .legal [data-lang="ca"],
 .card-fast dt{color:var(--mute);flex:none}
 .card-fast dd{font-weight:700;text-align:right}
 @media (max-width:860px){.about{grid-template-columns:1fr}.card-fast{position:static}}
+/* ---------- con qué trabajo ---------- */
+.stack-row{display:grid;grid-template-columns:minmax(150px,.55fr) 3fr;gap:12px 28px;align-items:baseline;padding:26px 0;border-top:1px solid var(--line)}
+.stack-row:last-child{border-bottom:1px solid var(--line)}
+.stack-row ul{list-style:none;display:flex;flex-wrap:wrap;gap:4px 0}
+.stack-row li{font-size:clamp(19px,2.7vw,32px);font-weight:700;letter-spacing:-.03em;line-height:1.25;transition:color .2s}
+.stack-row li+li::before{content:"/";color:var(--accent-ink);margin:0 .6em;font-weight:400}
+.stack-row li:hover{color:var(--accent-ink)}
+@media (max-width:700px){.stack-row{grid-template-columns:1fr}}
