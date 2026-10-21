@@ -49,7 +49,7 @@
       "pf.smx.body": "Primer y segundo curso, más el proyecto final. <a href=\"" + L + "/tree/main/SMX\">Ver SMX →</a>",
       "sec.contact": "Contacto", "contact.p": "Escríbeme y te respondo.", "footer.role": "Técnico informático · ASIX",
       "footer.legal": "Aviso legal", "footer.privacy": "Privacidad", "footer.cookies": "Cookies", "legal.back": "← Volver al inicio", "legal.title": "Aviso legal, privacidad y cookies · Valvarez",
-      "skills.title": "Aptitudes de formación · Valvarez", "btn.skills": "Ver aptitudes de formación →", "skills.back": "← Volver a la web", "skills.h1": "Aptitudes de formación", "skills.lead": "Lo que he aprendido y practicado en los ciclos SMX y ASIX, tal y como lo tengo recogido en mi LinkedIn.", "skills.smx": "Sistemas Microinformáticos y Redes", "skills.asix": "Administración de Sistemas Informáticos en Red", "skills.soon": "Próximamente: iré añadiendo las aptitudes de ASIX a medida que avance el curso.",
+      "skills.title": "Aptitudes de formación · Valvarez", "btn.skills": "Ver aptitudes de formación →", "menu.label": "Menú", "skills.back": "← Volver a la web", "skills.h1": "Aptitudes de formación", "skills.lead": "Lo que he aprendido y practicado en los ciclos SMX y ASIX, tal y como lo tengo recogido en mi LinkedIn.", "skills.smx": "Sistemas Microinformáticos y Redes", "skills.asix": "Administración de Sistemas Informáticos en Red", "skills.soon": "Próximamente: iré añadiendo las aptitudes de ASIX a medida que avance el curso.",
       "g.os": "Sistemas operativos", "g.net": "Redes", "g.srv": "Servicios", "g.virt": "Virtualización y hardware", "g.dev": "Programación y web", "g.db": "Bases de datos", "k.db": "Bases de datos", "k.reldb": "Base de datos relacional",
       "k.networks": "Redes informáticas", "k.subnets": "Subredes", "k.netsec": "Seguridad de redes", "k.firewalls": "Cortafuegos", "k.dns": "Servidor DNS", "k.dhcp": "Servidor DHCP", "k.web": "Servidores web", "k.mail": "Servidor de correo", "k.vm": "Gestión de Máquinas Virtuales", "k.hw": "Hardware",
       "theme.toLight": "Cambiar a tema claro", "theme.toDark": "Cambiar a tema oscuro", "lang.label": "Idioma",
@@ -99,7 +99,7 @@
       "pf.smx.body": "Primer i segon curs, més el projecte final. <a href=\"" + L + "/tree/main/SMX\">Veure SMX →</a>",
       "sec.contact": "Contacte", "contact.p": "Escriu-me i et responc.", "footer.role": "Tècnic informàtic · ASIX",
       "footer.legal": "Avís legal", "footer.privacy": "Privacitat", "footer.cookies": "Cookies", "legal.back": "← Tornar a l'inici", "legal.title": "Avís legal, privacitat i cookies · Valvarez",
-      "skills.title": "Aptituds de formació · Valvarez", "btn.skills": "Veure aptituds de formació →", "skills.back": "← Tornar a la web", "skills.h1": "Aptituds de formació", "skills.lead": "El que he après i practicat als cicles SMX i ASIX, tal com ho tinc recollit al meu LinkedIn.", "skills.smx": "Sistemes Microinformàtics i Xarxes", "skills.asix": "Administració de Sistemes Informàtics en Xarxa", "skills.soon": "Pròximament: aniré afegint les aptituds d'ASIX a mesura que avanci el curs.",
+      "skills.title": "Aptituds de formació · Valvarez", "btn.skills": "Veure aptituds de formació →", "menu.label": "Menú", "skills.back": "← Tornar a la web", "skills.h1": "Aptituds de formació", "skills.lead": "El que he après i practicat als cicles SMX i ASIX, tal com ho tinc recollit al meu LinkedIn.", "skills.smx": "Sistemes Microinformàtics i Xarxes", "skills.asix": "Administració de Sistemes Informàtics en Xarxa", "skills.soon": "Pròximament: aniré afegint les aptituds d'ASIX a mesura que avanci el curs.",
       "g.os": "Sistemes operatius", "g.net": "Xarxes", "g.srv": "Serveis", "g.virt": "Virtualització i maquinari", "g.dev": "Programació i web", "g.db": "Bases de dades", "k.db": "Bases de dades", "k.reldb": "Base de dades relacional",
       "k.networks": "Xarxes informàtiques", "k.subnets": "Subxarxes", "k.netsec": "Seguretat de xarxes", "k.firewalls": "Tallafocs", "k.dns": "Servidor DNS", "k.dhcp": "Servidor DHCP", "k.web": "Servidors web", "k.mail": "Servidor de correu", "k.vm": "Gestió de màquines virtuals", "k.hw": "Maquinari",
       "theme.toLight": "Canviar a tema clar", "theme.toDark": "Canviar a tema fosc", "lang.label": "Idioma",
@@ -149,7 +149,7 @@
       "pf.smx.body": "First and second year, plus the final project. <a href=\"" + L + "/tree/main/SMX\">View SMX →</a>",
       "sec.contact": "Contact", "contact.p": "Write to me and I'll reply.", "footer.role": "IT technician · ASIX",
       "footer.legal": "Legal notice", "footer.privacy": "Privacy", "footer.cookies": "Cookies", "legal.back": "← Back to home", "legal.title": "Legal notice, privacy and cookies · Valvarez",
-      "skills.title": "Training skills · Valvarez", "btn.skills": "View training skills →", "skills.back": "← Back to the site", "skills.h1": "Training skills", "skills.lead": "What I have learned and practised in the SMX and ASIX programmes, as listed on my LinkedIn.", "skills.smx": "Microcomputer Systems and Networks", "skills.asix": "Network Systems Administration", "skills.soon": "Coming soon: I will add the ASIX skills as the course progresses.",
+      "skills.title": "Training skills · Valvarez", "btn.skills": "View training skills →", "menu.label": "Menu", "skills.back": "← Back to the site", "skills.h1": "Training skills", "skills.lead": "What I have learned and practised in the SMX and ASIX programmes, as listed on my LinkedIn.", "skills.smx": "Microcomputer Systems and Networks", "skills.asix": "Network Systems Administration", "skills.soon": "Coming soon: I will add the ASIX skills as the course progresses.",
       "g.os": "Operating systems", "g.net": "Networking", "g.srv": "Services", "g.virt": "Virtualization and hardware", "g.dev": "Programming and web", "g.db": "Databases", "k.db": "Databases", "k.reldb": "Relational database",
       "k.networks": "Computer networks", "k.subnets": "Subnets", "k.netsec": "Network security", "k.firewalls": "Firewalls", "k.dns": "DNS server", "k.dhcp": "DHCP server", "k.web": "Web servers", "k.mail": "Mail server", "k.vm": "Virtual machine management", "k.hw": "Hardware",
       "theme.toLight": "Switch to light theme", "theme.toDark": "Switch to dark theme", "lang.label": "Language",
@@ -324,6 +324,45 @@
     paint();
   }
 
+  /* Menú desplegable con todas las secciones (mejora progresiva: sin JS queda el nav corto). */
+  function initMenu() {
+    var right = document.querySelector(".bar-right");
+    if (!right) return;
+    var page = document.body.getAttribute("data-page");
+    var base = page ? "index.html" : "";
+    var items = [
+      ["#perfil", "sec.profile", "Perfil", "01"], ["#experiencia", "sec.exp", "Experiencia", "02"],
+      ["#formacion", "sec.edu", "Formación", "03"], ["#timeline", "sec.timeline", "Línea de tiempo", "04"],
+      ["#stack", "sec.stack", "Con qué trabajo", "05"], ["#areas", "sec.areas", "Áreas", "06"],
+      ["#portfolio", "nav.portfolio", "Portfolio", "07"], ["#contacto", "sec.contact", "Contacto", "08"],
+      null,
+      ["aptitudes.html", "skills.h1", "Aptitudes de formación", "→"],
+      ["legal.html#aviso", "footer.legal", "Aviso legal", "·"], ["legal.html#privacidad", "footer.privacy", "Privacidad", "·"],
+      ["legal.html#cookies", "footer.cookies", "Cookies", "·"]
+    ];
+    var btn = document.createElement("button");
+    btn.type = "button"; btn.className = "menu-btn";
+    btn.setAttribute("aria-expanded", "false"); btn.setAttribute("aria-controls", "site-menu");
+    btn.innerHTML = '<span data-i18n="menu.label">Menú</span> <i aria-hidden="true">☰</i>';
+    var panel = document.createElement("nav");
+    panel.id = "site-menu"; panel.className = "menu-panel"; panel.hidden = true; panel.setAttribute("aria-label", "Menú");
+    items.forEach(function (it) {
+      if (!it) { var sep = document.createElement("div"); sep.className = "m-sep"; panel.appendChild(sep); return; }
+      var a = document.createElement("a");
+      a.href = it[0].charAt(0) === "#" ? base + it[0] : it[0];
+      a.innerHTML = '<span class="m-n">' + it[3] + '</span><span data-i18n="' + it[1] + '">' + it[2] + '</span>';
+      panel.appendChild(a);
+    });
+    var lang = right.querySelector(".lang-wrap");
+    right.insertBefore(btn, lang || null);
+    document.body.appendChild(panel);
+    function set(open) { panel.hidden = !open; btn.setAttribute("aria-expanded", String(open)); }
+    btn.addEventListener("click", function (e) { e.stopPropagation(); set(panel.hidden); });
+    panel.addEventListener("click", function (e) { if (e.target.closest("a")) set(false); });
+    document.addEventListener("click", function (e) { if (!panel.hidden && !panel.contains(e.target)) set(false); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !panel.hidden) { set(false); btn.focus(); } });
+  }
+
   function initYear() {
     var y = document.getElementById("year");
     if (y && !y.textContent) y.textContent = new Date().getFullYear();
@@ -336,6 +375,7 @@
     safe(initCount, "count");
     safe(initTimeline, "timeline");
     safe(initTheme, "theme");
+    safe(initMenu, "menu");
     safe(initLang, "lang");
     safe(initYear, "year");
   }
