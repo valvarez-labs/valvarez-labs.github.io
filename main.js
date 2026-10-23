@@ -194,25 +194,29 @@
     try { fn(); } catch (e) { if (window.console) console.warn("[web] fallo en " + name, e); }
   }
 
-  /* Gradiente: tres capas que se desplazan solo con transform (barato para la GPU).
-     Se anima únicamente mientras el hero es visible y la pestaña está activa. */
+  /* Gradiente: tres capas que siguen al cursor con transform. Si el ratón está quieto
+     (o en móvil) vagan solas con un movimiento lento. Solo se anima con el hero visible. */
   function initGradient() {
     var hero = document.querySelector(".hero");
     var blobs = document.querySelectorAll(".hero-gradient .blob");
     if (!hero || blobs.length < 3) return;
     var W = window.innerWidth, H = window.innerHeight;
-    var target = { x: W * 0.5, y: H * 0.45 };
+    var mouse = { x: -1, y: -1, t: 0 };
     var pos = [{ x: W * 0.5, y: H * 0.45 }, { x: W * 0.62, y: H * 0.33 }, { x: W * 0.36, y: H * 0.6 }];
     var offs = [[0, 0], [0.12, -0.12], [-0.14, 0.14]], lag = [0.28, 0.2, 0.15];
     var running = false, visible = true, t0 = performance.now();
     function frame(now) {
       if (!running) return;
-      var drift = Math.sin((now - t0) / 4000);
+      var idle = mouse.x < 0 || now - mouse.t > 2200;
+      var tx0, ty0, k = idle ? 0.22 : 1;
+      if (idle) {
+        tx0 = W * (0.5 + 0.26 * Math.sin((now - t0) / 4200));
+        ty0 = H * (0.42 + 0.2 * Math.cos((now - t0) / 5300));
+      } else { tx0 = mouse.x; ty0 = mouse.y; }
       for (var i = 0; i < 3; i++) {
-        var tx = target.x + offs[i][0] * W + drift * 24 * (i + 1);
-        var ty = target.y + offs[i][1] * H + Math.cos((now - t0) / 5000) * 18 * (i + 1);
-        pos[i].x += (tx - pos[i].x) * lag[i];
-        pos[i].y += (ty - pos[i].y) * lag[i];
+        var tx = tx0 + offs[i][0] * W, ty = ty0 + offs[i][1] * H;
+        pos[i].x += (tx - pos[i].x) * lag[i] * k;
+        pos[i].y += (ty - pos[i].y) * lag[i] * k;
         blobs[i].style.transform = "translate3d(" + pos[i].x.toFixed(1) + "px," + pos[i].y.toFixed(1) + "px,0)";
       }
       requestAnimationFrame(frame);
@@ -222,9 +226,8 @@
       if (should && !running) { running = true; requestAnimationFrame(frame); }
       else if (!should) running = false;
     }
-    function move(x, y) { target.x = x; target.y = y; }
-    document.addEventListener("mousemove", function (e) { move(e.clientX, e.clientY); }, { passive: true });
-    document.addEventListener("touchmove", function (e) { if (e.touches[0]) move(e.touches[0].clientX, e.touches[0].clientY); }, { passive: true });
+    document.addEventListener("mousemove", function (e) { mouse.x = e.clientX; mouse.y = e.clientY; mouse.t = performance.now(); }, { passive: true });
+    document.addEventListener("touchmove", function (e) { if (e.touches[0]) { mouse.x = e.touches[0].clientX; mouse.y = e.touches[0].clientY; mouse.t = performance.now(); } }, { passive: true });
     window.addEventListener("resize", function () { W = window.innerWidth; H = window.innerHeight; }, { passive: true });
     document.addEventListener("visibilitychange", sync);
     if ("IntersectionObserver" in window) {
@@ -232,7 +235,6 @@
     }
     sync();
   }
-
   /* Filas desplegables (experiencia, formación, portfolio). Acordeón accesible. */
   function initRows() {
     var rows = document.querySelectorAll(".row");
@@ -261,6 +263,7 @@
       });
     }, { threshold: 0.05, rootMargin: "0px 0px -4% 0px" });
     els.forEach(function (el) { io.observe(el); });
+    els.forEach(function (el) { var p = el.parentElement; var i = p ? Array.prototype.indexOf.call(p.children, el) : 0; if (i > 0 && i < 6) el.style.transitionDelay = (i * 70) + "ms"; });
     setTimeout(showAll, 6000);
   }
 
@@ -383,6 +386,46 @@
     setTimeout(close, 4500);
   }
 
+  /* Progreso de lectura, barra de navegación sólida al hacer scroll y sección actual resaltada. */
+  function initScrollUI() {
+    var bar = document.querySelector(".bar");
+    var prog = document.querySelector(".progress span");
+    var ticking = false;
+    function update() {
+      ticking = false;
+      var y = window.scrollY || window.pageYOffset;
+      if (bar) bar.classList.toggle("is-solid", y > 24);
+      if (prog) {
+        var h = document.documentElement.scrollHeight - window.innerHeight;
+        prog.style.transform = "scaleX(" + (h > 0 ? Math.min(1, y / h) : 0) + ")";
+      }
+    }
+    window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+
+    if (!("IntersectionObserver" in window)) return;
+    var map = {};
+    document.querySelectorAll('.bar nav a[href^="#"], #site-menu a[href^="#"]').forEach(function (a) {
+      var id = a.getAttribute("href").slice(1);
+      (map[id] = map[id] || []).push(a);
+    });
+    var trail = { timeline: "trayectoria" };
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        document.querySelectorAll(".is-current").forEach(function (a) { a.classList.remove("is-current"); });
+        [en.target.id, trail[en.target.id]].forEach(function (id) {
+          (map[id] || []).forEach(function (a) { a.classList.add("is-current"); });
+        });
+      });
+    }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+    Object.keys(map).concat(["timeline"]).forEach(function (id) {
+      var sec = document.getElementById(id);
+      if (sec) io.observe(sec);
+    });
+  }
+
   function initYear() {
     var y = document.getElementById("year");
     if (y && !y.textContent) y.textContent = new Date().getFullYear();
@@ -397,6 +440,7 @@
     safe(initTimeline, "timeline");
     safe(initTheme, "theme");
     safe(initMenu, "menu");
+    safe(initScrollUI, "scrollui");
     safe(initLang, "lang");
     safe(initYear, "year");
   }
