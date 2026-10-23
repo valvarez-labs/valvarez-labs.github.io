@@ -375,7 +375,7 @@
     function close() {
       if (closed) return; closed = true;
       s.classList.add("is-done");
-      setTimeout(function () { if (s.parentNode) s.parentNode.removeChild(s); }, 800);
+      setTimeout(function () { if (s.parentNode) s.parentNode.removeChild(s); }, 1100);
     }
     function ready() {
       var elapsed = (window.performance && performance.now) ? performance.now() - start : MIN;
