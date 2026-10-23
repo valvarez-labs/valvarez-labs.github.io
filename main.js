@@ -430,38 +430,53 @@
     });
   }
 
-  /* Capturas del proyecto: índice numerado; la barra de la fila activa avanza sola y pasa a la siguiente. */
+  /* Capturas del proyecto: índice numerado con avance automático.
+     El tiempo lo lleva JS (no una animación CSS): solo se detiene si la sección no se ve o la pestaña está oculta,
+     nunca por tener el ratón encima, así que no puede quedarse a medias. */
   function initShots() {
     var steps = document.querySelectorAll(".proj-step");
     var shots = document.querySelectorAll(".shot-view .shot");
     var host = document.querySelector(".project");
     var count = document.querySelector(".shot-count");
     if (!steps.length || steps.length !== shots.length || !host) return;
-    var cur = 0, visible = false, hover = false;
+    var DURATION = 5200, cur = 0, elapsed = 0, last = 0, visible = false, raf = 0;
     function pad(n) { return (n < 10 ? "0" : "") + n; }
-    function sync() { host.classList.toggle("is-paused", !visible || hover); }
-    function show(i) {
-      cur = i;
+    function paint() {
       steps.forEach(function (s, k) {
-        s.classList.remove("is-active");
-        s.setAttribute("aria-selected", "false");
+        var f = s.querySelector(".step-fill");
+        if (f) f.style.transform = "scaleX(" + (k === cur ? Math.min(1, elapsed / DURATION).toFixed(4) : 0) + ")";
       });
-      void host.offsetWidth; /* reinicia la animación de la barra */
-      steps[i].classList.add("is-active");
-      steps[i].setAttribute("aria-selected", "true");
+    }
+    function show(i) {
+      cur = i; elapsed = 0;
+      steps.forEach(function (s, k) {
+        s.classList.toggle("is-active", k === i);
+        s.setAttribute("aria-selected", String(k === i));
+      });
       shots.forEach(function (s, k) { s.classList.toggle("is-on", k === i); });
       if (count) count.textContent = pad(i + 1) + " / " + pad(steps.length);
+      paint();
     }
-    steps.forEach(function (s, k) {
-      s.addEventListener("click", function () { show(k); });
-      var bar = s.querySelector(".step-fill");
-      if (bar) bar.addEventListener("animationend", function () { if (cur === k) show((k + 1) % steps.length); });
-    });
-    host.addEventListener("mouseenter", function () { hover = true; sync(); });
-    host.addEventListener("mouseleave", function () { hover = false; sync(); });
+    function tick(now) {
+      raf = 0;
+      if (!visible || document.hidden) return;
+      var dt = Math.min(now - last, 250); /* evita saltos tras una pausa */
+      last = now;
+      elapsed += dt;
+      if (elapsed >= DURATION) show((cur + 1) % steps.length); else paint();
+      raf = requestAnimationFrame(tick);
+    }
+    function run() {
+      if (raf || !visible || document.hidden) return;
+      last = performance.now();
+      raf = requestAnimationFrame(tick);
+    }
+    steps.forEach(function (s, k) { s.addEventListener("click", function () { show(k); run(); }); });
+    document.addEventListener("visibilitychange", run);
     if ("IntersectionObserver" in window) {
-      new IntersectionObserver(function (en) { visible = en[0].isIntersecting; sync(); }, { threshold: 0.35 }).observe(host);
-    } else { visible = true; sync(); }
+      new IntersectionObserver(function (en) { visible = en[0].isIntersecting; if (visible) run(); }, { threshold: 0.25 }).observe(host);
+    } else { visible = true; run(); }
+    show(0);
   }
   function initYear() {
     var y = document.getElementById("year");

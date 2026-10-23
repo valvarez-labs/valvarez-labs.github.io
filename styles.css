@@ -324,9 +324,9 @@ html{scroll-padding-top:76px}
 .proj-step .step-fill{position:absolute;left:0;bottom:-1px;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left}
 .proj-step:hover{color:var(--ink);padding-left:6px}
 .proj-step.is-active{color:var(--ink);padding-left:10px}
-.proj-step.is-active .step-fill{animation:stepFill 5.2s linear forwards}
-.project.is-paused .proj-step .step-fill{animation-play-state:paused}
-@keyframes stepFill{to{transform:scaleX(1)}}
+
+
+
 .project-more{font-size:13px;color:var(--mute);margin-bottom:10px;max-width:46ch}
 .project-tech{font-size:12px;letter-spacing:.08em;color:var(--accent-ink)}
 .project-shot{margin:0}
