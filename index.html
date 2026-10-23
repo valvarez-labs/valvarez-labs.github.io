@@ -6,15 +6,24 @@
 <title>Víctor Álvarez Calvo · Técnico informático</title>
 <meta name="description" content="Técnico informático (SMX) y estudiante de ASIX. Soporte, redes y ciberseguridad.">
 <meta name="theme-color" content="#0a0a0a">
-<script>document.documentElement.className += " js";try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
+<script>document.documentElement.className += " js";try{var nav=performance.getEntriesByType("navigation")[0];var internal=document.referrer&&document.referrer.indexOf(location.origin)===0;if(internal&&!(nav&&nav.type==="reload"))document.documentElement.className+=" no-splash";}catch(e){}try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="stylesheet" href="styles.css?v=20261018j">
-<script defer src="main.js?v=20261018j"></script>
+<link rel="stylesheet" href="styles.css?v=20261018l">
+<script defer src="main.js?v=20261018l"></script>
 </head>
 <body>
+
+<div id="splash" class="splash" aria-hidden="true">
+  <div class="splash-in">
+    <img class="theme-img for-dark" src="assets/mark-dark.webp" alt="" width="110" height="70">
+    <img class="theme-img for-light" src="assets/mark-light.webp" alt="" width="110" height="70">
+    <span class="splash-name">Valvarez</span>
+    <span class="splash-bar"><i></i></span>
+  </div>
+</div>
 
 <header class="bar">
   <a class="brand" href="#inicio"><img class="theme-img for-dark" src="assets/mark-dark.webp" alt="" width="44" height="28"><img class="theme-img for-light" src="assets/mark-light.webp" alt="" width="44" height="28"><span>Valvarez</span></a>

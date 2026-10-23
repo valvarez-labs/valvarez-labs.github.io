@@ -363,12 +363,33 @@
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !panel.hidden) { set(false); btn.focus(); } });
   }
 
+  /* Pantalla de carga: se muestra un mínimo para que se aprecie y se retira al terminar de cargar. */
+  function initSplash() {
+    var s = document.getElementById("splash");
+    if (!s) return;
+    var start = (window.performance && performance.now) ? performance.now() : 0;
+    var MIN = 1400, closed = false;
+    function close() {
+      if (closed) return; closed = true;
+      s.classList.add("is-done");
+      setTimeout(function () { if (s.parentNode) s.parentNode.removeChild(s); }, 800);
+    }
+    function ready() {
+      var elapsed = (window.performance && performance.now) ? performance.now() - start : MIN;
+      setTimeout(close, Math.max(0, MIN - elapsed));
+    }
+    if (document.readyState === "complete") ready();
+    else window.addEventListener("load", ready);
+    setTimeout(close, 4500);
+  }
+
   function initYear() {
     var y = document.getElementById("year");
     if (y && !y.textContent) y.textContent = new Date().getFullYear();
   }
 
   function boot() {
+    safe(initSplash, "splash");
     safe(initGradient, "gradient");
     safe(initRows, "rows");
     safe(initReveal, "reveal");
