@@ -11,8 +11,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="stylesheet" href="styles.css?v=20261018t">
-<script defer src="main.js?v=20261018t"></script>
+<link rel="stylesheet" href="styles.css?v=20261018x">
+<script defer src="main.js?v=20261018x"></script>
 </head>
 <body>
 
@@ -45,6 +45,7 @@
   <!-- HERO -->
   <section class="hero" id="inicio">
     <div class="hero-gradient" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div>
+    <div class="hero-mark" aria-hidden="true"><div class="hm-obj"><img class="theme-img for-dark" src="assets/mark-dark-lg.webp" alt="" width="583" height="367"><img class="theme-img for-light" src="assets/mark-light-lg.webp" alt="" width="583" height="367"></div><div class="hm-floor"></div></div>
     <div class="hero-kicker">
       <span class="pill"><i></i> <span data-i18n="hero.role">Técnico informático</span></span>
       <span class="pill" data-i18n="hero.year">ASIX · 2º curso</span>
@@ -57,6 +58,11 @@
     </div>
     <div class="scroll-hint" data-i18n="hero.scroll">Scroll ↓</div>
   </section>
+
+  <div class="marquee" role="region" aria-label="Herramientas con las que trabajo" data-i18n-aria="marq.label">
+    <ul class="marquee-track"><li>Microsoft 365</li><li>Active Directory</li><li>Windows Server</li><li>Linux</li><li>NinjaOne</li><li>SentinelOne</li><li>RustDesk</li><li>VPN</li><li>pfSense</li><li>OPNsense</li><li>VLAN</li><li>PostgreSQL</li><li>MongoDB</li><li>VirtualBox</li><li>VMware</li><li>Bash</li><li>PowerShell</li><li>Python</li><li>WordPress</li><li>Packet Tracer</li></ul>
+    <ul class="marquee-track" aria-hidden="true"><li>Microsoft 365</li><li>Active Directory</li><li>Windows Server</li><li>Linux</li><li>NinjaOne</li><li>SentinelOne</li><li>RustDesk</li><li>VPN</li><li>pfSense</li><li>OPNsense</li><li>VLAN</li><li>PostgreSQL</li><li>MongoDB</li><li>VirtualBox</li><li>VMware</li><li>Bash</li><li>PowerShell</li><li>Python</li><li>WordPress</li><li>Packet Tracer</li></ul>
+  </div>
 
   <!-- PERFIL -->
   <section class="block" id="perfil">
@@ -168,7 +174,7 @@
   </section>
 
   <!-- CON QUÉ TRABAJO -->
-  <section class="block" id="stack">
+  <section class="block band-bone" id="stack">
     <div class="wrap">
       <div class="sec-head"><span class="label"><b>05</b> / <span data-i18n="sec.stack">Con qué trabajo</span></span></div>
       <div class="stack reveal">
@@ -185,10 +191,31 @@
   <section class="block" id="areas">
     <div class="wrap">
       <div class="sec-head"><span class="label"><b>06</b> / <span data-i18n="sec.areas">Áreas</span></span></div>
-      <div class="three reveal">
-        <div><span class="num">A.01</span><h3 data-i18n="a.1.t">Soporte</h3><p data-i18n="a.1.p">Hardware, software y usuarios. Dejar los equipos funcionando y que nadie se quede parado.</p></div>
-        <div><span class="num">A.02</span><h3 data-i18n="a.2.t">Redes</h3><p data-i18n="a.2.p">Conectividad y configuración de redes, del armario rack al router.</p></div>
-        <div><span class="num">A.03</span><h3 data-i18n="a.3.t">Ciberseguridad</h3><p data-i18n="a.3.p">Hacking ético, WebGoat, cortafuegos y alta disponibilidad con OPNsense.</p></div>
+      <div class="areas-stack">
+        <article class="acard">
+          <div class="ac-top"><span>01 / 03</span></div>
+          <div class="ac-body">
+            <h3 data-i18n="a.1.t">Soporte</h3>
+            <p data-i18n="a.1.p">Hardware, software y usuarios. Dejar los equipos funcionando y que nadie se quede parado.</p>
+            <ul class="chips"><li data-i18n="l.support">Soporte técnico</li><li data-i18n="s.assist">Asistencia informática</li><li data-i18n="s.incid">Gestión de incidencias</li><li data-i18n="l.users">Gestión de usuarios</li></ul>
+          </div>
+        </article>
+        <article class="acard">
+          <div class="ac-top"><span>02 / 03</span></div>
+          <div class="ac-body">
+            <h3 data-i18n="a.2.t">Redes</h3>
+            <p data-i18n="a.2.p">Conectividad y configuración de redes, del armario rack al router.</p>
+            <ul class="chips"><li>VLAN</li><li>IPv4</li><li>Packet Tracer</li><li>OPNsense</li><li data-i18n="s.vpn">Red privada virtual (VPN)</li></ul>
+          </div>
+        </article>
+        <article class="acard">
+          <div class="ac-top"><span>03 / 03</span></div>
+          <div class="ac-body">
+            <h3 data-i18n="a.3.t">Ciberseguridad</h3>
+            <p data-i18n="a.3.p">Hacking ético, WebGoat, cortafuegos y alta disponibilidad con OPNsense.</p>
+            <ul class="chips"><li>SentinelOne</li><li data-i18n="k.netsec">Seguridad de redes</li><li data-i18n="k.firewalls">Cortafuegos</li><li>WebGoat</li></ul>
+          </div>
+        </article>
       </div>
     </div>
   </section>

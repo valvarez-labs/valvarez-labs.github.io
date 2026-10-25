@@ -39,6 +39,7 @@
       "stat.1": "ciclos formativos de informática", "stat.2": "puestos en empresa, entre prácticas y empleo",
       "stat.3": "archivos de prácticas documentados", "stat.4": "idiomas: castellano, catalán e inglés",
       "sec.areas": "Áreas",
+      "marq.label": "Herramientas con las que trabajo",
       "sec.projects": "Proyectos", "proj.url": "Hellen Bold · vista previa en desarrollo", "proj.tabs": "Capturas del proyecto", "proj.t1": "Portada", "proj.t2": "Catálogo", "proj.t3": "Cómo comprar", "proj.s1": "Un carrusel de portadas que se arrastra.", "proj.s2": "Seis novelas organizadas por series.", "proj.s3": "Pedido directo o Amazon (Kindle y tapa blanda).", "proj.alt1": "Captura de la portada de la web de Hellen Bold", "proj.alt2": "Captura del catálogo de novelas de la web de Hellen Bold", "proj.alt3": "Captura de la sección Cómo comprar de la web de Hellen Bold", "proj.type": "Web · Autora de novelas", "proj.desc": "Web para una autora de novelas: catálogo de seis títulos agrupados por series y dos formas de conseguir cada libro. La estoy desarrollando yo.", "proj.more": "También incluye secciones de autora, redes, newsletter y contacto, con tema claro y oscuro.", "proj.status": "En desarrollo",
       "sec.stack": "Con qué trabajo", "st.ms": "Microsoft", "st.infra": "Infraestructura", "st.support": "Soporte", "st.way": "Forma de trabajar", "s.assist": "Asistencia informática", "s.hw": "Instalación de hardware informático", "s.doc": "Documentación", "s.team": "Trabajo en equipo", "st.tools": "Herramientas", "s.vpn": "Red privada virtual (VPN)", "s.remote": "Escritorio remoto", "s.incid": "Gestión de incidencias",
       "a.1.t": "Soporte", "a.1.p": "Hardware, software y usuarios. Dejar los equipos funcionando y que nadie se quede parado.",
@@ -90,6 +91,7 @@
       "stat.1": "cicles formatius d'informàtica", "stat.2": "llocs en empresa, entre pràctiques i feina",
       "stat.3": "fitxers de pràctiques documentats", "stat.4": "idiomes: castellà, català i anglès",
       "sec.areas": "Àrees",
+      "marq.label": "Eines amb les quals treballo",
       "sec.projects": "Projectes", "proj.url": "Hellen Bold · vista prèvia en desenvolupament", "proj.tabs": "Captures del projecte", "proj.t1": "Portada", "proj.t2": "Catàleg", "proj.t3": "Com comprar", "proj.s1": "Un carrusel de portades que s'arrossega.", "proj.s2": "Sis novel·les organitzades per sèries.", "proj.s3": "Comanda directa o Amazon (Kindle i tapa tova).", "proj.alt1": "Captura de la portada del web d'Hellen Bold", "proj.alt2": "Captura del catàleg de novel·les del web d'Hellen Bold", "proj.alt3": "Captura de la secció Com comprar del web d'Hellen Bold", "proj.type": "Web · Autora de novel·les", "proj.desc": "Web per a una autora de novel·les: catàleg de sis títols agrupats per sèries i dues maneres d'aconseguir cada llibre. La desenvolupo jo.", "proj.more": "També inclou seccions d'autora, xarxes, newsletter i contacte, amb tema clar i fosc.", "proj.status": "En desenvolupament",
       "sec.stack": "Amb què treballo", "st.ms": "Microsoft", "st.infra": "Infraestructura", "st.support": "Suport", "st.way": "Manera de treballar", "s.assist": "Assistència informàtica", "s.hw": "Instal·lació de maquinari informàtic", "s.doc": "Documentació", "s.team": "Treball en equip", "st.tools": "Eines", "s.vpn": "Xarxa privada virtual (VPN)", "s.remote": "Escriptori remot", "s.incid": "Gestió d'incidències",
       "a.1.t": "Suport", "a.1.p": "Maquinari, programari i usuaris. Deixar els equips funcionant i que ningú es quedi aturat.",
@@ -141,6 +143,7 @@
       "stat.1": "IT vocational programmes", "stat.2": "company positions, internships and employment",
       "stat.3": "documented practice files", "stat.4": "languages: Spanish, Catalan and English",
       "sec.areas": "Areas",
+      "marq.label": "Tools I work with",
       "sec.projects": "Projects", "proj.url": "Hellen Bold · preview in development", "proj.tabs": "Project screenshots", "proj.t1": "Home", "proj.t2": "Catalog", "proj.t3": "How to buy", "proj.s1": "A cover carousel you can drag.", "proj.s2": "Six novels organised by series.", "proj.s3": "Direct order or Amazon (Kindle and paperback).", "proj.alt1": "Screenshot of the Hellen Bold website home page", "proj.alt2": "Screenshot of the novel catalog on the Hellen Bold website", "proj.alt3": "Screenshot of the How to buy section on the Hellen Bold website", "proj.type": "Website · Novelist", "proj.desc": "Website for a novelist: a catalog of six titles grouped into series and two ways to get each book. I am building it myself.", "proj.more": "It also includes author, social media, newsletter and contact sections, with light and dark themes.", "proj.status": "In development",
       "sec.stack": "What I work with", "st.ms": "Microsoft", "st.infra": "Infrastructure", "st.support": "Support", "st.way": "Way of working", "s.assist": "IT assistance", "s.hw": "Computer hardware installation", "s.doc": "Documentation", "s.team": "Teamwork", "st.tools": "Tools", "s.vpn": "Virtual private network (VPN)", "s.remote": "Remote desktop", "s.incid": "Incident management",
       "a.1.t": "Support", "a.1.p": "Hardware, software and users. Keeping machines running so nobody is left stuck.",
@@ -478,6 +481,60 @@
     } else { visible = true; run(); }
     show(0);
   }
+  /* Símbolo del hero: se inclina hacia el cursor (perspectiva 3D) y flota suavemente en reposo. */
+  function initHeroMark() {
+    var obj = document.querySelector(".hm-obj"), hero = document.querySelector(".hero");
+    if (!obj || !hero) return;
+    var tx = 0, ty = 0, cx = 0, cy = 0, havePointer = false, visible = true, running = false, t0 = performance.now();
+    document.addEventListener("pointermove", function (e) {
+      if (e.pointerType === "touch") return;
+      havePointer = true;
+      tx = (e.clientX / window.innerWidth - 0.5) * 2 * 12;   /* giro horizontal */
+      ty = -(e.clientY / window.innerHeight - 0.5) * 2 * 9;  /* giro vertical */
+    }, { passive: true });
+    function frame(now) {
+      if (!running) return;
+      var t = (now - t0) / 1000;
+      var goalX = havePointer ? tx : Math.sin(t * 0.6) * 6;
+      var goalY = havePointer ? ty : Math.cos(t * 0.5) * 4;
+      cx += (goalX - cx) * 0.08; cy += (goalY - cy) * 0.08;
+      var lift = Math.sin(t * 1.1) * 7;
+      obj.style.transform = "rotateX(" + cy.toFixed(2) + "deg) rotateY(" + cx.toFixed(2) + "deg) translateY(" + lift.toFixed(1) + "px)";
+      requestAnimationFrame(frame);
+    }
+    function sync() {
+      var should = visible && !document.hidden;
+      if (should && !running) { running = true; requestAnimationFrame(frame); }
+      else if (!should) running = false;
+    }
+    document.addEventListener("visibilitychange", sync);
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (en) { visible = en[0].isIntersecting; sync(); }, { threshold: 0 }).observe(hero);
+    }
+    sync();
+  }
+
+  /* Tarjetas de áreas: al apilarse, la anterior se encoge y se oscurece un poco. */
+  function initAreaCards() {
+    var cards = document.querySelectorAll(".acard");
+    if (cards.length < 2) return;
+    var mq = window.matchMedia("(min-width: 721px)"), ticking = false, R = 420;
+    function update() {
+      ticking = false;
+      cards.forEach(function (c, i) {
+        if (!mq.matches || i === cards.length - 1) { c.style.transform = ""; c.style.setProperty("--p", 0); return; }
+        var topI = 88 + i * 24;
+        var nextTop = cards[i + 1].getBoundingClientRect().top;
+        var p = Math.max(0, Math.min(1, (R - (nextTop - (topI + 24))) / R));
+        c.style.transform = "scale(" + (1 - 0.05 * p).toFixed(4) + ")";
+        c.style.setProperty("--p", p.toFixed(3));
+      });
+    }
+    window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  }
+
   function initYear() {
     var y = document.getElementById("year");
     if (y && !y.textContent) y.textContent = new Date().getFullYear();
@@ -492,6 +549,8 @@
     safe(initTimeline, "timeline");
     safe(initTheme, "theme");
     safe(initMenu, "menu");
+    safe(initHeroMark, "heromark");
+    safe(initAreaCards, "areacards");
     safe(initShots, "shots");
     safe(initScrollUI, "scrollui");
     safe(initLang, "lang");

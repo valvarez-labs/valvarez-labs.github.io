@@ -336,3 +336,63 @@ html{scroll-padding-top:76px}
 .js .shot.is-on{opacity:1;transform:none}
 .shot-cap{display:flex;justify-content:space-between;gap:12px;margin-top:12px;font-size:12px;color:var(--mute)}
 @media (max-width:860px){.project{grid-template-columns:1fr}}
+/* =====================================================================
+   Ideas adaptadas de IRLHub: barra en píldora, símbolo 3D, franja crema
+   con cuadrícula, cinta de herramientas y tarjetas apiladas.
+   ===================================================================== */
+
+/* ---- barra flotante en píldoras ---- */
+.bar{background:transparent;border-bottom:0;padding-top:14px;padding-bottom:14px}
+.js .bar.is-solid{background:transparent;border-bottom-color:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
+.bar .brand,.bar nav,.menu-btn,#lang,.theme{background-color:var(--bar-bg);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%)}
+.bar .brand{padding:6px 18px 6px 10px;border:1px solid var(--line);border-radius:999px}
+.bar nav{gap:2px;padding:4px;border:1px solid var(--line);border-radius:999px}
+.bar nav a{padding:8px 16px;border-radius:999px;text-decoration:none;transition:background .2s,color .2s}
+.bar nav a:hover{background:rgba(127,127,127,.18);text-decoration:none}
+.bar nav a.is-current{background:var(--ink);color:var(--bg)}
+.bar-right{gap:10px}
+
+/* ---- símbolo del logo con inclinación 3D en el hero ---- */
+.hero-mark{position:absolute;right:var(--gut);top:0;bottom:0;margin:auto 0;height:fit-content;width:min(34vw,470px);pointer-events:none;perspective:1000px;z-index:0}
+.hm-obj{position:relative;transform-style:preserve-3d;will-change:transform}
+.hm-obj .theme-img{width:100%;height:auto;vertical-align:top;filter:drop-shadow(0 40px 60px rgba(0,170,255,.28)) drop-shadow(0 6px 14px rgba(0,0,0,.3))}
+.hm-floor{position:absolute;left:14%;right:14%;bottom:-7%;height:7%;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.55),transparent);filter:blur(6px)}
+.js .hero-mark{opacity:0;animation:heroFade 1.1s var(--ease-out) calc(var(--hd,1.5s) + .25s) forwards}
+@media (max-width:980px){.hero-mark{display:none}}
+
+/* ---- franja crema con cuadrícula tipo plano ---- */
+.band-bone{--bg:#ebe7dc;--bg-2:#f4f1e8;--ink:#171614;--ink2:#2c2a26;--mute:#5d5a52;--line:#cdc7b8;--accent-ink:#0a6b44;position:relative;overflow:hidden;background:var(--bg);color:var(--ink)}
+
+.band-bone .wrap{position:relative}
+
+/* ---- cinta de herramientas ---- */
+.marquee{display:flex;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee-track{display:flex;flex:none;gap:12px;padding-right:12px;list-style:none;animation:marquee 70s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee li{white-space:nowrap;padding:8px 18px;border:1px solid var(--line);border-radius:999px;font-size:13px;background:var(--bg-2);color:var(--ink2)}
+@keyframes marquee{to{transform:translateX(-100%)}}
+
+/* ---- áreas: tarjetas que se apilan al hacer scroll ---- */
+.areas-stack{position:relative}
+.acard{--i:0;position:sticky;top:calc(88px + var(--i) * 24px);min-height:min(62vh,460px);margin-bottom:20vh;border-radius:30px;padding:clamp(24px,4vw,52px);display:flex;flex-direction:column;justify-content:space-between;gap:28px;background:var(--cbg);color:var(--cink);transform-origin:50% 0;will-change:transform;overflow:hidden}
+.acard:last-child{margin-bottom:0}
+.acard::after{content:"";position:absolute;inset:0;background:#000;opacity:calc(var(--p,0) * .38);pointer-events:none}
+.acard:nth-child(1){--i:0;--cbg:#00e07a;--cink:#04170d}
+.acard:nth-child(2){--i:1;--cbg:#ebe7dc;--cink:#171614}
+.acard:nth-child(3){--i:2;--cbg:#1a201d;--cink:#dff7ea}
+.ac-top{font-size:13px;letter-spacing:.12em;opacity:.8}
+.acard h3{font-size:clamp(40px,7vw,100px);letter-spacing:-.05em;line-height:.95;margin-bottom:16px}
+.acard p{max-width:48ch;font-size:16px;margin-bottom:20px;opacity:.92}
+.acard .chips li{background:color-mix(in srgb,var(--cink) 12%,transparent);border-color:color-mix(in srgb,var(--cink) 32%,transparent);color:var(--cink)}
+@media (max-width:720px){.acard{position:static;min-height:0;margin-bottom:16px}.acard::after{display:none}}
+
+/* ---- botones: pulsación ---- */
+.btn:active{transform:scale(.97);transition-duration:.12s}
+/* ---- barra en píldoras: ajuste para móvil ---- */
+@media (max-width:520px){
+  .bar .brand{padding:6px 12px}
+  .bar .brand span{display:none}
+  .bar-right{gap:8px}
+}
+/* ---- correo de contacto: siempre en una línea, sin cortar ---- */
+.mail{white-space:nowrap;word-break:normal;overflow-wrap:normal;font-size:min(64px,calc((100vw - 2 * var(--gut)) / 19.5))}
