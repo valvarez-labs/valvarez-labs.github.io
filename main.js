@@ -183,6 +183,7 @@
     var md = document.querySelector('meta[name="description"]'); if (md) md.setAttribute("content", T("meta.desc"));
     var sel = document.getElementById("lang");
     if (sel) { sel.value = lang; sel.setAttribute("aria-label", T("lang.label")); var sr = document.querySelector(".lang-wrap .sr"); if (sr) sr.textContent = T("lang.label"); }
+    if (window.__langUI) window.__langUI(lang);
     var th = document.getElementById("theme");
     if (th) th.setAttribute("aria-label", document.documentElement.getAttribute("data-theme") === "light" ? T("theme.toDark") : T("theme.toLight"));
   }
@@ -535,6 +536,68 @@
     update();
   }
 
+  /* Menú de idioma propio (botón con globo + lista con marca). El <select> original queda oculto
+     como fuente de verdad y como respaldo si falla el JS. */
+  function initLangMenu() {
+    var sel = document.getElementById("lang");
+    var wrap = sel && sel.closest(".lang-wrap");
+    if (!sel || !wrap) return;
+    var LANGS = [["es", "ES", "Castellano"], ["ca", "CA", "Català"], ["en", "EN", "English"]];
+    var ICON = {
+      globe: '<svg class="ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 4 5.8 4 9s-1.4 6.4-4 9c-2.6-2.6-4-5.8-4-9s1.4-6.4 4-9z"/></svg>',
+      chev: '<svg class="ico chev" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>',
+      check: '<svg class="ico chk" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>'
+    };
+    var btn = document.createElement("button");
+    btn.type = "button"; btn.className = "lang-btn";
+    btn.setAttribute("aria-haspopup", "menu"); btn.setAttribute("aria-expanded", "false"); btn.setAttribute("aria-controls", "lang-menu");
+    btn.innerHTML = ICON.globe + '<span class="lang-code">ES</span>' + ICON.chev;
+    var menu = document.createElement("div");
+    menu.id = "lang-menu"; menu.className = "lang-menu"; menu.setAttribute("role", "menu"); menu.hidden = true;
+    LANGS.forEach(function (l) {
+      var it = document.createElement("button");
+      it.type = "button"; it.className = "lang-item"; it.setAttribute("role", "menuitemradio");
+      it.setAttribute("data-lang", l[0]); it.setAttribute("aria-checked", "false");
+      it.innerHTML = "<span>" + l[2] + "</span>" + ICON.check;
+      menu.appendChild(it);
+    });
+    wrap.classList.add("is-custom");
+    wrap.appendChild(btn); wrap.appendChild(menu);
+
+    function items() { return Array.prototype.slice.call(menu.querySelectorAll(".lang-item")); }
+    function set(open) {
+      menu.hidden = !open;
+      btn.setAttribute("aria-expanded", String(open));
+      if (open) { var cur = menu.querySelector('[aria-checked="true"]') || items()[0]; cur.focus(); }
+    }
+    window.__langUI = function (lang) {
+      var found = LANGS.filter(function (l) { return l[0] === lang; })[0] || LANGS[0];
+      btn.querySelector(".lang-code").textContent = found[1];
+      btn.setAttribute("aria-label", T("lang.label") + ": " + found[2]);
+      items().forEach(function (it) { it.setAttribute("aria-checked", String(it.getAttribute("data-lang") === found[0])); });
+    };
+    btn.addEventListener("click", function (e) { e.stopPropagation(); set(menu.hidden); });
+    menu.addEventListener("click", function (e) {
+      var it = e.target.closest(".lang-item");
+      if (!it) return;
+      sel.value = it.getAttribute("data-lang");
+      sel.dispatchEvent(new Event("change"));
+      set(false); btn.focus();
+    });
+    document.addEventListener("click", function (e) { if (!menu.hidden && !wrap.contains(e.target)) set(false); });
+    document.addEventListener("keydown", function (e) {
+      if (menu.hidden) return;
+      if (e.key === "Escape") { set(false); btn.focus(); return; }
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        e.preventDefault();
+        var list = items(), i = list.indexOf(document.activeElement);
+        i = e.key === "ArrowDown" ? (i + 1) % list.length : (i - 1 + list.length) % list.length;
+        list[i].focus();
+      }
+    });
+    window.__langUI(sel.value || "es");
+  }
+
   function initYear() {
     var y = document.getElementById("year");
     if (y && !y.textContent) y.textContent = new Date().getFullYear();
@@ -553,6 +616,7 @@
     safe(initAreaCards, "areacards");
     safe(initShots, "shots");
     safe(initScrollUI, "scrollui");
+    safe(initLangMenu, "langmenu");
     safe(initLang, "lang");
     safe(initYear, "year");
   }
