@@ -384,7 +384,7 @@ html{scroll-padding-top:76px}
 .acard h3{font-size:clamp(40px,7vw,100px);letter-spacing:-.05em;line-height:.95;margin-bottom:16px}
 .acard p{max-width:48ch;font-size:16px;margin-bottom:20px;opacity:.92}
 .acard .chips li{background:color-mix(in srgb,var(--cink) 12%,transparent);border-color:color-mix(in srgb,var(--cink) 32%,transparent);color:var(--cink)}
-@media (max-width:720px){.acard{position:static;min-height:0;margin-bottom:16px}.acard::after{display:none}}
+@media (max-width:720px){.acard{top:calc(78px + var(--i) * 16px);min-height:0;margin-bottom:12vh}.acard:last-child{margin-bottom:0}}
 
 /* ---- botones: pulsación ---- */
 .btn:active{transform:scale(.97);transition-duration:.12s}
@@ -412,3 +412,14 @@ html{scroll-padding-top:76px}
 .lang-item .chk{opacity:0;color:var(--accent-ink)}
 .lang-item[aria-checked="true"] .chk{opacity:1}
 .lang-item[aria-checked="true"]{color:var(--ink)}
+/* ---- línea de tiempo: meses con año (SEP 25) ---- */
+.tl-grid{min-width:calc(110px + var(--cols) * 42px)}
+.tl-months{letter-spacing:.02em}
+.tl-months span{white-space:nowrap}
+.tl-months i{font-style:normal;opacity:.65}
+/* ---- móvil: el logo del hero también se ve (dentro del flujo, justo encima de las etiquetas) ---- */
+@media (max-width:980px){
+  .hero-mark{display:block;position:relative;top:auto;bottom:auto;left:auto;right:auto;flex:none;margin:0 auto 20px;width:min(54vw,240px);height:auto}
+}
+/* ---- móvil: títulos de las tarjetas de áreas ajustados al ancho ---- */
+@media (max-width:520px){.acard h3{font-size:32px}}

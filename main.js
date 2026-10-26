@@ -107,7 +107,7 @@
       "g.os": "Sistemes operatius", "g.net": "Xarxes", "g.srv": "Serveis", "g.virt": "Virtualització i maquinari", "g.dev": "Programació i web", "g.db": "Bases de dades", "k.db": "Bases de dades", "k.reldb": "Base de dades relacional",
       "k.networks": "Xarxes informàtiques", "k.subnets": "Subxarxes", "k.netsec": "Seguretat de xarxes", "k.firewalls": "Tallafocs", "k.dns": "Servidor DNS", "k.dhcp": "Servidor DHCP", "k.web": "Servidors web", "k.mail": "Servidor de correu", "k.vm": "Gestió de màquines virtuals", "k.hw": "Maquinari",
       "theme.toLight": "Canviar a tema clar", "theme.toDark": "Canviar a tema fosc", "lang.label": "Idioma",
-      "months": ["GEN","FEB","MAR","ABR","MAIG","JUNY","JUL","AGO","SET","OCT","NOV","DES"]
+      "months": ["GEN","FEB","MAR","ABR","MAI","JUN","JUL","AGO","SET","OCT","NOV","DES"]
     },
     en: {
       "meta.title": "Víctor Álvarez Calvo · IT Technician",
@@ -165,6 +165,19 @@
   var LANG = "es";
   function T(k) { var d = I18N[LANG] || I18N.es; return d[k] != null ? d[k] : I18N.es[k]; }
 
+  /* Meses abreviados con año (SEP 25) en la línea de tiempo; se pinta al cargar y al cambiar de idioma. */
+  function renderMonths() {
+    document.querySelectorAll(".tl-months").forEach(function (box) {
+      var start = parseInt(box.getAttribute("data-start") || "0", 10), months = T("months");
+      var year0 = parseInt(box.getAttribute("data-year") || "0", 10);
+      Array.prototype.forEach.call(box.children, function (s, i) {
+        var idx = start + i, yy = year0 ? String((year0 + Math.floor(idx / 12)) % 100) : "";
+        if (yy.length === 1) yy = "0" + yy;
+        s.innerHTML = months[idx % 12] + (yy ? ' <i>' + yy + '</i>' : "");
+      });
+    });
+  }
+
   /* Selector de idioma: aplica las traducciones sin recargar y recuerda la elección. */
   function applyLang(lang) {
     if (!I18N[lang]) lang = "es";
@@ -174,10 +187,7 @@
     document.querySelectorAll("[data-i18n-html]").forEach(function (el) { var v = T(el.getAttribute("data-i18n-html")); if (v != null) el.innerHTML = v; });
     document.querySelectorAll("[data-i18n-aria]").forEach(function (el) { var v = T(el.getAttribute("data-i18n-aria")); if (v != null) el.setAttribute("aria-label", v); });
     document.querySelectorAll("[data-i18n-alt]").forEach(function (el) { var v = T(el.getAttribute("data-i18n-alt")); if (v != null) el.setAttribute("alt", v); });
-    document.querySelectorAll(".tl-months").forEach(function (box) {
-      var start = parseInt(box.getAttribute("data-start") || "0", 10), months = T("months");
-      Array.prototype.forEach.call(box.children, function (s, i) { s.textContent = months[(start + i) % 12]; });
-    });
+    renderMonths();
     var pg = document.body.getAttribute("data-page");
     document.title = pg === "legal" ? T("legal.title") : pg === "skills" ? T("skills.title") : T("meta.title");
     var md = document.querySelector('meta[name="description"]'); if (md) md.setAttribute("content", T("meta.desc"));
@@ -487,6 +497,7 @@
     var obj = document.querySelector(".hm-obj"), hero = document.querySelector(".hero");
     if (!obj || !hero) return;
     var tx = 0, ty = 0, cx = 0, cy = 0, havePointer = false, visible = true, running = false, t0 = performance.now();
+    var touch = window.matchMedia("(hover: none)").matches;
     document.addEventListener("pointermove", function (e) {
       if (e.pointerType === "touch") return;
       havePointer = true;
@@ -498,6 +509,7 @@
       var t = (now - t0) / 1000;
       var goalX = havePointer ? tx : Math.sin(t * 0.6) * 6;
       var goalY = havePointer ? ty : Math.cos(t * 0.5) * 4;
+      if (touch && !havePointer) goalY += Math.max(-18, Math.min(18, -(window.scrollY / window.innerHeight) * 16));
       cx += (goalX - cx) * 0.08; cy += (goalY - cy) * 0.08;
       var lift = Math.sin(t * 1.1) * 7;
       obj.style.transform = "rotateX(" + cy.toFixed(2) + "deg) rotateY(" + cx.toFixed(2) + "deg) translateY(" + lift.toFixed(1) + "px)";
@@ -523,8 +535,8 @@
     function update() {
       ticking = false;
       cards.forEach(function (c, i) {
-        if (!mq.matches || i === cards.length - 1) { c.style.transform = ""; c.style.setProperty("--p", 0); return; }
-        var topI = 88 + i * 24;
+        if (i === cards.length - 1) { c.style.transform = ""; c.style.setProperty("--p", 0); return; }
+        var topI = parseFloat(getComputedStyle(c).top) || (88 + i * 24);
         var nextTop = cards[i + 1].getBoundingClientRect().top;
         var p = Math.max(0, Math.min(1, (R - (nextTop - (topI + 24))) / R));
         c.style.transform = "scale(" + (1 - 0.05 * p).toFixed(4) + ")";
@@ -618,6 +630,7 @@
     safe(initScrollUI, "scrollui");
     safe(initLangMenu, "langmenu");
     safe(initLang, "lang");
+    safe(renderMonths, "months");
     safe(initYear, "year");
   }
 
