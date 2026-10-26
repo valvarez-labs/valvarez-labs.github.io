@@ -423,3 +423,5 @@ html{scroll-padding-top:76px}
 }
 /* ---- móvil: títulos de las tarjetas de áreas ajustados al ancho ---- */
 @media (max-width:520px){.acard h3{font-size:32px}}
+/* ---- ubicación con borde (como la etiqueta Finalizado) ---- */
+.xp-place{display:inline-block;padding:2px 10px;border:1px solid var(--mute);border-radius:999px;vertical-align:middle}
