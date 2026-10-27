@@ -425,3 +425,9 @@ html{scroll-padding-top:76px}
 @media (max-width:520px){.acard h3{font-size:32px}}
 /* ---- ubicación con borde (como la etiqueta Finalizado) ---- */
 .xp-place{display:inline-block;padding:2px 10px;border:1px solid var(--mute);border-radius:999px;vertical-align:middle}
+
+/* ---- ubicación enlazada a Maps + LinkedIn de la empresa ---- */
+a.xp-place{display:inline-flex;align-items:center;gap:6px;color:var(--mute);text-decoration:none;transition:color .2s,border-color .2s}
+a.xp-place:hover,a.xp-place:focus-visible{color:var(--ink);border-color:var(--accent-ink)}
+.xp-in{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;margin-left:8px;border:1px solid var(--mute);border-radius:50%;color:var(--mute);vertical-align:middle;transition:color .2s,border-color .2s}
+.xp-in:hover,.xp-in:focus-visible{color:var(--ink);border-color:var(--accent-ink)}
