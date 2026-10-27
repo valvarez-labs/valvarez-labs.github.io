@@ -431,3 +431,11 @@ a.xp-place{display:inline-flex;align-items:center;gap:6px;color:var(--mute);text
 a.xp-place:hover,a.xp-place:focus-visible{color:var(--ink);border-color:var(--accent-ink)}
 .xp-in{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;margin-left:8px;border:1px solid var(--mute);border-radius:50%;color:var(--mute);vertical-align:middle;transition:color .2s,border-color .2s}
 .xp-in:hover,.xp-in:focus-visible{color:var(--ink);border-color:var(--accent-ink)}
+
+/* ---- Finalizado: relleno sólido para distinguirlo de la ubicación (borde gris) ---- */
+.tag.done{background:var(--ink);border-color:var(--ink);color:var(--bg);font-weight:700}
+
+/* ---- institutos: nombre enlazado (verde, subrayado) y pin de ubicación ---- */
+.row-name small a:not(.xp-place){color:var(--accent-ink);font-weight:700;text-underline-offset:4px}
+.row-head:focus-visible{outline:2px solid var(--accent-ink);outline-offset:4px}
+.row-name small .xp-place{margin-left:6px}

@@ -262,9 +262,14 @@
       var open = row.getAttribute("data-open") === "true";
       row.classList.toggle("open", open);
       head.setAttribute("aria-expanded", String(open));
-      head.addEventListener("click", function () {
+      function toggle() {
         var isOpen = row.classList.toggle("open");
         head.setAttribute("aria-expanded", String(isOpen));
+      }
+      head.addEventListener("click", function (e) { if (e.target.closest("a")) return; toggle(); });
+      head.addEventListener("keydown", function (e) {
+        if (e.target !== head || (e.key !== "Enter" && e.key !== " ")) return;
+        e.preventDefault(); toggle();
       });
     });
   }
