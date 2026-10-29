@@ -26,7 +26,7 @@
       "l.support": "Soporte técnico", "l.hwsw": "Gestión de hardware y software", "l.net": "Gestión de redes y conectividad", "l.users": "Gestión de usuarios",
       "l.wp": "Diseño de páginas web en WordPress", "l.content": "Gestión de contenidos de WordPress",
       "l.setup": "Configuración y preparación de equipos informáticos", "l.moodle": "Gestión y creación de cursos (vía Moodle)",
-      "sec.edu": "Formación", "sec.cert": "Certificaciones", "cert.ccna": "Preparación de la certificación Cisco CCNA: fundamentos de redes, direccionamiento IP, switching, routing y seguridad básica.", "tag.ongoing": "En curso", "tag.done": "Finalizado", "tag.complete": "Completo", "tag.year2": "2º curso",
+      "sec.edu": "Formación", "ver.title": "Versiones", "ver.page": "Versiones · Valvarez", "sec.cert": "Certificaciones", "cert.ccna": "Preparación de la certificación Cisco CCNA: fundamentos de redes, direccionamiento IP, switching, routing y seguridad básica.", "tag.ongoing": "En curso", "tag.done": "Finalizado", "tag.complete": "Completo", "tag.year2": "2º curso",
       "edu.asix": "Grado Superior en Administración de Sistemas Informáticos en Red. Cursando segundo año.",
       "edu.smx": "Grado Medio en Sistemas Microinformáticos y Redes.", "edu.eso": "Educación Secundaria Obligatoria.",
       "sec.timeline": "Línea de tiempo", "tl.prev": "Anterior", "tl.next": "Siguiente",
@@ -78,7 +78,7 @@
       "l.support": "Suport tècnic", "l.hwsw": "Gestió de maquinari i programari", "l.net": "Gestió de xarxes i connectivitat", "l.users": "Gestió d'usuaris",
       "l.wp": "Disseny de pàgines web amb WordPress", "l.content": "Gestió de continguts de WordPress",
       "l.setup": "Configuració i preparació d'equips informàtics", "l.moodle": "Gestió i creació de cursos (via Moodle)",
-      "sec.edu": "Formació", "sec.cert": "Certificacions", "cert.ccna": "Preparació de la certificació Cisco CCNA: fonaments de xarxes, adreçament IP, switching, routing i seguretat bàsica.", "tag.ongoing": "En curs", "tag.done": "Finalitzat", "tag.complete": "Complet", "tag.year2": "2n curs",
+      "sec.edu": "Formació", "ver.title": "Versions", "ver.page": "Versions · Valvarez", "sec.cert": "Certificacions", "cert.ccna": "Preparació de la certificació Cisco CCNA: fonaments de xarxes, adreçament IP, switching, routing i seguretat bàsica.", "tag.ongoing": "En curs", "tag.done": "Finalitzat", "tag.complete": "Complet", "tag.year2": "2n curs",
       "edu.asix": "Cicle Formatiu de Grau Superior en Administració de Sistemes Informàtics en Xarxa. Cursant segon any.",
       "edu.smx": "Cicle Formatiu de Grau Mitjà en Sistemes Microinformàtics i Xarxes.", "edu.eso": "Educació Secundària Obligatòria.",
       "sec.timeline": "Línia de temps", "tl.prev": "Anterior", "tl.next": "Següent",
@@ -130,7 +130,7 @@
       "l.support": "Technical support", "l.hwsw": "Hardware and software management", "l.net": "Network and connectivity management", "l.users": "User management",
       "l.wp": "WordPress website design", "l.content": "WordPress content management",
       "l.setup": "Computer setup and preparation", "l.moodle": "Course creation and management (via Moodle)",
-      "sec.edu": "Education", "sec.cert": "Certifications", "cert.ccna": "Preparing for the Cisco CCNA certification: network fundamentals, IP addressing, switching, routing and basic security.", "tag.ongoing": "Ongoing", "tag.done": "Completed", "tag.complete": "Complete", "tag.year2": "2nd year",
+      "sec.edu": "Education", "ver.title": "Versions", "ver.page": "Versions · Valvarez", "sec.cert": "Certifications", "cert.ccna": "Preparing for the Cisco CCNA certification: network fundamentals, IP addressing, switching, routing and basic security.", "tag.ongoing": "Ongoing", "tag.done": "Completed", "tag.complete": "Complete", "tag.year2": "2nd year",
       "edu.asix": "Higher Vocational Diploma in Network Systems Administration. Currently in the second year.",
       "edu.smx": "Intermediate Vocational Diploma in Microcomputer Systems and Networks.", "edu.eso": "Compulsory Secondary Education.",
       "sec.timeline": "Timeline", "tl.prev": "Previous", "tl.next": "Next",
@@ -189,7 +189,7 @@
     document.querySelectorAll("[data-i18n-alt]").forEach(function (el) { var v = T(el.getAttribute("data-i18n-alt")); if (v != null) el.setAttribute("alt", v); });
     renderMonths();
     var pg = document.body.getAttribute("data-page");
-    document.title = pg === "legal" ? T("legal.title") : pg === "skills" ? T("skills.title") : T("meta.title");
+    document.title = pg === "legal" ? T("legal.title") : pg === "skills" ? T("skills.title") : pg === "versions" ? T("ver.page") : T("meta.title");
     var md = document.querySelector('meta[name="description"]'); if (md) md.setAttribute("content", T("meta.desc"));
     var sel = document.getElementById("lang");
     if (sel) { sel.value = lang; sel.setAttribute("aria-label", T("lang.label")); var sr = document.querySelector(".lang-wrap .sr"); if (sr) sr.textContent = T("lang.label"); }
@@ -362,7 +362,7 @@
       ["#stack", "sec.stack", "Con qué trabajo", "06"], ["#areas", "sec.areas", "Áreas", "07"],
       ["#proyectos", "sec.projects", "Proyectos", "08"], ["#portfolio", "nav.portfolio", "Portfolio", "09"], ["#contacto", "sec.contact", "Contacto", "10"],
       null,
-      ["aptitudes.html", "skills.h1", "Aptitudes de formación", "→"],
+      ["aptitudes.html", "skills.h1", "Aptitudes de formación", "→"], ["versiones.html", "ver.title", "Versiones", "→"],
       ["legal.html#aviso", "footer.legal", "Aviso legal", "·"], ["legal.html#privacidad", "footer.privacy", "Privacidad", "·"],
       ["legal.html#cookies", "footer.cookies", "Cookies", "·"]
     ];

@@ -444,3 +444,19 @@ a.xp-place:hover,a.xp-place:focus-visible{color:var(--ink);border-color:var(--ac
 .row-name .xp-in{color:var(--accent-ink);font-size:12px;font-weight:700;letter-spacing:0;text-decoration:none}
 
 .row-name .xp-in:hover,.row-name .xp-in:focus-visible{color:var(--ink);border-color:var(--accent-ink)}
+
+/* ---- página de versiones ---- */
+.vers [data-lang]{display:none}
+html[lang="es"] .vers [data-lang="es"],html[lang="ca"] .vers [data-lang="ca"],html[lang="en"] .vers [data-lang="en"]{display:block}
+.ver{display:grid;grid-template-columns:minmax(150px,.6fr) 3fr;gap:12px 24px;padding:28px 0;border-top:1px solid var(--line)}
+.ver:last-child{border-bottom:1px solid var(--line)}
+.ver-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;align-content:flex-start}
+.ver-n{font-size:clamp(28px,4vw,44px);font-weight:700;letter-spacing:-.03em;line-height:1}
+.ver-head .tag{margin-left:0}
+.ver-date{flex-basis:100%;font-size:12px;letter-spacing:.08em;color:var(--mute)}
+.ver ul{list-style:none}
+.ver li{padding:4px 0;color:var(--ink2)}
+.ver li::before{content:"→ ";color:var(--accent-ink)}
+@media (max-width:720px){.ver{grid-template-columns:1fr}}
+.foot-ver{margin-left:8px;color:var(--mute);text-decoration:none;border-bottom:1px solid var(--line)}
+.foot-ver:hover{color:var(--accent-ink);border-color:var(--accent-ink)}
