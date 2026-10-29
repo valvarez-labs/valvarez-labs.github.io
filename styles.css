@@ -436,6 +436,11 @@ a.xp-place:hover,a.xp-place:focus-visible{color:var(--ink);border-color:var(--ac
 .tag.done{background:var(--ink);border-color:var(--ink);color:var(--bg);font-weight:700}
 
 /* ---- institutos: nombre enlazado (verde, subrayado) y pin de ubicación ---- */
-.row-name small a:not(.xp-place){color:var(--accent-ink);font-weight:700;text-underline-offset:4px}
+.row-name small a:not(.xp-place):not(.xp-in){color:var(--accent-ink);font-weight:700;text-underline-offset:4px}
 .row-head:focus-visible{outline:2px solid var(--accent-ink);outline-offset:4px}
 .row-name small .xp-place{margin-left:6px}
+
+/* ---- botón de LinkedIn en filas de Formación/Certificaciones: igual que en Experiencia (gris, hover verde) ---- */
+.row-name .xp-in{color:var(--accent-ink);font-size:12px;font-weight:700;letter-spacing:0;text-decoration:none}
+
+.row-name .xp-in:hover,.row-name .xp-in:focus-visible{color:var(--ink);border-color:var(--accent-ink)}
