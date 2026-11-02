@@ -5,22 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Víctor Álvarez Calvo · Técnico informático</title>
 <meta name="description" content="Técnico informático (SMX) y estudiante de ASIX. Soporte, redes y ciberseguridad.">
-<meta name="theme-color" content="#0a0a0a">
+<meta name="theme-color" content="#0b0c0e">
 <script>document.documentElement.className += " js";try{var nav=performance.getEntriesByType("navigation")[0];var internal=document.referrer&&document.referrer.indexOf(location.origin)===0;if(internal&&!(nav&&nav.type==="reload"))document.documentElement.className+=" no-splash";}catch(e){}try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
-<link rel="icon" href="assets/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="stylesheet" href="styles.css?v=20261029m">
-<script defer src="main.js?v=20261029m"></script>
+<link rel="icon" href="assets/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/svg+xml" href="assets/logo/alcasite-mark.svg?v=2">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png?v=2">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2">
+<link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css?v=20261103c">
+<script defer src="main.js?v=20261103c"></script>
 </head>
 <body>
 
 <div id="splash" class="splash" aria-hidden="true">
   <div class="splash-in">
-    <img class="theme-img for-dark" src="assets/mark-dark.webp" alt="" width="110" height="70">
-    <img class="theme-img for-light" src="assets/mark-light.webp" alt="" width="110" height="70">
-    <span class="splash-name">Valvarez</span>
+    <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><rect class="lm-tile" width="64" height="64" rx="16"/><circle class="lm-a" cx="27" cy="37" r="11.5"/><rect class="lm-s" x="35.5" y="22" width="7" height="30" rx="1.5"/><rect class="lm-c" x="46.5" y="44" width="8" height="8" rx="1.5"/></svg>
+    <span class="splash-name">alcasite<i class="caret"></i></span>
     <span class="splash-bar"><i></i></span>
   </div>
 </div>
@@ -28,7 +29,7 @@
 <div class="progress" aria-hidden="true"><span></span></div>
 
 <header class="bar">
-  <a class="brand" href="#inicio"><img class="theme-img for-dark" src="assets/mark-dark.webp" alt="" width="44" height="28"><img class="theme-img for-light" src="assets/mark-light.webp" alt="" width="44" height="28"><span>Valvarez</span></a>
+  <a class="brand" href="#inicio" aria-label="alcasite"><svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><rect class="lm-tile" width="64" height="64" rx="16"/><circle class="lm-a" cx="27" cy="37" r="11.5"/><rect class="lm-s" x="35.5" y="22" width="7" height="30" rx="1.5"/><rect class="lm-c" x="46.5" y="44" width="8" height="8" rx="1.5"/></svg><span class="wordmark">alcasite</span></a>
   <div class="bar-right">
     <nav>
       <a href="#perfil" data-i18n="nav.profile">Perfil</a>
@@ -44,11 +45,11 @@
 <main>
   <!-- HERO -->
   <section class="hero" id="inicio">
-    <div class="hero-gradient" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div>
-    <div class="hero-mark" aria-hidden="true"><div class="hm-obj"><img class="theme-img for-dark" src="assets/mark-dark-lg.webp" alt="" width="583" height="367"><img class="theme-img for-light" src="assets/mark-light-lg.webp" alt="" width="583" height="367"></div><div class="hm-floor"></div></div>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-mark" aria-hidden="true"><div class="hm-obj"><svg class="logo-glyph" viewBox="9 18 50 38" aria-hidden="true"><circle class="lg-a" cx="27" cy="37" r="11.5"/><rect class="lg-s" x="35.5" y="22" width="7" height="30" rx="1.5"/><rect class="lg-c" x="46.5" y="44" width="8" height="8" rx="1.5"/></svg></div><div class="hm-floor"></div></div>
     <div class="hero-kicker">
       <span class="pill"><i></i> <span data-i18n="hero.role">Técnico informático</span></span>
-      <span class="pill" data-i18n="hero.year">ASIX · 2º curso</span>
+      <span class="kick-txt" data-i18n="hero.year">ASIX · 2º curso</span>
     </div>
     <h1 class="hero-title"><span class="line"><span>Víctor</span></span> <span class="line"><span>Álvarez</span></span> <span class="line"><span>Calvo<em>.</em></span></span></h1>
     <p class="hero-sub" data-i18n="hero.sub">Arreglo equipos, configuro redes y estudio cómo se rompen los sistemas para aprender a protegerlos.</p>
@@ -68,8 +69,8 @@
   <section class="block" id="perfil">
     <div class="wrap about">
       <div class="about-text">
-        <div class="sec-head" style="margin-bottom:22px"><span class="label"><b>01</b> / <span data-i18n="sec.profile">Perfil</span></span></div>
-        <h2 class="about-title reveal" data-i18n="about.title">De técnico en SMX a especializarme en ciberseguridad</h2>
+        <div class="sec-head" style="margin-bottom:22px"><span class="eyebrow"><b>01</b> <span data-i18n="sec.profile">Perfil</span></span></div>
+        <h2 class="about-title" data-i18n-html="about.title">De técnico en SMX a especializarme en <em>ciberseguridad</em></h2>
         <p class="about-p reveal" data-i18n-html="profile.1">Técnico informático con formación en <mark>sistemas microinformáticos y redes</mark>, ahora estudiando administración de redes y <mark>ciberseguridad</mark>.</p>
         <p class="about-p reveal" data-i18n="profile.2">Trabajo como auxiliar de TI en BandIT Solutions: soporte técnico, hardware y software, redes y conectividad, y gestión de usuarios. Antes diseñé páginas en WordPress y creé cursos online en Moodle. Constante, con ganas de aprender y de crecer en el sector.</p>
       </div>
@@ -90,8 +91,8 @@
   <!-- TRAYECTORIA -->
   <section class="block" id="trayectoria">
     <div class="wrap">
-      <div class="sec-head" id="experiencia"><span class="label"><b>02</b> / <span data-i18n="sec.exp">Experiencia</span></span></div>
-      <h2 class="xp-title" data-i18n="exp.title">Experiencia profesional</h2>
+      <div class="sec-head" id="experiencia"><span class="eyebrow"><b>02</b> <span data-i18n="sec.exp">Experiencia</span></span></div>
+      <h2 class="xp-title" data-i18n-html="exp.title">Experiencia <em>profesional</em></h2>
       <p class="xp-lead" data-i18n="exp.lead">Soporte técnico, redes y gestión de usuarios en empresa; webs y cursos online durante las prácticas.</p>
       <ol class="xp reveal">
         <li class="xp-item current">
@@ -117,7 +118,7 @@
         </li>
       </ol>
 
-      <div class="sec-head" id="formacion" style="margin-top:clamp(56px,8vw,110px)"><span class="label"><b>03</b> / <span data-i18n="sec.edu">Formación</span></span></div>
+      <div class="sec-head" id="formacion" style="margin-top:clamp(56px,8vw,110px)"><span class="eyebrow"><b>03</b></span><h2 class="sec-title" data-i18n="sec.edu">Formación</h2></div>
       <div class="rows reveal">
         <div class="row" data-open="true">
           <div class="row-head" role="button" tabindex="0" aria-expanded="true">
@@ -146,7 +147,7 @@
       </div>
       <p class="skills-cta"><a class="btn main" href="aptitudes.html" data-i18n="btn.skills">Ver aptitudes de formación →</a></p>
 
-      <div class="sec-head" id="certificaciones" style="margin-top:clamp(56px,8vw,110px)"><span class="label"><b>04</b> / <span data-i18n="sec.cert">Certificaciones</span></span></div>
+      <div class="sec-head" id="certificaciones" style="margin-top:clamp(56px,8vw,110px)"><span class="eyebrow"><b>04</b></span><h2 class="sec-title" data-i18n="sec.cert">Certificaciones</h2></div>
       <div class="rows reveal">
         <div class="row" data-open="true">
           <div class="row-head" role="button" tabindex="0" aria-expanded="true">
@@ -164,7 +165,7 @@
   <section class="block" id="timeline">
     <div class="wrap">
       <div class="sec-head">
-        <span class="label"><b>05</b> / <span data-i18n="sec.timeline">Línea de tiempo</span></span>
+        <span class="eyebrow"><b>05</b></span><h2 class="sec-title" data-i18n="sec.timeline">Línea de tiempo</h2>
         <div class="tl-pager"><button type="button" id="tl-prev" aria-label="Anterior" data-i18n-aria="tl.prev">‹</button><span id="tl-count" class="label">SMX · 1 / 2</span><button type="button" id="tl-next" aria-label="Siguiente" data-i18n-aria="tl.next">›</button></div>
       </div>
       <div class="tl-card reveal">
@@ -188,7 +189,7 @@
   <!-- CON QUÉ TRABAJO -->
   <section class="block band-bone" id="stack">
     <div class="wrap">
-      <div class="sec-head"><span class="label"><b>06</b> / <span data-i18n="sec.stack">Con qué trabajo</span></span></div>
+      <div class="sec-head"><span class="eyebrow"><b>06</b></span><h2 class="sec-title" data-i18n="sec.stack">Con qué trabajo</h2></div>
       <div class="stack reveal">
         <div class="stack-row"><h3 class="label" data-i18n="st.ms">Microsoft</h3><ul><li>Microsoft 365</li><li>Microsoft Exchange</li><li>Microsoft Office</li><li>SharePoint</li></ul></div>
         <div class="stack-row"><h3 class="label" data-i18n="st.infra">Infraestructura</h3><ul><li>Windows Server</li><li>Active Directory</li><li data-i18n="s.vpn">Red privada virtual (VPN)</li><li data-i18n="s.remote">Escritorio remoto</li></ul></div>
@@ -202,7 +203,7 @@
   <!-- ÁREAS -->
   <section class="block" id="areas">
     <div class="wrap">
-      <div class="sec-head"><span class="label"><b>07</b> / <span data-i18n="sec.areas">Áreas</span></span></div>
+      <div class="sec-head"><span class="eyebrow"><b>07</b></span><h2 class="sec-title" data-i18n="sec.areas">Áreas</h2></div>
       <div class="areas-stack">
         <article class="acard">
           <div class="ac-top"><span>01 / 03</span></div>
@@ -233,38 +234,111 @@
   </section>
 
   <!-- PROYECTOS -->
-  <section class="block" id="proyectos">
+  <section class="block projects" id="proyectos">
     <div class="wrap">
-      <div class="sec-head"><span class="label"><b>08</b> / <span data-i18n="sec.projects">Proyectos</span></span></div>
-      <article class="project reveal">
-        <div class="project-text">
-          <p class="project-meta"><span class="dot" aria-hidden="true"></span><span data-i18n="proj.status">En desarrollo</span><span class="sep">/</span><span data-i18n="proj.type">Web · Autora de novelas</span></p>
-          <h3 class="project-title">Hellen Bold</h3>
-          <p class="project-desc" data-i18n="proj.desc">Web para una autora de novelas: catálogo de seis títulos agrupados por series y dos formas de conseguir cada libro. La estoy desarrollando yo.</p>
-          <ol class="proj-steps" role="tablist" aria-label="Capturas del proyecto" data-i18n-aria="proj.tabs">
-            <li><button type="button" role="tab" aria-selected="true" data-shot="0" class="proj-step is-active"><span class="n">01</span><span class="t"><b data-i18n="proj.t1">Portada</b><small data-i18n="proj.s1">Un carrusel de portadas que se arrastra.</small></span><i class="step-fill" aria-hidden="true"></i></button></li>
-            <li><button type="button" role="tab" aria-selected="false" data-shot="1" class="proj-step"><span class="n">02</span><span class="t"><b data-i18n="proj.t2">Catálogo</b><small data-i18n="proj.s2">Seis novelas organizadas por series.</small></span><i class="step-fill" aria-hidden="true"></i></button></li>
-            <li><button type="button" role="tab" aria-selected="false" data-shot="2" class="proj-step"><span class="n">03</span><span class="t"><b data-i18n="proj.t3">Cómo comprar</b><small data-i18n="proj.s3">Pedido directo o Amazon (Kindle y tapa blanda).</small></span><i class="step-fill" aria-hidden="true"></i></button></li>
-          </ol>
-          <p class="project-more" data-i18n="proj.more">También incluye secciones de autora, redes, newsletter y contacto, con tema claro y oscuro.</p>
-          <p class="project-tech">HTML · CSS · JavaScript · GSAP · ScrollTrigger</p>
-        </div>
-        <figure class="project-shot">
-          <div class="shot-view">
-            <img class="shot is-on" src="assets/projects/hellenbold-portada.webp" alt="Captura de la portada de la web de Hellen Bold" data-i18n-alt="proj.alt1" width="800" height="500" loading="lazy">
-            <img class="shot" src="assets/projects/hellenbold-catalogo.webp?v=3" alt="Captura del catálogo de novelas de la web de Hellen Bold" data-i18n-alt="proj.alt2" width="800" height="500" loading="lazy">
-            <img class="shot" src="assets/projects/hellenbold-compra.webp" alt="Captura de la sección Cómo comprar de la web de Hellen Bold" data-i18n-alt="proj.alt3" width="800" height="500" loading="lazy">
+      <div class="sec-head"><span class="eyebrow"><b>08</b></span><h2 class="sec-title" data-i18n="sec.projects">Proyectos</h2></div>
+    </div>
+
+    <!-- Holgura: proyecto principal (la sección se queda fija y las capturas pasan en horizontal) -->
+    <div class="chapter ch-hg" id="holgura" data-chapter="hg">
+      <div class="wrap">
+        <div class="ch-head">
+          <p class="project-meta"><span class="dot" aria-hidden="true"></span><span data-i18n="hg.status">En desarrollo · lanzamiento público muy pronto</span><span class="sep">/</span><span data-i18n="hg.type">App web · Finanzas personales</span></p>
+          <h3 class="ch-title"><span class="lm"><span>Holgura<em>.</em></span></span></h3>
+          <p class="ch-tagline" data-i18n-html="hg.tag">Tu sueldo, con <em>margen</em> para respirar.</p>
+          <div class="ch-grid">
+            <div>
+              <p class="project-desc" data-i18n="hg.desc">Una app web para llevar las cuentas del mes sin hojas de cálculo: apuntas lo que entra, los gastos fijos y lo que pasa por la tarjeta, y te dice cada día cuánto te queda de verdad. La estoy desarrollando yo y se lanzará pronto para todo el público.</p>
+              <p class="project-more" data-i18n="hg.more">Sin registro y con los datos guardados en tu propio navegador. Incluye previsión del mes por categorías, objetivo de ahorro, gastos fijos mensuales o anuales y copia de seguridad.</p>
+            </div>
+            <div class="facts">
+              <div><b data-count="5">5</b><small data-i18n="hg.f1">perfiles en el mismo navegador</small></div>
+              <div><b data-count="0">0</b><small data-i18n="hg.f2">registros ni cuentas que crear</small></div>
+              <div><b data-count="100" data-suffix="%">100%</b><small data-i18n="hg.f3">de tus datos, en tu navegador</small></div>
+            </div>
           </div>
-          <figcaption class="shot-cap"><span data-i18n="proj.url">Hellen Bold · vista previa en desarrollo</span><span class="shot-count">01 / 03</span></figcaption>
-        </figure>
-      </article>
+        </div>
+      </div>
+
+      <div class="ribbon" aria-hidden="true"><div class="ribbon-track"><span>Holgura</span><span data-i18n="hg.r1">Finanzas personales</span><span data-i18n="hg.r2">Sin registro</span><span data-i18n="hg.r3">Tus datos, en tu navegador</span><span>v0.28 beta</span></div></div>
+
+      <div class="hs">
+        <div class="hs-sticky">
+          <svg class="hs-thread" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path class="hs-path" d="M0 90 C 180 20, 320 20, 460 70 S 760 120, 900 50 S 1120 10, 1200 40"/></svg>
+          <div class="hs-count" aria-hidden="true"><b class="hs-n">01</b> / <span class="hs-total">04</span></div>
+          <div class="hs-track" role="list" aria-label="Capturas de Holgura" data-i18n-aria="hg.tabs">
+            <div class="hs-stop hs-intro" role="listitem">
+              <span class="eyebrow" data-i18n="hg.url">Holgura · beta en desarrollo</span>
+              <h4 class="hs-big" data-i18n="hg.tabs">Capturas de la app</h4>
+              <p class="project-tech">HTML · CSS · JavaScript</p>
+              <span class="hs-hint" aria-hidden="true">→</span>
+            </div>
+            <figure class="hs-stop" role="listitem">
+              <div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>holgura · 01</span></div><img src="assets/projects/holgura-inicio.webp" alt="Captura de la portada de Holgura con el resumen del mes" data-i18n-alt="hg.alt1" width="1280" height="800" loading="lazy"></div>
+              <figcaption class="cap"><b>01</b><div><h4 data-i18n="hg.t1">Inicio</h4><p data-i18n="hg.s1">Lo que te queda este mes, nada más entrar.</p></div></figcaption>
+            </figure>
+            <figure class="hs-stop" role="listitem">
+              <div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>holgura · 02</span></div><img src="assets/projects/holgura-mes.webp" alt="Captura del panel mensual de Holgura con movimientos y gasto por categorías" data-i18n-alt="hg.alt2" width="1280" height="800" loading="lazy"></div>
+              <figcaption class="cap"><b>02</b><div><h4 data-i18n="hg.t2">Mi mes</h4><p data-i18n="hg.s2">Ingresos, fijos, gastos del día a día y dónde se va el dinero.</p></div></figcaption>
+            </figure>
+            <figure class="hs-stop" role="listitem">
+              <div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>holgura · 03</span></div><img src="assets/projects/holgura-fijos.webp" alt="Captura de la lista de gastos fijos mensuales de Holgura" data-i18n-alt="hg.alt3" width="1280" height="800" loading="lazy"></div>
+              <figcaption class="cap"><b>03</b><div><h4 data-i18n="hg.t3">Gastos fijos</h4><p data-i18n="hg.s3">Se repiten solos cada mes y se marcan cuando se cobran.</p></div></figcaption>
+            </figure>
+            <figure class="hs-stop" role="listitem">
+              <div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>holgura · 04</span></div><img src="assets/projects/holgura-prevision.webp" alt="Captura de la previsión del mes de Holgura" data-i18n-alt="hg.alt4" width="1280" height="800" loading="lazy"></div>
+              <figcaption class="cap"><b>04</b><div><h4 data-i18n="hg.t4">Previsión</h4><p data-i18n="hg.s4">Lo que crees que gastarás y cuánto te sobraría.</p></div></figcaption>
+            </figure>
+          </div>
+          <div class="hs-bar" aria-hidden="true"><i></i></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hellen Bold: el libro se queda fijo y pasa de página según avanzan los capítulos -->
+    <div class="chapter ch-hb" id="hellenbold" data-chapter="hb">
+      <div class="wrap">
+        <div class="hb-head">
+          <p class="project-meta"><span class="dot" aria-hidden="true"></span><span data-i18n="proj.status">En desarrollo</span><span class="sep">/</span><span data-i18n="proj.type">Web · Autora de novelas</span></p>
+          <h3 class="hb-title"><span class="lm"><span>Hellen</span></span> <span class="lm"><span>Bold</span></span></h3>
+          <div class="hb-intro">
+            <div>
+              <p class="project-desc" data-i18n="proj.desc">Web para una autora de novelas: catálogo de seis títulos agrupados por series y dos formas de conseguir cada libro. La estoy desarrollando yo.</p>
+              <p class="project-more" data-i18n="proj.more">También incluye secciones de autora, redes, newsletter y contacto, con tema claro y oscuro.</p>
+            </div>
+            <dl class="hb-index">
+              <div><dt data-i18n="proj.f1">novelas en el catálogo</dt><dd data-count="6">6</dd></div>
+              <div><dt data-i18n="proj.f2">formas de conseguir cada libro</dt><dd data-count="2">2</dd></div>
+              <div><dt data-i18n="proj.f3">temas: claro y oscuro</dt><dd data-count="2">2</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="hb-story">
+          <div class="hb-book">
+            <div class="hb-sheet">
+              <img class="hb-page is-on" src="assets/projects/hellenbold-portada.webp" alt="Captura de la portada de la web de Hellen Bold" data-i18n-alt="proj.alt1" width="800" height="500" loading="lazy">
+              <img class="hb-page" src="assets/projects/hellenbold-catalogo.webp?v=3" alt="Captura del catálogo de novelas de la web de Hellen Bold" data-i18n-alt="proj.alt2" width="800" height="500" loading="lazy">
+              <img class="hb-page" src="assets/projects/hellenbold-compra.webp" alt="Captura de la sección Cómo comprar de la web de Hellen Bold" data-i18n-alt="proj.alt3" width="800" height="500" loading="lazy">
+              <span class="hb-fold" aria-hidden="true"></span>
+            </div>
+            <p class="hb-folio" aria-hidden="true"><span class="hb-folio-n">I</span> · III</p>
+          </div>
+          <ol class="hb-steps">
+            <li class="hb-step is-on"><span class="hb-num" aria-hidden="true">I</span><h4 data-i18n="proj.t1">Portada</h4><p data-i18n="proj.s1">Un carrusel de portadas que se arrastra.</p></li>
+            <li class="hb-step"><span class="hb-num" aria-hidden="true">II</span><h4 data-i18n="proj.t2">Catálogo</h4><p data-i18n="proj.s2">Seis novelas organizadas por series.</p></li>
+            <li class="hb-step"><span class="hb-num" aria-hidden="true">III</span><h4 data-i18n="proj.t3">Cómo comprar</h4><p data-i18n="proj.s3">Pedido directo o Amazon (Kindle y tapa blanda).</p></li>
+          </ol>
+        </div>
+        <p class="project-tech hb-tech">HTML · CSS · JavaScript · GSAP · ScrollTrigger</p>
+      </div>
     </div>
   </section>
 
 <!-- PORTFOLIO -->
   <section class="block" id="portfolio">
     <div class="wrap">
-      <div class="sec-head"><span class="label"><b>09</b> / Portfolio</span><a class="label" href="https://github.com/valvarez-labs/VictorAlvarez-IT-Portfolio" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+      <div class="sec-head"><span class="eyebrow"><b>09</b></span><h2 class="sec-title" data-i18n="nav.portfolio">Portfolio</h2><a class="label" href="https://github.com/valvarez-labs/VictorAlvarez-IT-Portfolio" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
       <div class="rows reveal">
         <div class="row" data-open="true">
           <div class="row-head" role="button" tabindex="0" aria-expanded="true">
@@ -289,10 +363,10 @@
   <!-- CONTACTO -->
   <section class="block contact" id="contacto">
     <div class="wrap">
-      <span class="label"><b>10</b> / <span data-i18n="sec.contact">Contacto</span></span>
-      <br>
-      <a class="mail" href="mailto:victor.alvarez.calvo01@gmail.com">victor.alvarez.calvo01@gmail.com</a>
-      <p style="color:var(--mute)" data-i18n="contact.p">Escríbeme y te respondo.</p>
+      <span class="eyebrow"><b>10</b></span>
+      <h2 class="contact-title" data-i18n="sec.contact">Contacto</h2>
+      <p class="contact-p" data-i18n="contact.p">Escríbeme y te respondo.</p>
+      <div class="mail-row"><a class="mail" href="mailto:victor.alvarez.calvo01@gmail.com">victor.alvarez.calvo01@gmail.com</a><button type="button" class="copy" data-copy="victor.alvarez.calvo01@gmail.com" data-i18n="copy.btn">Copiar</button></div>
       <div class="links">
         <a href="https://github.com/valvarez-labs" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
         <a href="https://linkedin.com/in/victor-alvarez-calvo-3513673a6" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
@@ -302,8 +376,8 @@
 </main>
 
 <footer>
-  <span class="foot-logo"><img class="theme-img for-dark" src="assets/logo-dark.webp" alt="Logotipo de Valvarez" width="80" height="60" loading="lazy"><img class="theme-img for-light" src="assets/logo-light.webp" alt="Logotipo de Valvarez" width="80" height="60" loading="lazy"></span>
-  <span>© <span id="year">2026</span> Víctor Álvarez Calvo <a class="foot-ver" href="versiones.html" title="Versiones">v1.6</a></span>
+  <span class="foot-logo"><svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><rect class="lm-tile" width="64" height="64" rx="16"/><circle class="lm-a" cx="27" cy="37" r="11.5"/><rect class="lm-s" x="35.5" y="22" width="7" height="30" rx="1.5"/><rect class="lm-c" x="46.5" y="44" width="8" height="8" rx="1.5"/></svg><span class="wordmark">alcasite</span></span>
+  <span>© <span id="year">2026</span> Víctor Álvarez Calvo <a class="foot-ver" href="versiones.html" title="Versiones">v1.7</a></span>
   <nav class="legal-links" aria-label="Legal"><a href="legal.html#aviso" data-i18n="footer.legal">Aviso legal</a><a href="legal.html#privacidad" data-i18n="footer.privacy">Privacidad</a><a href="legal.html#cookies" data-i18n="footer.cookies">Cookies</a></nav>
   <span data-i18n="footer.role">Técnico informático · ASIX</span>
 </footer>
