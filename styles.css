@@ -423,6 +423,15 @@ html[lang="es"] .vers [data-lang="es"],html[lang="ca"] .vers [data-lang="ca"],ht
 .ver ul{list-style:none}
 .ver li{position:relative;padding:5px 0 5px 22px;color:var(--ink2)}
 .ver li::before{content:"—";position:absolute;left:0;color:var(--accent)}
+/* índice de versiones y cambios agrupados por tipo */
+.ver{scroll-margin-top:90px}
+.ver-toc{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 34px}
+.ver-toc a{display:inline-flex;align-items:baseline;gap:8px;padding:7px 13px;border:1px solid var(--line);border-radius:999px;font-family:var(--mono);font-size:12px;color:var(--ink2);text-decoration:none;transition:color .2s,border-color .2s}
+.ver-toc a b{color:var(--ink)}
+.ver-toc a:hover{color:var(--ink);border-color:var(--accent)}
+.ver-sum{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.2vw,26px);line-height:1.2;color:var(--ink);margin-bottom:18px}
+.ver-g + .ver-g{margin-top:16px}
+.ver-g h3{font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-bottom:2px}
 @media (max-width:720px){.ver{grid-template-columns:1fr}}
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marquee-track{animation:none}}
