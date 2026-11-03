@@ -560,11 +560,12 @@ main{overflow-x:clip}
 @media (max-width:900px){.hs-track{padding-bottom:10px}.cap{margin-top:16px}}
 
 /* ---------- Holgura: color propio ---------- */
-:root{--hg:#ffb48f;--hg-bg:#0c1713;--hg-bg2:#12231c;--hg-ink:#1d0f07}
-:root[data-theme="light"]{--hg:#2f6b55;--hg-bg:#eaf3ec;--hg-bg2:#dbeae0;--hg-ink:#f2faf5}
+/* mismos colores que la propia Holgura: verde muy oscuro con lima, o crema con verde en claro */
+:root{--hg:#c6f04f;--hg-bg:#0a1512;--hg-bg2:#10201b;--hg-ink:#0b1a14;--hg-sig:#c6f04f;--hg-sig-ink:#0b1a14}
+:root[data-theme="light"]{--hg:#17694c;--hg-bg:#eef1ea;--hg-bg2:#e1e8dc;--hg-ink:#f3f7ee}
 :root.in-hg{--bg:var(--hg-bg);--bg-2:var(--hg-bg2);--accent:var(--hg);--accent-fill:var(--hg);--on-accent:var(--hg-ink);--accent-soft:color-mix(in srgb,var(--hg) 14%,transparent);--glow:transparent}
 :root.in-hg .bar.is-solid{background:color-mix(in srgb,var(--hg-bg) 82%,transparent)}
-.ch-hg .ribbon{background:var(--hg);color:var(--hg-ink)}
+.ch-hg .ribbon{background:var(--hg-sig);color:var(--hg-sig-ink)}
 .ch-tagline{font-family:var(--serif);font-style:italic;font-size:clamp(24px,2.6vw,38px);line-height:1.15;color:var(--ink2);margin:-8px 0 clamp(26px,3.5vw,44px)}
 .ch-tagline em{color:var(--accent)}
 .ch-hg .ch-title{margin-bottom:clamp(14px,2vw,22px)}
