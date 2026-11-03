@@ -8,7 +8,7 @@
     es: {
       "meta.title": "Víctor Álvarez Calvo · Técnico informático",
       "meta.desc": "Técnico informático (SMX) y estudiante de ASIX. Soporte, redes y ciberseguridad.",
-      "nav.profile": "Perfil", "nav.path": "Trayectoria", "nav.portfolio": "Portfolio", "nav.contact": "Contacto",
+      "nav.profile": "Perfil", "nav.projects": "Proyectos", "nav.path": "Trayectoria", "nav.portfolio": "Portfolio", "nav.contact": "Contacto",
       "hero.role": "Técnico informático", "hero.year": "ASIX · 2º curso",
       "hero.sub": "Arreglo equipos, configuro redes y estudio cómo se rompen los sistemas para aprender a protegerlos.",
       "hero.cta1": "Ver portfolio", "hero.cta2": "Contactar", "hero.scroll": "Scroll ↓",
@@ -60,7 +60,7 @@
     ca: {
       "meta.title": "Víctor Álvarez Calvo · Tècnic informàtic",
       "meta.desc": "Tècnic informàtic (SMX) i estudiant d'ASIX. Suport, xarxes i ciberseguretat.",
-      "nav.profile": "Perfil", "nav.path": "Trajectòria", "nav.portfolio": "Portfoli", "nav.contact": "Contacte",
+      "nav.profile": "Perfil", "nav.projects": "Projectes", "nav.path": "Trajectòria", "nav.portfolio": "Portfoli", "nav.contact": "Contacte",
       "hero.role": "Tècnic informàtic", "hero.year": "ASIX · 2n curs",
       "hero.sub": "Arreglo equips, configuro xarxes i estudio com es trenquen els sistemes per aprendre a protegir-los.",
       "hero.cta1": "Veure el portfoli", "hero.cta2": "Contactar", "hero.scroll": "Scroll ↓",
@@ -112,7 +112,7 @@
     en: {
       "meta.title": "Víctor Álvarez Calvo · IT Technician",
       "meta.desc": "IT technician (SMX) and ASIX student. Support, networks and cybersecurity.",
-      "nav.profile": "Profile", "nav.path": "Journey", "nav.portfolio": "Portfolio", "nav.contact": "Contact",
+      "nav.profile": "Profile", "nav.projects": "Projects", "nav.path": "Journey", "nav.portfolio": "Portfolio", "nav.contact": "Contact",
       "hero.role": "IT technician", "hero.year": "ASIX · 2nd year",
       "hero.sub": "I fix computers, set up networks and study how systems break so I can learn to protect them.",
       "hero.cta1": "View portfolio", "hero.cta2": "Get in touch", "hero.scroll": "Scroll ↓",
