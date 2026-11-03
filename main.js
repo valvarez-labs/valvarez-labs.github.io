@@ -358,10 +358,10 @@
     var page = document.body.getAttribute("data-page");
     var base = page ? "index.html" : "";
     var items = [
-      ["#perfil", "sec.profile", "Perfil", "01"], ["#experiencia", "sec.exp", "Experiencia", "02"],
-      ["#formacion", "sec.edu", "Formación", "03"], ["#certificaciones", "sec.cert", "Certificaciones", "04"], ["#timeline", "sec.timeline", "Línea de tiempo", "05"],
-      ["#stack", "sec.stack", "Con qué trabajo", "06"], ["#areas", "sec.areas", "Áreas", "07"],
-      ["#proyectos", "sec.projects", "Proyectos", "08"], ["#portfolio", "nav.portfolio", "Portfolio", "09"], ["#contacto", "sec.contact", "Contacto", "10"],
+      ["#perfil", "sec.profile", "Perfil", "01"], ["#proyectos", "sec.projects", "Proyectos", "02"], ["#experiencia", "sec.exp", "Experiencia", "03"],
+      ["#formacion", "sec.edu", "Formación", "04"], ["#certificaciones", "sec.cert", "Certificaciones", "05"], ["#timeline", "sec.timeline", "Línea de tiempo", "06"],
+      ["#stack", "sec.stack", "Con qué trabajo", "07"], ["#areas", "sec.areas", "Áreas", "08"],
+      ["#portfolio", "nav.portfolio", "Portfolio", "09"], ["#contacto", "sec.contact", "Contacto", "10"],
       null,
       ["aptitudes.html", "skills.h1", "Aptitudes de formación", "→"], ["versiones.html", "ver.title", "Versiones", "→"],
       ["legal.html#aviso", "footer.legal", "Aviso legal", "·"], ["legal.html#privacidad", "footer.privacy", "Privacidad", "·"],
