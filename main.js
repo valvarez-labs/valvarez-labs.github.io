@@ -40,7 +40,7 @@
       "stat.3": "archivos de prácticas documentados", "stat.4": "idiomas: castellano, catalán e inglés",
       "sec.areas": "Áreas",
       "marq.label": "Herramientas con las que trabajo",
-      "sec.projects": "Proyectos", "proj.url": "Hellen Bold · vista previa en desarrollo", "proj.tabs": "Capturas del proyecto", "proj.t1": "Portada", "proj.t2": "Catálogo", "proj.t3": "Cómo comprar", "proj.s1": "Un carrusel de portadas que se arrastra.", "proj.s2": "Seis novelas organizadas por series.", "proj.s3": "Pedido directo o Amazon (Kindle y tapa blanda).", "proj.alt1": "Captura de la portada de la web de Hellen Bold", "proj.alt2": "Captura del catálogo de novelas de la web de Hellen Bold", "proj.alt3": "Captura de la sección Cómo comprar de la web de Hellen Bold", "proj.type": "Web · Autora de novelas", "proj.desc": "Web para una autora de novelas: catálogo de seis títulos agrupados por series y dos formas de conseguir cada libro. La estoy desarrollando yo.", "proj.more": "También incluye secciones de autora, redes, newsletter y contacto, con tema claro y oscuro.", "proj.status": "En desarrollo", "proj.f1": "novelas en el catálogo", "proj.f2": "formas de conseguir cada libro", "proj.f3": "temas: claro y oscuro", "cur.view": "Ver", "cur.open": "Abrir", "hg.status": "En desarrollo · lanzamiento público muy pronto", "hg.type": "App web · Finanzas personales", "hg.tag": "Tu sueldo, con <em>margen</em> para respirar.", "hg.desc": "Una app web para llevar las cuentas del mes sin hojas de cálculo: apuntas lo que entra, los gastos fijos y lo que pasa por la tarjeta, y te dice cada día cuánto te queda de verdad. La estoy desarrollando yo y se lanzará pronto para todo el público.", "hg.more": "Los datos se guardan en tu propio navegador. Incluye previsión del mes por categorías, objetivo de ahorro, gastos fijos mensuales o anuales, copia de seguridad, exportación a Excel, PDF y CSV, y modo claro y oscuro.", "hg.f1": "perfiles en el mismo navegador", "hg.f2": "categorías para clasificar cada gasto", "hg.f3": "formatos para exportar: Excel, PDF y CSV", "hg.r1": "Finanzas personales", "hg.r2": "Previsión del mes", "hg.r3": "Tus datos, en tu navegador", "hg.url": "Holgura · beta en desarrollo", "hg.tabs": "Capturas de la app", "hg.t1": "Inicio", "hg.s1": "Lo que te queda este mes, nada más entrar.", "hg.t2": "Mi mes", "hg.s2": "Ingresos, fijos, gastos del día a día y dónde se va el dinero.", "hg.t3": "Gastos fijos", "hg.s3": "Se repiten solos cada mes y se marcan cuando se cobran.", "hg.t4": "Previsión", "hg.s4": "Lo que crees que gastarás y cuánto te sobraría.", "hg.alt1": "Captura de la portada de Holgura con el resumen del mes", "hg.alt2": "Captura del panel mensual de Holgura con movimientos y gasto por categorías", "hg.alt3": "Captura de la lista de gastos fijos mensuales de Holgura", "hg.alt4": "Captura de la previsión del mes de Holgura",
+      "sec.projects": "Proyectos", "proj.t1": "Portada", "proj.s1": "Un carrusel de portadas que se arrastra con el ratón o con el dedo, y el sello de seis novelas.", "proj.n1": "Arrastrar · flechas · 6 novelas", "proj.alt1": "Captura de la portada de la web de Hellen Bold con el carrusel de portadas", "proj.t2": "Catálogo", "proj.s2": "Todas las portadas de un vistazo y, debajo, cada novela en su serie: Quiero ser, Velox y una autoconclusiva.", "proj.n2": "2 series · 1 autoconclusiva", "proj.alt2": "Captura del catálogo de novelas de la web de Hellen Bold", "proj.t3": "Ficha de cada libro", "proj.s3": "La maqueta del libro en Kindle y en papel, la serie y el número de libro, y sus botones de compra.", "proj.n3": "Kindle · tapa blanda", "proj.alt3": "Captura de la ficha de un libro en la web de Hellen Bold", "proj.t4": "Edición o portada", "proj.s4": "Un interruptor en cada ficha cambia la maqueta por la portada a tamaño completo.", "proj.n4": "2 vistas por libro", "proj.alt4": "Captura de la portada a tamaño completo de un libro en la web de Hellen Bold", "proj.t5": "Serie completa", "proj.s5": "La saga Quiero ser también se vende entera en Kindle, con su propia ficha.", "proj.n5": "3 libros en 1", "proj.alt5": "Captura de la serie completa Quiero ser en la web de Hellen Bold", "proj.t6": "Dos formas de comprar", "proj.s6": "Pedírselo directamente a la autora, con dedicatoria y un detalle de regalo, o ir a Amazon.", "proj.n6": "Directo · Amazon", "proj.alt6": "Captura de la sección Cómo comprar de la web de Hellen Bold", "proj.t7": "Pedido directo", "proj.s7": "Eliges el libro, cuántos ejemplares y un mensaje, y se abre tu correo con todo ya redactado.", "proj.n7": "Formulario → correo", "proj.alt7": "Captura del formulario de pedido directo de la web de Hellen Bold", "proj.t8": "Modo oscuro", "proj.s8": "Tema claro u oscuro con un solo botón; las portadas lucen igual en los dos.", "proj.n8": "Claro · oscuro", "proj.alt8": "Captura de la web de Hellen Bold en modo oscuro", "proj.plate": "Lámina", "proj.ed": "Libro de funciones", "proj.vol": "Ocho capítulos · baja para pasar página", "proj.toc": "Índice de capítulos", "proj.type": "Web · Autora de novelas", "proj.desc": "Web para una autora de novelas: catálogo de seis títulos agrupados por series y dos formas de conseguir cada libro. La estoy desarrollando yo.", "proj.more": "También incluye secciones de autora y redes, y un formulario de pedido directo, con tema claro y oscuro.", "proj.status": "En desarrollo", "proj.f1": "novelas en el catálogo", "proj.f2": "formas de conseguir cada libro", "proj.f3": "temas: claro y oscuro", "cur.view": "Ver", "cur.open": "Abrir", "hg.status": "En desarrollo · lanzamiento público muy pronto", "hg.l1": "Tu resumen", "hg.v1": "1 vistazo", "hg.d1": "Lo que te queda este mes, nada más entrar.", "hg.a1": "Captura de la portada de Holgura con el tique del mes", "hg.l2": "Perfiles", "hg.v2": "×5", "hg.d2": "Hasta cinco cuentas en el mismo navegador, una al lado de otra.", "hg.a2": "Captura de los perfiles de Holgura", "hg.l3": "Mi mes", "hg.v3": "4 cifras", "hg.d3": "Ingresos, fijos, gastos del día a día y cuánto puedes gastar al día.", "hg.a3": "Captura del panel mensual de Holgura", "hg.l4": "Día de cobro", "hg.v4": "1–31", "hg.d4": "El mes empieza el día que cobras la nómina, no el día 1.", "hg.a4": "Captura del selector del día de cobro de Holgura", "hg.l5": "Apuntar un gasto", "hg.v5": "5 campos", "hg.d5": "Concepto, importe, fecha, categoría y método de pago, en segundos.", "hg.a5": "Captura del formulario para apuntar un gasto en Holgura", "hg.l6": "Movimientos", "hg.v6": "17 categorías", "hg.d6": "Búsqueda, filtros por categoría y método, y dónde se va tu dinero.", "hg.a6": "Captura de los movimientos y el gasto por categorías de Holgura", "hg.l7": "Calendario", "hg.v7": "día a día", "hg.d7": "Lo que gastas cada día; cuanto más intenso el color, más gastaste.", "hg.a7": "Captura del calendario de gastos de Holgura", "hg.l8": "Gastos fijos", "hg.v8": "mes · año", "hg.d8": "Mensuales o anuales; se repiten solos y se marcan cuando se cobran.", "hg.a8": "Captura de los gastos fijos de Holgura", "hg.l9": "Previsión", "hg.v9": "+ ahorro", "hg.d9": "Lo que crees que gastarás por categoría, cuánto te sobraría y tu objetivo de ahorro.", "hg.a9": "Captura de la previsión del mes de Holgura", "hg.l10": "Copia y exportación", "hg.v10": "4 formatos", "hg.d10": "Copia de seguridad de tus datos y exportación a Excel, ODS, PDF y CSV.", "hg.a10": "Captura del menú de exportación de Holgura", "hg.l11": "Claro u oscuro", "hg.v11": "ES · CA · EN", "hg.d11": "Tema claro u oscuro, en castellano, catalán o inglés.", "hg.a11": "Captura de Holgura en modo claro y en inglés", "hg.top": "Tique de funciones", "hg.sub": "Beta · en desarrollo", "hg.total": "Hojas de cálculo", "hg.thanks": "Gracias · pronto, para todo el público", "hg.shots": "Capturas de Holgura", "hg.type": "App web · Finanzas personales", "hg.tag": "Tu sueldo, con <em>margen</em> para respirar.", "hg.desc": "Una app web para llevar las cuentas del mes sin hojas de cálculo: apuntas lo que entra, los gastos fijos y lo que pasa por la tarjeta, y te dice cada día cuánto te queda de verdad. La estoy desarrollando yo y se lanzará pronto para todo el público.", "hg.more": "Los datos se guardan en tu propio navegador. Incluye previsión del mes por categorías, objetivo de ahorro, gastos fijos mensuales o anuales, copia de seguridad, exportación a Excel, ODS, PDF y CSV, y modo claro y oscuro.", "hg.f1": "perfiles en el mismo navegador", "hg.f2": "categorías para clasificar cada gasto", "hg.f3": "formatos para exportar: Excel, ODS, PDF y CSV",
       "sec.stack": "Con qué trabajo", "st.ms": "Microsoft", "st.infra": "Infraestructura", "st.support": "Soporte", "st.way": "Forma de trabajar", "s.assist": "Asistencia informática", "s.hw": "Instalación de hardware informático", "s.doc": "Documentación", "s.team": "Trabajo en equipo", "st.tools": "Herramientas", "s.vpn": "Red privada virtual (VPN)", "s.remote": "Escritorio remoto", "s.incid": "Gestión de incidencias",
       "a.1.t": "Soporte", "a.1.p": "Hardware, software y usuarios. Dejar los equipos funcionando y que nadie se quede parado.",
       "a.2.t": "Redes", "a.2.p": "Conectividad y configuración de redes, del armario rack al router.",
@@ -92,7 +92,7 @@
       "stat.3": "fitxers de pràctiques documentats", "stat.4": "idiomes: castellà, català i anglès",
       "sec.areas": "Àrees",
       "marq.label": "Eines amb les quals treballo",
-      "sec.projects": "Projectes", "proj.url": "Hellen Bold · vista prèvia en desenvolupament", "proj.tabs": "Captures del projecte", "proj.t1": "Portada", "proj.t2": "Catàleg", "proj.t3": "Com comprar", "proj.s1": "Un carrusel de portades que s'arrossega.", "proj.s2": "Sis novel·les organitzades per sèries.", "proj.s3": "Comanda directa o Amazon (Kindle i tapa tova).", "proj.alt1": "Captura de la portada del web d'Hellen Bold", "proj.alt2": "Captura del catàleg de novel·les del web d'Hellen Bold", "proj.alt3": "Captura de la secció Com comprar del web d'Hellen Bold", "proj.type": "Web · Autora de novel·les", "proj.desc": "Web per a una autora de novel·les: catàleg de sis títols agrupats per sèries i dues maneres d'aconseguir cada llibre. La desenvolupo jo.", "proj.more": "També inclou seccions d'autora, xarxes, newsletter i contacte, amb tema clar i fosc.", "proj.status": "En desenvolupament", "proj.f1": "novel·les al catàleg", "proj.f2": "maneres d'aconseguir cada llibre", "proj.f3": "temes: clar i fosc", "cur.view": "Veure", "cur.open": "Obrir", "hg.status": "En desenvolupament · llançament públic molt aviat", "hg.type": "App web · Finances personals", "hg.tag": "El teu sou, amb <em>marge</em> per respirar.", "hg.desc": "Una app web per portar els comptes del mes sense fulls de càlcul: hi apuntes el que entra, les despeses fixes i el que passa per la targeta, i et diu cada dia quant et queda de veritat. La desenvolupo jo i es llançarà aviat per a tothom.", "hg.more": "Les dades es guarden al teu propi navegador. Inclou previsió del mes per categories, objectiu d'estalvi, despeses fixes mensuals o anuals, còpia de seguretat, exportació a Excel, PDF i CSV, i mode clar i fosc.", "hg.f1": "perfils al mateix navegador", "hg.f2": "categories per classificar cada despesa", "hg.f3": "formats per exportar: Excel, PDF i CSV", "hg.r1": "Finances personals", "hg.r2": "Previsió del mes", "hg.r3": "Les teves dades, al teu navegador", "hg.url": "Holgura · beta en desenvolupament", "hg.tabs": "Captures de l'app", "hg.t1": "Inici", "hg.s1": "El que et queda aquest mes, només entrar.", "hg.t2": "El meu mes", "hg.s2": "Ingressos, fixos, despeses del dia a dia i on van els diners.", "hg.t3": "Despeses fixes", "hg.s3": "Es repeteixen soles cada mes i es marquen quan es cobren.", "hg.t4": "Previsió", "hg.s4": "El que creus que gastaràs i quant et sobraria.", "hg.alt1": "Captura de la portada d'Holgura amb el resum del mes", "hg.alt2": "Captura del tauler mensual d'Holgura amb moviments i despesa per categories", "hg.alt3": "Captura de la llista de despeses fixes mensuals d'Holgura", "hg.alt4": "Captura de la previsió del mes d'Holgura",
+      "sec.projects": "Projectes", "proj.t1": "Portada", "proj.s1": "Un carrusel de portades que s'arrossega amb el ratolí o amb el dit, i el segell de sis novel·les.", "proj.n1": "Arrossegar · fletxes · 6 novel·les", "proj.alt1": "Captura de la portada del web d'Hellen Bold amb el carrusel de portades", "proj.t2": "Catàleg", "proj.s2": "Totes les portades d'un cop d'ull i, a sota, cada novel·la a la seva sèrie: Quiero ser, Velox i una autoconclusiva.", "proj.n2": "2 sèries · 1 autoconclusiva", "proj.alt2": "Captura del catàleg de novel·les del web d'Hellen Bold", "proj.t3": "Fitxa de cada llibre", "proj.s3": "La maqueta del llibre en Kindle i en paper, la sèrie i el número de llibre, i els seus botons de compra.", "proj.n3": "Kindle · tapa tova", "proj.alt3": "Captura de la fitxa d'un llibre al web d'Hellen Bold", "proj.t4": "Edició o portada", "proj.s4": "Un interruptor a cada fitxa canvia la maqueta per la portada a mida completa.", "proj.n4": "2 vistes per llibre", "proj.alt4": "Captura de la portada a mida completa d'un llibre al web d'Hellen Bold", "proj.t5": "Sèrie completa", "proj.s5": "La saga Quiero ser també es ven sencera en Kindle, amb la seva pròpia fitxa.", "proj.n5": "3 llibres en 1", "proj.alt5": "Captura de la sèrie completa Quiero ser al web d'Hellen Bold", "proj.t6": "Dues maneres de comprar", "proj.s6": "Demanar-lo directament a l'autora, amb dedicatòria i un detall de regal, o anar a Amazon.", "proj.n6": "Directe · Amazon", "proj.alt6": "Captura de la secció Com comprar del web d'Hellen Bold", "proj.t7": "Comanda directa", "proj.s7": "Tries el llibre, quants exemplars i un missatge, i s'obre el teu correu amb tot ja redactat.", "proj.n7": "Formulari → correu", "proj.alt7": "Captura del formulari de comanda directa del web d'Hellen Bold", "proj.t8": "Mode fosc", "proj.s8": "Tema clar o fosc amb un sol botó; les portades llueixen igual en tots dos.", "proj.n8": "Clar · fosc", "proj.alt8": "Captura del web d'Hellen Bold en mode fosc", "proj.plate": "Làmina", "proj.ed": "Llibre de funcions", "proj.vol": "Vuit capítols · baixa per passar pàgina", "proj.toc": "Índex de capítols", "proj.type": "Web · Autora de novel·les", "proj.desc": "Web per a una autora de novel·les: catàleg de sis títols agrupats per sèries i dues maneres d'aconseguir cada llibre. La desenvolupo jo.", "proj.more": "També inclou seccions d'autora i xarxes, i un formulari de comanda directa, amb tema clar i fosc.", "proj.status": "En desenvolupament", "proj.f1": "novel·les al catàleg", "proj.f2": "maneres d'aconseguir cada llibre", "proj.f3": "temes: clar i fosc", "cur.view": "Veure", "cur.open": "Obrir", "hg.status": "En desenvolupament · llançament públic molt aviat", "hg.l1": "El teu resum", "hg.v1": "1 cop d'ull", "hg.d1": "El que et queda aquest mes, només entrar.", "hg.a1": "Captura de la portada d'Holgura amb el tiquet del mes", "hg.l2": "Perfils", "hg.v2": "×5", "hg.d2": "Fins a cinc comptes al mateix navegador, l'un al costat de l'altre.", "hg.a2": "Captura dels perfils d'Holgura", "hg.l3": "El meu mes", "hg.v3": "4 xifres", "hg.d3": "Ingressos, fixos, despeses del dia a dia i quant pots gastar al dia.", "hg.a3": "Captura del tauler mensual d'Holgura", "hg.l4": "Dia de cobrament", "hg.v4": "1–31", "hg.d4": "El mes comença el dia que cobres la nòmina, no el dia 1.", "hg.a4": "Captura del selector del dia de cobrament d'Holgura", "hg.l5": "Apuntar una despesa", "hg.v5": "5 camps", "hg.d5": "Concepte, import, data, categoria i mètode de pagament, en segons.", "hg.a5": "Captura del formulari per apuntar una despesa a Holgura", "hg.l6": "Moviments", "hg.v6": "17 categories", "hg.d6": "Cerca, filtres per categoria i mètode, i on van els teus diners.", "hg.a6": "Captura dels moviments i la despesa per categories d'Holgura", "hg.l7": "Calendari", "hg.v7": "dia a dia", "hg.d7": "El que gastes cada dia; com més intens el color, més vas gastar.", "hg.a7": "Captura del calendari de despeses d'Holgura", "hg.l8": "Despeses fixes", "hg.v8": "mes · any", "hg.d8": "Mensuals o anuals; es repeteixen soles i es marquen quan es cobren.", "hg.a8": "Captura de les despeses fixes d'Holgura", "hg.l9": "Previsió", "hg.v9": "+ estalvi", "hg.d9": "El que creus que gastaràs per categoria, quant et sobraria i el teu objectiu d'estalvi.", "hg.a9": "Captura de la previsió del mes d'Holgura", "hg.l10": "Còpia i exportació", "hg.v10": "4 formats", "hg.d10": "Còpia de seguretat de les teves dades i exportació a Excel, ODS, PDF i CSV.", "hg.a10": "Captura del menú d'exportació d'Holgura", "hg.l11": "Clar o fosc", "hg.v11": "ES · CA · EN", "hg.d11": "Tema clar o fosc, en castellà, català o anglès.", "hg.a11": "Captura d'Holgura en mode clar i en anglès", "hg.top": "Tiquet de funcions", "hg.sub": "Beta · en desenvolupament", "hg.total": "Fulls de càlcul", "hg.thanks": "Gràcies · aviat, per a tothom", "hg.shots": "Captures d'Holgura", "hg.type": "App web · Finances personals", "hg.tag": "El teu sou, amb <em>marge</em> per respirar.", "hg.desc": "Una app web per portar els comptes del mes sense fulls de càlcul: hi apuntes el que entra, les despeses fixes i el que passa per la targeta, i et diu cada dia quant et queda de veritat. La desenvolupo jo i es llançarà aviat per a tothom.", "hg.more": "Les dades es guarden al teu propi navegador. Inclou previsió del mes per categories, objectiu d'estalvi, despeses fixes mensuals o anuals, còpia de seguretat, exportació a Excel, ODS, PDF i CSV, i mode clar i fosc.", "hg.f1": "perfils al mateix navegador", "hg.f2": "categories per classificar cada despesa", "hg.f3": "formats per exportar: Excel, ODS, PDF i CSV",
       "sec.stack": "Amb què treballo", "st.ms": "Microsoft", "st.infra": "Infraestructura", "st.support": "Suport", "st.way": "Manera de treballar", "s.assist": "Assistència informàtica", "s.hw": "Instal·lació de maquinari informàtic", "s.doc": "Documentació", "s.team": "Treball en equip", "st.tools": "Eines", "s.vpn": "Xarxa privada virtual (VPN)", "s.remote": "Escriptori remot", "s.incid": "Gestió d'incidències",
       "a.1.t": "Suport", "a.1.p": "Maquinari, programari i usuaris. Deixar els equips funcionant i que ningú es quedi aturat.",
       "a.2.t": "Xarxes", "a.2.p": "Connectivitat i configuració de xarxes, de l'armari rack al router.",
@@ -144,7 +144,7 @@
       "stat.3": "documented practice files", "stat.4": "languages: Spanish, Catalan and English",
       "sec.areas": "Areas",
       "marq.label": "Tools I work with",
-      "sec.projects": "Projects", "proj.url": "Hellen Bold · preview in development", "proj.tabs": "Project screenshots", "proj.t1": "Home", "proj.t2": "Catalog", "proj.t3": "How to buy", "proj.s1": "A cover carousel you can drag.", "proj.s2": "Six novels organised by series.", "proj.s3": "Direct order or Amazon (Kindle and paperback).", "proj.alt1": "Screenshot of the Hellen Bold website home page", "proj.alt2": "Screenshot of the novel catalog on the Hellen Bold website", "proj.alt3": "Screenshot of the How to buy section on the Hellen Bold website", "proj.type": "Website · Novelist", "proj.desc": "Website for a novelist: a catalog of six titles grouped into series and two ways to get each book. I am building it myself.", "proj.more": "It also includes author, social media, newsletter and contact sections, with light and dark themes.", "proj.status": "In development", "proj.f1": "novels in the catalog", "proj.f2": "ways to get each book", "proj.f3": "themes: light and dark", "cur.view": "View", "cur.open": "Open", "hg.status": "In development · public launch very soon", "hg.type": "Web app · Personal finance", "hg.tag": "Your salary, with <em>room</em> to breathe.", "hg.desc": "A web app to keep track of your month without spreadsheets: you log what comes in, your fixed bills and what goes on the card, and every day it tells you how much you really have left. I am building it myself and it will launch to the public soon.", "hg.more": "Your data is saved in your own browser. It includes a monthly forecast by category, a savings goal, monthly or yearly fixed expenses, backups, export to Excel, PDF and CSV, and light and dark modes.", "hg.f1": "profiles in the same browser", "hg.f2": "categories to sort every expense", "hg.f3": "export formats: Excel, PDF and CSV", "hg.r1": "Personal finance", "hg.r2": "Monthly forecast", "hg.r3": "Your data, in your browser", "hg.url": "Holgura · beta in development", "hg.tabs": "App screenshots", "hg.t1": "Home", "hg.s1": "What you have left this month, right away.", "hg.t2": "My month", "hg.s2": "Income, fixed bills, day-to-day spending and where the money goes.", "hg.t3": "Fixed expenses", "hg.s3": "They repeat every month and get ticked off when charged.", "hg.t4": "Forecast", "hg.s4": "What you expect to spend and how much you would have left.", "hg.alt1": "Screenshot of the Holgura home page with the month summary", "hg.alt2": "Screenshot of the Holgura monthly dashboard with transactions and spending by category", "hg.alt3": "Screenshot of the Holgura list of monthly fixed expenses", "hg.alt4": "Screenshot of the Holgura monthly forecast",
+      "sec.projects": "Projects", "proj.t1": "Home", "proj.s1": "A cover carousel you can drag with the mouse or your finger, plus a six-novel badge.", "proj.n1": "Drag · arrows · 6 novels", "proj.alt1": "Screenshot of the Hellen Bold website home page with the cover carousel", "proj.t2": "Catalog", "proj.s2": "Every cover at a glance and, below, each novel in its series: Quiero ser, Velox and a standalone.", "proj.n2": "2 series · 1 standalone", "proj.alt2": "Screenshot of the novel catalog on the Hellen Bold website", "proj.t3": "Book page", "proj.s3": "The book shown on Kindle and in print, its series and number, and its buy buttons.", "proj.n3": "Kindle · paperback", "proj.alt3": "Screenshot of a book page on the Hellen Bold website", "proj.t4": "Edition or cover", "proj.s4": "A switch on every book swaps the mock-up for the full-size cover.", "proj.n4": "2 views per book", "proj.alt4": "Screenshot of a full-size book cover on the Hellen Bold website", "proj.t5": "Complete series", "proj.s5": "The Quiero ser saga is also sold as a whole on Kindle, with its own page.", "proj.n5": "3 books in 1", "proj.alt5": "Screenshot of the complete Quiero ser series on the Hellen Bold website", "proj.t6": "Two ways to buy", "proj.s6": "Order straight from the author, with a dedication and a small gift, or go to Amazon.", "proj.n6": "Direct · Amazon", "proj.alt6": "Screenshot of the How to buy section on the Hellen Bold website", "proj.t7": "Direct order", "proj.s7": "Pick the book, how many copies and a message, and your email opens with everything already written.", "proj.n7": "Form → email", "proj.alt7": "Screenshot of the direct order form on the Hellen Bold website", "proj.t8": "Dark mode", "proj.s8": "Light or dark theme with a single button; the covers look just as good in both.", "proj.n8": "Light · dark", "proj.alt8": "Screenshot of the Hellen Bold website in dark mode", "proj.plate": "Plate", "proj.ed": "Book of features", "proj.vol": "Eight chapters · scroll to turn the page", "proj.toc": "Chapter index", "proj.type": "Website · Novelist", "proj.desc": "Website for a novelist: a catalog of six titles grouped into series and two ways to get each book. I am building it myself.", "proj.more": "It also includes author and social media sections, and a direct order form, with light and dark themes.", "proj.status": "In development", "proj.f1": "novels in the catalog", "proj.f2": "ways to get each book", "proj.f3": "themes: light and dark", "cur.view": "View", "cur.open": "Open", "hg.status": "In development · public launch very soon", "hg.l1": "Your summary", "hg.v1": "1 glance", "hg.d1": "What you have left this month, right away.", "hg.a1": "Screenshot of the Holgura home page with the month receipt", "hg.l2": "Profiles", "hg.v2": "×5", "hg.d2": "Up to five accounts in the same browser, side by side.", "hg.a2": "Screenshot of the Holgura profiles", "hg.l3": "My month", "hg.v3": "4 figures", "hg.d3": "Income, fixed bills, day-to-day spending and how much you can spend per day.", "hg.a3": "Screenshot of the Holgura monthly dashboard", "hg.l4": "Payday", "hg.v4": "1–31", "hg.d4": "Your month starts on the day you get paid, not on the 1st.", "hg.a4": "Screenshot of the Holgura payday picker", "hg.l5": "Log an expense", "hg.v5": "5 fields", "hg.d5": "Description, amount, date, category and payment method, in seconds.", "hg.a5": "Screenshot of the Holgura form to log an expense", "hg.l6": "Transactions", "hg.v6": "17 categories", "hg.d6": "Search, filters by category and payment method, and where your money goes.", "hg.a6": "Screenshot of the Holgura transactions and spending by category", "hg.l7": "Calendar", "hg.v7": "day by day", "hg.d7": "What you spend each day; the stronger the colour, the more you spent.", "hg.a7": "Screenshot of the Holgura spending calendar", "hg.l8": "Fixed expenses", "hg.v8": "month · year", "hg.d8": "Monthly or yearly; they repeat on their own and get ticked off when charged.", "hg.a8": "Screenshot of the Holgura fixed expenses", "hg.l9": "Forecast", "hg.v9": "+ savings", "hg.d9": "What you expect to spend by category, what you would have left and your savings goal.", "hg.a9": "Screenshot of the Holgura monthly forecast", "hg.l10": "Backup and export", "hg.v10": "4 formats", "hg.d10": "Back up your data and export it to Excel, ODS, PDF and CSV.", "hg.a10": "Screenshot of the Holgura export menu", "hg.l11": "Light or dark", "hg.v11": "ES · CA · EN", "hg.d11": "Light or dark theme, in Spanish, Catalan or English.", "hg.a11": "Screenshot of Holgura in light mode and in English", "hg.top": "Feature receipt", "hg.sub": "Beta · in development", "hg.total": "Spreadsheets", "hg.thanks": "Thank you · coming soon to everyone", "hg.shots": "Holgura screenshots", "hg.type": "Web app · Personal finance", "hg.tag": "Your salary, with <em>room</em> to breathe.", "hg.desc": "A web app to keep track of your month without spreadsheets: you log what comes in, your fixed bills and what goes on the card, and every day it tells you how much you really have left. I am building it myself and it will launch to the public soon.", "hg.more": "Your data is saved in your own browser. It includes a monthly forecast by category, a savings goal, monthly or yearly fixed expenses, backups, export to Excel, ODS, PDF and CSV, and light and dark modes.", "hg.f1": "profiles in the same browser", "hg.f2": "categories to sort every expense", "hg.f3": "export formats: Excel, ODS, PDF and CSV",
       "sec.stack": "What I work with", "st.ms": "Microsoft", "st.infra": "Infrastructure", "st.support": "Support", "st.way": "Way of working", "s.assist": "IT assistance", "s.hw": "Computer hardware installation", "s.doc": "Documentation", "s.team": "Teamwork", "st.tools": "Tools", "s.vpn": "Virtual private network (VPN)", "s.remote": "Remote desktop", "s.incid": "Incident management",
       "a.1.t": "Support", "a.1.p": "Hardware, software and users. Keeping machines running so nobody is left stuck.",
       "a.2.t": "Networks", "a.2.p": "Connectivity and network configuration, from the rack cabinet to the router.",
@@ -618,7 +618,7 @@
 
   /* ===================== Movimiento ligado al scroll =====================
      Un único bucle (requestAnimationFrame) reparte el progreso del scroll entre
-     las escenas: fondo por capítulo, viaje horizontal de Holgura, libro de Hellen Bold,
+     las escenas: fondo por capítulo, tique de Holgura, libro de Hellen Bold,
      palabras que se encienden, línea de la experiencia y el título de contacto. */
   var REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var scenes = [];
@@ -775,108 +775,198 @@
     });
   }
 
-  /* Holgura: la sección se queda fija y las capturas pasan en horizontal, como pestañas
-     que se acercan girando. En móvil (o con movimiento reducido) es un carrusel que se desliza con el dedo. */
-  function initHScroll() {
-    document.querySelectorAll(".hs").forEach(function (hs) {
-      var track = hs.querySelector(".hs-track"), sticky = hs.querySelector(".hs-sticky");
-      var stops = Array.prototype.slice.call(track.querySelectorAll("figure.hs-stop"));
-      var path = hs.querySelector(".hs-path"), num = hs.querySelector(".hs-n"), total = hs.querySelector(".hs-total");
-      var bar = hs.querySelector(".hs-bar i");
-      var mq = window.matchMedia("(min-width: 901px)");
-      var len = path ? path.getTotalLength() : 0;
-      if (path) { path.style.strokeDasharray = len; path.style.strokeDashoffset = len; }
-      var dist = 0, cur = 0, target = 0, loop = 0, on = false;
-      function pad(n) { return (n < 10 ? "0" : "") + n; }
-      if (total) total.textContent = pad(stops.length);
-      function layout() {
-        on = mq.matches && !REDUCED;
-        hs.classList.toggle("is-pinned", on);
-        if (!on) { hs.style.height = ""; track.style.transform = ""; stops.forEach(function (s) { s.querySelector(".frame").style.transform = ""; s.querySelector(".frame").style.opacity = ""; s.querySelector(".cap").style.transform = ""; s.querySelector(".cap").style.opacity = ""; }); return; }
-        dist = Math.max(0, track.scrollWidth - sticky.clientWidth);
-        hs.style.height = (dist + window.innerHeight) + "px";
-      }
-      function paint() {
-        var W = sticky.clientWidth;
-        track.style.transform = "translate3d(" + (-cur * dist).toFixed(1) + "px,0,0)";
-        if (path) path.style.strokeDashoffset = (len * (1 - cur)).toFixed(1);
-        if (bar) bar.style.transform = "scaleX(" + cur.toFixed(4) + ")";
-        var active = 1;
-        stops.forEach(function (st, i) {
-          var x = st.offsetLeft - cur * dist;
-          var t = clamp01((W * 0.95 - x) / (W * 0.6));
-          var c = clamp01((W * 0.8 - x) / (W * 0.35));
-          var fr = st.querySelector(".frame"), cap = st.querySelector(".cap");
-          fr.style.transform = "perspective(1400px) rotateY(" + (-18 * (1 - t)).toFixed(2) + "deg) scale(" + (0.86 + 0.14 * t).toFixed(4) + ")";
-          fr.style.opacity = (0.35 + 0.65 * t).toFixed(3);
-          cap.style.transform = "translateY(" + (40 * (1 - c)).toFixed(1) + "px)";
-          cap.style.opacity = c.toFixed(3);
-          if (x < W * 0.55) active = i + 1;
-        });
-        if (num) num.textContent = pad(active);
-      }
-      function tick() {
-        cur += (target - cur) * 0.12;
-        if (Math.abs(target - cur) < 0.0005) cur = target;
-        paint();
-        loop = cur !== target ? requestAnimationFrame(tick) : 0;
-      }
-      scenes.push(function () {
-        if (!on) return;
-        var r = hs.getBoundingClientRect();
-        target = clamp01(-r.top / ((hs.offsetHeight - window.innerHeight) || 1));
+  /* Holgura: un tique de funciones que se imprime con el scroll. El papel sube por la ranura de la
+     impresora y, cuando sale una línea, su captura aparece en la pantalla con una línea de escaneo.
+     En móvil (o con movimiento reducido) el tique se lee entero y la pantalla se queda arriba. */
+  function initPrinter() {
+    var box = document.querySelector(".hgp");
+    if (!box) return;
+    var lines = Array.prototype.slice.call(box.querySelectorAll(".hgp-line"));
+    var shots = Array.prototype.slice.call(box.querySelectorAll(".hgp-shot"));
+    var wrap = box.querySelector(".hgp-shots"), feed = box.querySelector(".hgp-feed");
+    var win = box.querySelector(".hgp-window"), paper = box.querySelector(".hgp-paper");
+    var cap = box.querySelector(".hgp-cap"), capN = cap.querySelector("b"), capT = cap.querySelector("h4"), capD = cap.querySelector("p");
+    var num = box.querySelector(".hgp-n");
+    var N = lines.length, mq = window.matchMedia("(min-width: 901px) and (min-height: 560px)");
+    var on = false, cur = 0, target = 0, loop = 0, active = -1, stops = [], timer = 0;
+    function pad(n) { return (n < 10 ? "0" : "") + n; }
+    function caption(i) {
+      capN.textContent = pad(i + 1);
+      capT.textContent = lines[i].querySelector(".t").textContent;
+      capD.textContent = lines[i].querySelector(".d").textContent;
+    }
+    function restart(el, cls) { el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); }
+    function show(i) {
+      if (i === active) return;
+      var prev = active;
+      active = i;
+      lines.forEach(function (l, k) { l.classList.toggle("is-on", k === i); });
+      shots.forEach(function (s, k) { s.classList.toggle("is-on", k === i); s.classList.toggle("was", k === prev); });
+      if (num) num.textContent = pad(i + 1);
+      caption(i);
+      if (prev === -1 || REDUCED) return;
+      restart(wrap, "is-scanning");
+      restart(cap, "is-swap");
+      clearTimeout(timer);
+      timer = setTimeout(function () { shots.forEach(function (s) { s.classList.remove("was"); }); wrap.classList.remove("is-scanning"); }, 900);
+    }
+    /* altura impresa al terminar cada línea; la última parada es el tique entero (total y código) */
+    function measure() {
+      stops = lines.map(function (l) { return l.offsetTop + l.offsetHeight; });
+      stops.push(paper.offsetHeight);
+    }
+    function paint() {
+      var i = Math.min(Math.floor(cur), N), f = cur - i;
+      /* el papel se queda quieto y avanza de golpe en la segunda mitad de cada tramo, como una impresora */
+      var e = clamp01((f - 0.45) / 0.55);
+      e = e * e * (3 - 2 * e);
+      var h = i >= N ? stops[N] : stops[i] + (stops[i + 1] - stops[i]) * e;
+      feed.style.transform = "translate3d(0," + (win.clientHeight - h).toFixed(1) + "px,0)";
+      box.classList.toggle("is-printing", e > 0 && e < 1 && cur !== target);
+      show(Math.min(e > 0.5 ? i + 1 : i, N - 1));
+    }
+    function tick() {
+      cur += (target - cur) * 0.14;
+      if (Math.abs(target - cur) < 0.002) cur = target;
+      paint();
+      loop = cur !== target ? requestAnimationFrame(tick) : 0;
+    }
+    function layout() {
+      on = mq.matches && !REDUCED;
+      box.classList.toggle("is-pinned", on);
+      if (!on) { box.style.height = ""; feed.style.transform = ""; box.classList.remove("is-printing"); return; }
+      box.style.height = Math.round((N * 0.42 + 1) * window.innerHeight) + "px";
+      measure();
+      paint();
+    }
+    scenes.push(function () {
+      if (on) {
+        var r = box.getBoundingClientRect();
+        target = clamp01(-r.top / ((box.offsetHeight - window.innerHeight) || 1)) * N;
         if (!loop) loop = requestAnimationFrame(tick);
-      });
-      window.addEventListener("resize", layout);
-      window.addEventListener("load", layout);
-      if (mq.addEventListener) mq.addEventListener("change", layout);
-      track.querySelectorAll("img").forEach(function (img) { if (!img.complete) img.addEventListener("load", layout); });
-      layout();
+        return;
+      }
+      var H = window.innerHeight, a = 0;
+      lines.forEach(function (l, k) { if (l.getBoundingClientRect().top < H * 0.62) a = k; });
+      show(a);
     });
+    /* al cambiar de idioma cambian los textos (y el alto de las líneas) */
+    var sel = document.getElementById("lang");
+    if (sel) sel.addEventListener("change", function () { setTimeout(function () { caption(Math.max(active, 0)); if (on) { measure(); paint(); } }, 0); });
+    window.addEventListener("resize", layout);
+    window.addEventListener("load", layout);
+    if (mq.addEventListener) mq.addEventListener("change", layout);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
+    show(0);
+    layout();
   }
 
-  /* Hellen Bold: el libro se queda fijo a un lado y pasa de página según el capítulo que se lee al otro. */
+  /* Hellen Bold: un libro que pasa de página. En escritorio se monta a partir de la lista de funciones:
+     una tapa y una hoja por función; cada hoja lleva delante la lámina (la captura) y detrás el texto
+     de la función siguiente, así que al girar queda abierto texto a la izquierda y lámina a la derecha. */
   function initBook() {
     var story = document.querySelector(".hb-story");
     if (!story) return;
-    var steps = Array.prototype.slice.call(story.querySelectorAll(".hb-step"));
-    var pages = Array.prototype.slice.call(story.querySelectorAll(".hb-page"));
-    var sheet = story.querySelector(".hb-sheet"), folio = story.querySelector(".hb-folio-n");
-    var ROMAN = ["I", "II", "III", "IV", "V", "VI"], cur = -1, timer = 0;
-    function show(i) {
-      if (i === cur) return;
-      var turn = cur !== -1;
-      cur = i;
-      steps.forEach(function (s, k) { s.classList.toggle("is-on", k === i); });
-      pages.forEach(function (p, k) { p.classList.toggle("is-on", k <= i); });
-      if (folio) folio.textContent = ROMAN[i] || String(i + 1);
-      if (turn && !REDUCED) {
-        sheet.classList.remove("is-turning");
-        void sheet.offsetWidth; /* reinicia la animación del pliegue */
-        sheet.classList.add("is-turning");
-        clearTimeout(timer);
-        timer = setTimeout(function () { sheet.classList.remove("is-turning"); }, 1000);
+    var feats = Array.prototype.slice.call(story.querySelectorAll(".hb-feat"));
+    var flip = story.querySelector(".hb-flip"), vol = story.querySelector(".hb-volume");
+    var toc = story.querySelector(".hb-toc"), tpl = story.querySelector(".hb-cover-tpl");
+    var N = feats.length, END = N + 0.35, mq = window.matchMedia("(min-width: 901px) and (min-height: 560px)");
+    var ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
+    var leaves = [], btns = [], built = false, on = false, cur = 0, target = 0, loop = 0, active = -2;
+    function face(cls, node) {
+      var f = document.createElement("div");
+      f.className = "hb-face " + cls;
+      f.appendChild(node);
+      return f;
+    }
+    function part(i, sel) { return feats[i].querySelector(sel).cloneNode(true); }
+    /* la tapa sale de una plantilla, que no pasa por el cambio de idioma inicial */
+    function cover() {
+      var c = tpl.content.firstElementChild.cloneNode(true);
+      c.querySelectorAll("[data-i18n]").forEach(function (el) { var v = T(el.getAttribute("data-i18n")); if (v != null) el.textContent = v; });
+      return c;
+    }
+    function label() {
+      btns.forEach(function (b, i) { b.setAttribute("aria-label", ROMAN[i] + ". " + feats[i].querySelector("h4").textContent); });
+    }
+    function build() {
+      built = true;
+      var base = document.createElement("div");
+      base.className = "hb-base";
+      base.appendChild(face("hb-front", part(N - 1, ".hb-plate")));
+      vol.appendChild(base);
+      for (var k = 0; k < N; k++) {
+        var leaf = document.createElement("div");
+        leaf.className = "hb-leaf" + (k === 0 ? " hb-leaf-cover" : "");
+        leaf.appendChild(face("hb-front", k === 0 ? cover() : part(k - 1, ".hb-plate")));
+        leaf.appendChild(face("hb-back", part(k, ".hb-txt")));
+        vol.appendChild(leaf);
+        leaves.push(leaf);
+      }
+      var spine = document.createElement("span");
+      spine.className = "hb-spine";
+      vol.appendChild(spine);
+      feats.forEach(function (f, i) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.textContent = ROMAN[i];
+        b.addEventListener("click", function () { go(i); });
+        toc.appendChild(b);
+        btns.push(b);
+      });
+      label();
+    }
+    /* lleva el scroll al punto en que el libro queda abierto por esa función */
+    function go(i) {
+      var top = flip.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: top + (i + 1.15) / END * (flip.offsetHeight - window.innerHeight), behavior: "smooth" });
+    }
+    function paint() {
+      var open = 0;
+      leaves.forEach(function (l, i) {
+        /* cada hoja se queda quieta un rato (para leerla) y gira en el resto de su tramo */
+        var e = clamp01((cur - i - 0.35) / 0.65);
+        e = e * e * (3 - 2 * e);
+        l.style.setProperty("--e", e.toFixed(4));
+        l.style.zIndex = e === 0 ? 2 * N - i : e === 1 ? i + 1 : 3 * N;
+        if (e >= 0.5) open++;
+        if (i === 0) vol.style.setProperty("--shift", (1 - e).toFixed(4));
+      });
+      if (open - 1 !== active) {
+        active = open - 1;
+        btns.forEach(function (b, k) { b.classList.toggle("is-on", k === active); });
       }
     }
+    function tick() {
+      cur += (target - cur) * 0.12;
+      if (Math.abs(target - cur) < 0.002) cur = target;
+      paint();
+      loop = cur !== target ? requestAnimationFrame(tick) : 0;
+    }
+    function layout() {
+      on = mq.matches && !REDUCED;
+      story.classList.toggle("is-book", on);
+      if (!on) { flip.style.height = ""; return; }
+      if (!built) build();
+      flip.style.height = Math.round((N * 0.55 + 1.2) * window.innerHeight) + "px";
+      paint();
+    }
     scenes.push(function () {
-      var H = window.innerHeight, a = 0;
-      steps.forEach(function (s, k) { if (s.getBoundingClientRect().top < H * 0.55) a = k; });
-      show(a);
+      if (on) {
+        var r = flip.getBoundingClientRect();
+        target = clamp01(-r.top / ((flip.offsetHeight - window.innerHeight) || 1)) * END;
+        if (!loop) loop = requestAnimationFrame(tick);
+        return;
+      }
+      /* sin libro, cada función entra girando como una página */
+      var H = window.innerHeight;
+      feats.forEach(function (f) { if (f.getBoundingClientRect().top < H * 0.88) f.classList.add("in"); });
     });
-    show(0);
-  }
-
-  /* Cintas inclinadas: se desplazan con el scroll. */
-  function initRibbon() {
-    if (REDUCED) return;
-    document.querySelectorAll(".ribbon-track").forEach(function (tr) {
-      var base = tr.innerHTML, guard = 0;
-      while (tr.scrollWidth < window.innerWidth * 2.4 && guard++ < 8) tr.innerHTML += base;
-      scenes.push(function () {
-        var p = prog(tr.parentNode, 1, 0);
-        tr.style.transform = "translate3d(" + (-p * 50).toFixed(3) + "%,0,0)";
-      });
-    });
+    var sel = document.getElementById("lang");
+    if (sel) sel.addEventListener("change", function () { setTimeout(label, 0); });
+    window.addEventListener("resize", layout);
+    if (mq.addEventListener) mq.addEventListener("change", layout);
+    layout();
   }
 
   /* Barra superior: se esconde al bajar y vuelve al subir. */
@@ -945,10 +1035,9 @@
     safe(initWords, "words");
     safe(initSpine, "spine");
     safe(initStack, "stack");
-    safe(initRibbon, "ribbon");
     safe(initContactScale, "contactscale");
     safe(initChapters, "chapters");
-    safe(initHScroll, "hscroll");
+    safe(initPrinter, "printer");
     safe(initBook, "book");
     safe(initBarHide, "barhide");
     safe(initMagnetic, "magnetic");

@@ -13,8 +13,8 @@
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png?v=2">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2">
 <link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css?v=20261103f">
-<script defer src="main.js?v=20261103f"></script>
+<link rel="stylesheet" href="styles.css?v=20261104c">
+<script defer src="main.js?v=20261104c"></script>
 </head>
 <body>
 
@@ -94,7 +94,7 @@
       <div class="sec-head"><span class="eyebrow"><b>02</b></span><h2 class="sec-title" data-i18n="sec.projects">Proyectos</h2></div>
     </div>
 
-    <!-- Holgura: proyecto principal (la sección se queda fija y las capturas pasan en horizontal) -->
+    <!-- Holgura: proyecto principal (un tique de funciones que se imprime al bajar) -->
     <div class="chapter ch-hg" id="holgura" data-chapter="hg">
       <div class="wrap">
         <div class="ch-head">
@@ -104,53 +104,73 @@
           <div class="ch-grid">
             <div>
               <p class="project-desc" data-i18n="hg.desc">Una app web para llevar las cuentas del mes sin hojas de cálculo: apuntas lo que entra, los gastos fijos y lo que pasa por la tarjeta, y te dice cada día cuánto te queda de verdad. La estoy desarrollando yo y se lanzará pronto para todo el público.</p>
-              <p class="project-more" data-i18n="hg.more">Los datos se guardan en tu propio navegador. Incluye previsión del mes por categorías, objetivo de ahorro, gastos fijos mensuales o anuales, copia de seguridad, exportación a Excel, PDF y CSV, y modo claro y oscuro.</p>
+              <p class="project-more" data-i18n="hg.more">Los datos se guardan en tu propio navegador. Incluye previsión del mes por categorías, objetivo de ahorro, gastos fijos mensuales o anuales, copia de seguridad, exportación a Excel, ODS, PDF y CSV, y modo claro y oscuro.</p>
             </div>
             <div class="facts">
               <div><b data-count="5">5</b><small data-i18n="hg.f1">perfiles en el mismo navegador</small></div>
               <div><b data-count="17">17</b><small data-i18n="hg.f2">categorías para clasificar cada gasto</small></div>
-              <div><b data-count="3">3</b><small data-i18n="hg.f3">formatos para exportar: Excel, PDF y CSV</small></div>
+              <div><b data-count="4">4</b><small data-i18n="hg.f3">formatos para exportar: Excel, ODS, PDF y CSV</small></div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="ribbon" aria-hidden="true"><div class="ribbon-track"><span>Holgura</span><span data-i18n="hg.r1">Finanzas personales</span><span data-i18n="hg.r2">Previsión del mes</span><span data-i18n="hg.r3">Tus datos, en tu navegador</span><span>v0.28 beta</span></div></div>
-
-      <div class="hs">
-        <div class="hs-sticky">
-          <svg class="hs-thread" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path class="hs-path" d="M0 90 C 180 20, 320 20, 460 70 S 760 120, 900 50 S 1120 10, 1200 40"/></svg>
-          <div class="hs-count" aria-hidden="true"><b class="hs-n">01</b> / <span class="hs-total">04</span></div>
-          <div class="hs-track" role="list" aria-label="Capturas de Holgura" data-i18n-aria="hg.tabs">
-            <div class="hs-stop hs-intro" role="listitem">
-              <span class="eyebrow" data-i18n="hg.url">Holgura · beta en desarrollo</span>
-              <h4 class="hs-big" data-i18n="hg.tabs">Capturas de la app</h4>
-              <p class="project-tech">HTML · CSS · JavaScript</p>
-              <span class="hs-hint" aria-hidden="true">→</span>
+      <!-- tique que se imprime con el scroll: cada línea es una función y su captura sale en la pantalla -->
+      <div class="hgp">
+        <div class="hgp-sticky">
+          <div class="wrap hgp-stage">
+            <div class="hgp-screen">
+              <div class="frame">
+                <div class="frame-bar"><i></i><i></i><i></i><span>holgura · <b class="hgp-n">01</b> / 11</span></div>
+                <div class="hgp-shots" role="img" aria-label="Capturas de Holgura" data-i18n-aria="hg.shots">
+                  <img class="hgp-shot is-on" src="assets/projects/holgura-inicio.webp?v=3" alt="Captura de la portada de Holgura con el tique del mes" data-i18n-alt="hg.a1" width="1280" height="800" loading="lazy">
+                  <img class="hgp-shot" src="assets/projects/holgura-perfiles.webp?v=3" alt="Captura de los perfiles de Holgura" data-i18n-alt="hg.a2" width="1280" height="800" loading="lazy">
+                  <img class="hgp-shot" src="assets/projects/holgura-mes.webp?v=3" alt="Captura del panel mensual de Holgura" data-i18n-alt="hg.a3" width="1280" height="800" loading="lazy">
+                  <img class="hgp-shot" src="assets/projects/holgura-cobro.webp?v=3" alt="Captura del selector del día de cobro de Holgura" data-i18n-alt="hg.a4" width="1280" height="800" loading="lazy">
+                  <img class="hgp-shot" src="assets/projects/holgura-gasto.webp?v=3" alt="Captura del formulario para apuntar un gasto en Holgura" data-i18n-alt="hg.a5" width="1280" height="800" loading="lazy">
+                  <img class="hgp-shot" src="assets/projects/holgura-movimientos.webp?v=3" alt="Captura de los movimientos y el gasto por categorías de Holgura" data-i18n-alt="hg.a6" width="1280" height="800" loading="lazy">
+                  <img class="hgp-shot" src="assets/projects/holgura-calendario.webp?v=3" alt="Captura del calendario de gastos de Holgura" data-i18n-alt="hg.a7" width="1280" height="800" loading="lazy">
+                  <img class="hgp-shot" src="assets/projects/holgura-fijos.webp?v=3" alt="Captura de los gastos fijos de Holgura" data-i18n-alt="hg.a8" width="1280" height="800" loading="lazy">
+                  <img class="hgp-shot" src="assets/projects/holgura-prevision.webp?v=3" alt="Captura de la previsión del mes de Holgura" data-i18n-alt="hg.a9" width="1280" height="800" loading="lazy">
+                  <img class="hgp-shot" src="assets/projects/holgura-datos.webp?v=3" alt="Captura del menú de exportación de Holgura" data-i18n-alt="hg.a10" width="1280" height="800" loading="lazy">
+                  <img class="hgp-shot" src="assets/projects/holgura-claro.webp?v=3" alt="Captura de Holgura en modo claro y en inglés" data-i18n-alt="hg.a11" width="1280" height="800" loading="lazy">
+                  <span class="hgp-scan" aria-hidden="true"></span>
+                </div>
+              </div>
+              <div class="hgp-cap" aria-hidden="true"><b>01</b><div><h4>Tu resumen</h4><p>Lo que te queda este mes, nada más entrar.</p></div></div>
             </div>
-            <figure class="hs-stop" role="listitem">
-              <div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>holgura · 01</span></div><img src="assets/projects/holgura-inicio.webp?v=2" alt="Captura de la portada de Holgura con el resumen del mes" data-i18n-alt="hg.alt1" width="1280" height="800" loading="lazy"></div>
-              <figcaption class="cap"><b>01</b><div><h4 data-i18n="hg.t1">Inicio</h4><p data-i18n="hg.s1">Lo que te queda este mes, nada más entrar.</p></div></figcaption>
-            </figure>
-            <figure class="hs-stop" role="listitem">
-              <div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>holgura · 02</span></div><img src="assets/projects/holgura-mes.webp?v=2" alt="Captura del panel mensual de Holgura con movimientos y gasto por categorías" data-i18n-alt="hg.alt2" width="1280" height="800" loading="lazy"></div>
-              <figcaption class="cap"><b>02</b><div><h4 data-i18n="hg.t2">Mi mes</h4><p data-i18n="hg.s2">Ingresos, fijos, gastos del día a día y dónde se va el dinero.</p></div></figcaption>
-            </figure>
-            <figure class="hs-stop" role="listitem">
-              <div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>holgura · 03</span></div><img src="assets/projects/holgura-fijos.webp?v=2" alt="Captura de la lista de gastos fijos mensuales de Holgura" data-i18n-alt="hg.alt3" width="1280" height="800" loading="lazy"></div>
-              <figcaption class="cap"><b>03</b><div><h4 data-i18n="hg.t3">Gastos fijos</h4><p data-i18n="hg.s3">Se repiten solos cada mes y se marcan cuando se cobran.</p></div></figcaption>
-            </figure>
-            <figure class="hs-stop" role="listitem">
-              <div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>holgura · 04</span></div><img src="assets/projects/holgura-prevision.webp?v=2" alt="Captura de la previsión del mes de Holgura" data-i18n-alt="hg.alt4" width="1280" height="800" loading="lazy"></div>
-              <figcaption class="cap"><b>04</b><div><h4 data-i18n="hg.t4">Previsión</h4><p data-i18n="hg.s4">Lo que crees que gastarás y cuánto te sobraría.</p></div></figcaption>
-            </figure>
+            <div class="hgp-printer">
+              <div class="hgp-window">
+                <div class="hgp-feed">
+                  <div class="hgp-paper">
+                    <div class="hgp-head"><span class="hgp-brand">Holgura</span><small data-i18n="hg.top">Tique de funciones</small><small data-i18n="hg.sub">Beta · en desarrollo</small></div>
+                    <ol class="hgp-lines">
+                <li class="hgp-line is-on"><span class="n">01</span><span class="t" data-i18n="hg.l1">Tu resumen</span><span class="v" data-i18n="hg.v1">1 vistazo</span><p class="d" data-i18n="hg.d1">Lo que te queda este mes, nada más entrar.</p></li>
+                <li class="hgp-line"><span class="n">02</span><span class="t" data-i18n="hg.l2">Perfiles</span><span class="v" data-i18n="hg.v2">×5</span><p class="d" data-i18n="hg.d2">Hasta cinco cuentas en el mismo navegador, una al lado de otra.</p></li>
+                <li class="hgp-line"><span class="n">03</span><span class="t" data-i18n="hg.l3">Mi mes</span><span class="v" data-i18n="hg.v3">4 cifras</span><p class="d" data-i18n="hg.d3">Ingresos, fijos, gastos del día a día y cuánto puedes gastar al día.</p></li>
+                <li class="hgp-line"><span class="n">04</span><span class="t" data-i18n="hg.l4">Día de cobro</span><span class="v" data-i18n="hg.v4">1–31</span><p class="d" data-i18n="hg.d4">El mes empieza el día que cobras la nómina, no el día 1.</p></li>
+                <li class="hgp-line"><span class="n">05</span><span class="t" data-i18n="hg.l5">Apuntar un gasto</span><span class="v" data-i18n="hg.v5">5 campos</span><p class="d" data-i18n="hg.d5">Concepto, importe, fecha, categoría y método de pago, en segundos.</p></li>
+                <li class="hgp-line"><span class="n">06</span><span class="t" data-i18n="hg.l6">Movimientos</span><span class="v" data-i18n="hg.v6">17 categorías</span><p class="d" data-i18n="hg.d6">Búsqueda, filtros por categoría y método, y dónde se va tu dinero.</p></li>
+                <li class="hgp-line"><span class="n">07</span><span class="t" data-i18n="hg.l7">Calendario</span><span class="v" data-i18n="hg.v7">día a día</span><p class="d" data-i18n="hg.d7">Lo que gastas cada día; cuanto más intenso el color, más gastaste.</p></li>
+                <li class="hgp-line"><span class="n">08</span><span class="t" data-i18n="hg.l8">Gastos fijos</span><span class="v" data-i18n="hg.v8">mes · año</span><p class="d" data-i18n="hg.d8">Mensuales o anuales; se repiten solos y se marcan cuando se cobran.</p></li>
+                <li class="hgp-line"><span class="n">09</span><span class="t" data-i18n="hg.l9">Previsión</span><span class="v" data-i18n="hg.v9">+ ahorro</span><p class="d" data-i18n="hg.d9">Lo que crees que gastarás por categoría, cuánto te sobraría y tu objetivo de ahorro.</p></li>
+                <li class="hgp-line"><span class="n">10</span><span class="t" data-i18n="hg.l10">Copia y exportación</span><span class="v" data-i18n="hg.v10">4 formatos</span><p class="d" data-i18n="hg.d10">Copia de seguridad de tus datos y exportación a Excel, ODS, PDF y CSV.</p></li>
+                <li class="hgp-line"><span class="n">11</span><span class="t" data-i18n="hg.l11">Claro u oscuro</span><span class="v" data-i18n="hg.v11">ES · CA · EN</span><p class="d" data-i18n="hg.d11">Tema claro u oscuro, en castellano, catalán o inglés.</p></li>
+                    </ol>
+                    <div class="hgp-total"><span data-i18n="hg.total">Hojas de cálculo</span><b>0</b></div>
+                    <div class="hgp-code" aria-hidden="true"></div>
+                    <p class="hgp-thanks" data-i18n="hg.thanks">Gracias · pronto, para todo el público</p>
+                  </div>
+                </div>
+              </div>
+              <div class="hgp-slot" aria-hidden="true"></div>
+            </div>
           </div>
-          <div class="hs-bar" aria-hidden="true"><i></i></div>
         </div>
       </div>
     </div>
 
-    <!-- Hellen Bold: el libro se queda fijo y pasa de página según avanzan los capítulos -->
+    <!-- Hellen Bold: un libro de verdad; al bajar, cada página gira sobre el lomo y enseña una función de la web -->
     <div class="chapter ch-hb" id="hellenbold" data-chapter="hb">
       <div class="wrap">
         <div class="hb-head">
@@ -159,7 +179,7 @@
           <div class="hb-intro">
             <div>
               <p class="project-desc" data-i18n="proj.desc">Web para una autora de novelas: catálogo de seis títulos agrupados por series y dos formas de conseguir cada libro. La estoy desarrollando yo.</p>
-              <p class="project-more" data-i18n="proj.more">También incluye secciones de autora, redes, newsletter y contacto, con tema claro y oscuro.</p>
+              <p class="project-more" data-i18n="proj.more">También incluye secciones de autora y redes, y un formulario de pedido directo, con tema claro y oscuro.</p>
             </div>
             <dl class="hb-index">
               <div><dt data-i18n="proj.f1">novelas en el catálogo</dt><dd data-count="6">6</dd></div>
@@ -170,20 +190,47 @@
         </div>
 
         <div class="hb-story">
-          <div class="hb-book">
-            <div class="hb-sheet">
-              <img class="hb-page is-on" src="assets/projects/hellenbold-portada.webp" alt="Captura de la portada de la web de Hellen Bold" data-i18n-alt="proj.alt1" width="800" height="500" loading="lazy">
-              <img class="hb-page" src="assets/projects/hellenbold-catalogo.webp?v=3" alt="Captura del catálogo de novelas de la web de Hellen Bold" data-i18n-alt="proj.alt2" width="800" height="500" loading="lazy">
-              <img class="hb-page" src="assets/projects/hellenbold-compra.webp" alt="Captura de la sección Cómo comprar de la web de Hellen Bold" data-i18n-alt="proj.alt3" width="800" height="500" loading="lazy">
-              <span class="hb-fold" aria-hidden="true"></span>
-            </div>
-            <p class="hb-folio" aria-hidden="true"><span class="hb-folio-n">I</span> · III</p>
-          </div>
-          <ol class="hb-steps">
-            <li class="hb-step is-on"><span class="hb-num" aria-hidden="true">I</span><h4 data-i18n="proj.t1">Portada</h4><p data-i18n="proj.s1">Un carrusel de portadas que se arrastra.</p></li>
-            <li class="hb-step"><span class="hb-num" aria-hidden="true">II</span><h4 data-i18n="proj.t2">Catálogo</h4><p data-i18n="proj.s2">Seis novelas organizadas por series.</p></li>
-            <li class="hb-step"><span class="hb-num" aria-hidden="true">III</span><h4 data-i18n="proj.t3">Cómo comprar</h4><p data-i18n="proj.s3">Pedido directo o Amazon (Kindle y tapa blanda).</p></li>
+          <ol class="hb-feats">
+            <li class="hb-feat">
+              <div class="hb-txt"><span class="hb-num" aria-hidden="true">I</span><h4 data-i18n="proj.t1">Portada</h4><p data-i18n="proj.s1">Un carrusel de portadas que se arrastra con el ratón o con el dedo, y el sello de seis novelas.</p><p class="hb-note" data-i18n="proj.n1">Arrastrar · flechas · 6 novelas</p></div>
+              <figure class="hb-plate"><img src="assets/projects/hellenbold-portada.webp?v=4" alt="Captura de la portada de la web de Hellen Bold con el carrusel de portadas" data-i18n-alt="proj.alt1" width="1280" height="800" loading="lazy"><figcaption><span data-i18n="proj.plate">Lámina</span> I</figcaption></figure>
+            </li>
+            <li class="hb-feat">
+              <div class="hb-txt"><span class="hb-num" aria-hidden="true">II</span><h4 data-i18n="proj.t2">Catálogo</h4><p data-i18n="proj.s2">Todas las portadas de un vistazo y, debajo, cada novela en su serie: Quiero ser, Velox y una autoconclusiva.</p><p class="hb-note" data-i18n="proj.n2">2 series · 1 autoconclusiva</p></div>
+              <figure class="hb-plate"><img src="assets/projects/hellenbold-catalogo.webp?v=4" alt="Captura del catálogo de novelas de la web de Hellen Bold" data-i18n-alt="proj.alt2" width="1280" height="800" loading="lazy"><figcaption><span data-i18n="proj.plate">Lámina</span> II</figcaption></figure>
+            </li>
+            <li class="hb-feat">
+              <div class="hb-txt"><span class="hb-num" aria-hidden="true">III</span><h4 data-i18n="proj.t3">Ficha de cada libro</h4><p data-i18n="proj.s3">La maqueta del libro en Kindle y en papel, la serie y el número de libro, y sus botones de compra.</p><p class="hb-note" data-i18n="proj.n3">Kindle · tapa blanda</p></div>
+              <figure class="hb-plate"><img src="assets/projects/hellenbold-edicion.webp?v=4" alt="Captura de la ficha de un libro en la web de Hellen Bold" data-i18n-alt="proj.alt3" width="1280" height="800" loading="lazy"><figcaption><span data-i18n="proj.plate">Lámina</span> III</figcaption></figure>
+            </li>
+            <li class="hb-feat">
+              <div class="hb-txt"><span class="hb-num" aria-hidden="true">IV</span><h4 data-i18n="proj.t4">Edición o portada</h4><p data-i18n="proj.s4">Un interruptor en cada ficha cambia la maqueta por la portada a tamaño completo.</p><p class="hb-note" data-i18n="proj.n4">2 vistas por libro</p></div>
+              <figure class="hb-plate"><img src="assets/projects/hellenbold-cubierta.webp?v=4" alt="Captura de la portada a tamaño completo de un libro en la web de Hellen Bold" data-i18n-alt="proj.alt4" width="1280" height="800" loading="lazy"><figcaption><span data-i18n="proj.plate">Lámina</span> IV</figcaption></figure>
+            </li>
+            <li class="hb-feat">
+              <div class="hb-txt"><span class="hb-num" aria-hidden="true">V</span><h4 data-i18n="proj.t5">Serie completa</h4><p data-i18n="proj.s5">La saga Quiero ser también se vende entera en Kindle, con su propia ficha.</p><p class="hb-note" data-i18n="proj.n5">3 libros en 1</p></div>
+              <figure class="hb-plate"><img src="assets/projects/hellenbold-serie.webp?v=4" alt="Captura de la serie completa Quiero ser en la web de Hellen Bold" data-i18n-alt="proj.alt5" width="1280" height="800" loading="lazy"><figcaption><span data-i18n="proj.plate">Lámina</span> V</figcaption></figure>
+            </li>
+            <li class="hb-feat">
+              <div class="hb-txt"><span class="hb-num" aria-hidden="true">VI</span><h4 data-i18n="proj.t6">Dos formas de comprar</h4><p data-i18n="proj.s6">Pedírselo directamente a la autora, con dedicatoria y un detalle de regalo, o ir a Amazon.</p><p class="hb-note" data-i18n="proj.n6">Directo · Amazon</p></div>
+              <figure class="hb-plate"><img src="assets/projects/hellenbold-comprar.webp?v=4" alt="Captura de la sección Cómo comprar de la web de Hellen Bold" data-i18n-alt="proj.alt6" width="1280" height="800" loading="lazy"><figcaption><span data-i18n="proj.plate">Lámina</span> VI</figcaption></figure>
+            </li>
+            <li class="hb-feat">
+              <div class="hb-txt"><span class="hb-num" aria-hidden="true">VII</span><h4 data-i18n="proj.t7">Pedido directo</h4><p data-i18n="proj.s7">Eliges el libro, cuántos ejemplares y un mensaje, y se abre tu correo con todo ya redactado.</p><p class="hb-note" data-i18n="proj.n7">Formulario → correo</p></div>
+              <figure class="hb-plate"><img src="assets/projects/hellenbold-pedido.webp?v=4" alt="Captura del formulario de pedido directo de la web de Hellen Bold" data-i18n-alt="proj.alt7" width="1280" height="800" loading="lazy"><figcaption><span data-i18n="proj.plate">Lámina</span> VII</figcaption></figure>
+            </li>
+            <li class="hb-feat">
+              <div class="hb-txt"><span class="hb-num" aria-hidden="true">VIII</span><h4 data-i18n="proj.t8">Modo oscuro</h4><p data-i18n="proj.s8">Tema claro u oscuro con un solo botón; las portadas lucen igual en los dos.</p><p class="hb-note" data-i18n="proj.n8">Claro · oscuro</p></div>
+              <figure class="hb-plate"><img src="assets/projects/hellenbold-oscuro.webp?v=4" alt="Captura de la web de Hellen Bold en modo oscuro" data-i18n-alt="proj.alt8" width="1280" height="800" loading="lazy"><figcaption><span data-i18n="proj.plate">Lámina</span> VIII</figcaption></figure>
+            </li>
           </ol>
+          <div class="hb-flip">
+            <div class="hb-flip-sticky">
+              <div class="hb-stage" aria-hidden="true"><div class="hb-volume"></div></div>
+              <nav class="hb-toc" aria-label="Índice de capítulos" data-i18n-aria="proj.toc"></nav>
+            </div>
+          </div>
+          <template class="hb-cover-tpl"><div class="hb-cover"><small data-i18n="proj.ed">Libro de funciones</small><b>Hellen<br>Bold</b><span class="hb-orn">❦</span><small data-i18n="proj.vol">Ocho capítulos · baja para pasar página</small></div></template>
         </div>
         <p class="project-tech hb-tech">HTML · CSS · JavaScript · GSAP · ScrollTrigger</p>
       </div>
