@@ -969,6 +969,39 @@
     layout();
   }
 
+  /* Versiones: las cifras se cuentan sobre las notas de la página y la línea de tiempo
+     se llena al bajar, encendiendo cada etapa y cada versión al pasar por ella. */
+  function initVersions() {
+    var blocks = document.querySelectorAll(".vers > div[data-lang]");
+    if (!blocks.length) return;
+    Array.prototype.forEach.call(blocks, function (b) {
+      var fixes = b.querySelectorAll(".ver-g.is-fix li").length;
+      var n = { versions: b.querySelectorAll(".ver").length, features: b.querySelectorAll(".ver li").length - fixes,
+                fixes: fixes, stages: b.querySelectorAll(".ver-stage").length };
+      Array.prototype.forEach.call(b.querySelectorAll("[data-n]"), function (d) { d.textContent = n[d.getAttribute("data-n")]; });
+    });
+    var marks = Array.prototype.slice.call(document.querySelectorAll(".ver-stage, .ver"));
+    if (REDUCED) {
+      document.querySelectorAll(".ver-tl").forEach(function (tl) { tl.style.setProperty("--fill", 1); });
+      marks.forEach(function (m) { m.classList.add("is-lit"); });
+      return;
+    }
+    scenes.push(function () {
+      var H = window.innerHeight, line = H * 0.6;
+      document.querySelectorAll(".ver-tl").forEach(function (tl) {
+        if (!tl.offsetHeight) return;
+        var r = tl.getBoundingClientRect();
+        tl.style.setProperty("--fill", clamp01((line - r.top) / r.height).toFixed(4));
+      });
+      marks.forEach(function (m) {
+        if (m.offsetHeight) m.classList.toggle("is-lit", m.getBoundingClientRect().top + 30 < line);
+      });
+    });
+    /* al cambiar de idioma se ve otro bloque: se recoloca sin esperar al scroll */
+    var sel = document.getElementById("lang");
+    if (sel) sel.addEventListener("change", function () { setTimeout(function () { if (window.__motion) window.__motion(); }, 0); });
+  }
+
   /* Barra superior: se esconde al bajar y vuelve al subir. */
   function initBarHide() {
     var bar = document.querySelector(".bar");
@@ -1039,6 +1072,7 @@
     safe(initChapters, "chapters");
     safe(initPrinter, "printer");
     safe(initBook, "book");
+    safe(initVersions, "versions");
     safe(initBarHide, "barhide");
     safe(initMagnetic, "magnetic");
     safe(initMotion, "motion");
