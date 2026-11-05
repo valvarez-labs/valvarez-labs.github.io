@@ -110,18 +110,42 @@ em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent
 .progress span{display:block;height:100%;background:var(--accent-fill);transform:scaleX(0);transform-origin:left}
 
 /* ---------- pantalla de carga ---------- */
+/* pantalla de carga: el logo late y la pantalla se abre por una ventana con la forma de la baldosa del logo */
 .splash{display:none}
-.js .splash{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;background:var(--bg);clip-path:inset(0 0 0 0);transition:clip-path .9s var(--ease-out),opacity .4s .6s ease,visibility 0s linear .95s;animation:splash-safety .5s ease 3s forwards}
+.js .splash{--sp-io:cubic-bezier(.77,0,.18,1);position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;overflow:hidden;transition:opacity .35s ease 1.1s,visibility 0s linear 1.45s;animation:splash-safety .5s ease 4s forwards}
 .js.no-splash .splash{display:none}
-.js .splash.is-done{clip-path:inset(0 0 100% 0);opacity:0;visibility:hidden;pointer-events:none}
-.splash-in{display:flex;flex-direction:column;align-items:center;gap:16px}
+.js .splash.is-done{opacity:0;visibility:hidden;pointer-events:none}
+/* la ventana: un hueco que empieza como un rombo diminuto y crece hasta ser un cuadrado redondeado; su sombra enorme es el fondo */
+.splash-hole{position:absolute;left:var(--hx,50%);top:var(--hy,50%);width:0;height:0;border-radius:24%;transform:translate(-50%,-50%) rotate(45deg);
+  box-shadow:0 0 0 0 transparent,0 0 0 0 transparent,0 0 0 170vmax var(--bg),inset 0 0 0 0 transparent;
+  transition:width 1.3s var(--sp-io),height 1.3s var(--sp-io),transform 1.3s var(--sp-io),box-shadow .35s ease}
+.splash.is-done .splash-hole{width:140vmax;height:140vmax;transform:translate(-50%,-50%) rotate(0deg);
+  box-shadow:0 0 0 2px var(--accent-fill),0 0 48px 10px color-mix(in srgb,var(--accent-fill) 32%,transparent),0 0 0 170vmax var(--bg),inset 0 0 44px 4px color-mix(in srgb,var(--accent-fill) 24%,transparent)}
+.splash-in{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:16px}
+.splash.is-done .splash-in{opacity:0;transform:scale(.86);transition:opacity .35s ease,transform .8s var(--sp-io)}
 .splash-in .theme-img{width:104px;height:auto;animation:splash-logo .9s var(--ease-out) both}
 .splash-name{font-family:var(--disp);font-size:20px;font-weight:800;letter-spacing:-.01em;color:var(--ink);animation:splash-logo .9s .12s var(--ease-out) both}
+/* un brillo verde recorre el nombre una vez */
+.splash-name .nm{background:linear-gradient(100deg,var(--ink) 0%,var(--ink) 38%,var(--accent-fill) 50%,var(--ink) 62%,var(--ink) 100%);background-size:300% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent;animation:splash-shine 1.5s .35s var(--sp-io) forwards}
+/* el logo late: ondas con la forma de su baldosa */
+.splash-mark{position:relative;display:grid;place-items:center;width:84px;height:84px}
+.splash-mark::before{content:"";position:absolute;inset:-28px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--accent-fill) 16%,transparent) 0%,transparent 68%);pointer-events:none}
+.splash-mark::after,.splash-mark i{content:"";position:absolute;inset:0;border-radius:24%;border:1.5px solid var(--accent-fill);opacity:0;pointer-events:none;animation:splash-ripple 2s .55s var(--ease-out) infinite}
+.splash-mark i{animation-delay:1.55s}
+.splash-mark .logo-mark{position:relative}
 .splash-bar{position:relative;width:120px;height:2px;background:var(--line);border-radius:2px;overflow:hidden;margin-top:4px}
-.splash-bar i{position:absolute;inset:0;background:var(--accent-fill);transform-origin:left;transform:scaleX(0);animation:splash-fill 1.15s .15s cubic-bezier(.65,0,.35,1) forwards}
-@keyframes splash-logo{from{opacity:0;transform:translateY(10px) scale(.96)}to{opacity:1;transform:none}}
+.splash-bar i{position:absolute;inset:0;background:var(--accent-fill);box-shadow:0 0 10px var(--accent-fill);transform-origin:left;transform:scaleX(0);animation:splash-fill 1.15s .15s cubic-bezier(.65,0,.35,1) forwards}
+@keyframes splash-logo{from{opacity:0;transform:translateY(10px) scale(.96);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
 @keyframes splash-fill{to{transform:scaleX(1)}}
-@keyframes splash-safety{to{opacity:0;pointer-events:none;clip-path:inset(0 0 100% 0);visibility:hidden}}
+@keyframes splash-shine{to{background-position:0 0}}
+@keyframes splash-ripple{0%{opacity:.75;transform:scale(1)}100%{opacity:0;transform:scale(1.85)}}
+@keyframes splash-safety{to{opacity:0;pointer-events:none;visibility:hidden}}
+@media (prefers-reduced-motion:reduce){
+  .splash-mark::after,.splash-mark i{animation:none}
+  .splash-name .nm{animation:none;background:none;color:var(--ink)}
+  .splash-hole{transition:none}
+  .js .splash{transition:opacity .3s ease,visibility 0s linear .3s}
+}
 
 /* ---------- hero ---------- */
 .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:130px var(--gut) 64px;max-width:var(--max);margin:0 auto;isolation:isolate}

@@ -390,24 +390,33 @@
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !panel.hidden) { set(false); btn.focus(); } });
   }
 
-  /* Pantalla de carga: se muestra un mínimo para que se aprecie y se retira al terminar de cargar. */
+  /* Pantalla de carga: se muestra un mínimo para que se aprecie y se abre desde el logo al terminar de cargar. */
   function initSplash() {
     var s = document.getElementById("splash");
     if (!s) return;
+    var mark = s.querySelector(".splash-mark");
     var start = (window.performance && performance.now) ? performance.now() : 0;
     var MIN = 1400, closed = false;
+    function aim() {
+      if (!mark) return;
+      var r = mark.getBoundingClientRect();
+      s.style.setProperty("--hx", (r.left + r.width / 2) + "px");
+      s.style.setProperty("--hy", (r.top + r.height / 2) + "px");
+    }
     function close() {
       if (closed) return; closed = true;
+      aim();
       s.classList.add("is-done");
-      setTimeout(function () { if (s.parentNode) s.parentNode.removeChild(s); }, 1100);
+      setTimeout(function () { if (s.parentNode) s.parentNode.removeChild(s); }, 1600);
     }
     function ready() {
       var elapsed = (window.performance && performance.now) ? performance.now() - start : MIN;
       setTimeout(close, Math.max(0, MIN - elapsed));
     }
+    aim();
     if (document.readyState === "complete") ready();
     else window.addEventListener("load", ready);
-    setTimeout(close, 4500);
+    setTimeout(close, 3500);
   }
 
   /* Progreso de lectura, barra de navegación sólida al hacer scroll y sección actual resaltada. */
